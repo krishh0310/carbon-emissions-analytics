@@ -340,7 +340,7 @@ function FacilitiesTab({ st }: { st: Panel }) {
   const [state, setState] = useState("");
   const [sector, setSector] = useState("");
   const q = useQuery({ queryKey: ["fac", state, sector], queryFn: () => api(`/api/v2/analytics/facilities?limit=300${state ? `&state=${state}` : ""}${sector ? `&sector=${sector}` : ""}`) });
-  const items: any[] = q.data?.items ?? [];
+  const items: any[] = useMemo(() => q.data?.items ?? [], [q.data]);
   const byState = useMemo(() => {
     const m: Record<string, number> = {};
     items.forEach((f) => { if (f.state_code) m[f.state_code] = (m[f.state_code] ?? 0) + f.co2e_mt; });
