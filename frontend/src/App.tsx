@@ -13,6 +13,7 @@ const MapOverview = lazy(() => import("./pages/MapOverview"));
 const StateExplorer = lazy(() => import("./pages/StateExplorer"));
 const Cities = lazy(() => import("./pages/Cities"));
 const Insights = lazy(() => import("./pages/Insights"));
+const Analytics = lazy(() => import("./pages/Analytics"));
 const Methodology = lazy(() => import("./pages/Methodology"));
 const AdminConsole = lazy(() => import("./pages/AdminConsole"));
 
@@ -23,12 +24,18 @@ function Login({ onDone }: { onDone: () => void }) {
   const [busy, setBusy] = useState(false);
   const submit = async (e: FormEvent, register = false) => {
     e.preventDefault();
+    // "Create account" is a type=button, so run the form's native validation (email format, ≥10 chars) ourselves
+    if (!(e.currentTarget as HTMLElement).closest("form")?.reportValidity()) return;
     setBusy(true);
     try {
       await login(email, password, register);
+      if (register) toast.success("Account created — you're signed in");
       onDone();
     } catch (err: any) {
-      toast.error(err.message);
+      toast.error(err.status === 409 ? "This email already has an account — use Sign in."
+        : err.status === 401 ? "Wrong email or password."
+        : err.status === 429 ? "Too many attempts — wait a minute and try again."
+        : err.message);
     } finally {
       setBusy(false);
     }
@@ -40,6 +47,7 @@ function Login({ onDone }: { onDone: () => void }) {
         <form className="grid gap-3" onSubmit={(e) => submit(e)}>
           <Input type="email" required placeholder={t("Email")} autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <Input type="password" required minLength={10} placeholder={`${t("Password")} (≥10)`} autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          <p className="-mt-1.5 text-[11px] text-slate-500">New here? Enter any email + a password of 10+ characters and press “{t("Create account")}”.</p>
           <Button disabled={busy}>{t("Sign in")}</Button>
           <Button type="button" variant="outline" disabled={busy} onClick={(e) => submit(e as any, true)}>{t("Create account")}</Button>
         </form>
@@ -51,7 +59,7 @@ function Login({ onDone }: { onDone: () => void }) {
 
 // Viewer navigation. Model/training/data-quality internals live only under /admin (role-gated here AND in the API).
 const NAV = [["/", "Live Map"], ["/overview", "India Map"], ["/state/IN-MH", "State Explorer"], ["/cities", "Cities"],
-  ["/insights", "Insights"], ["/methodology", "Methodology"]] as const;
+  ["/analytics", "Analytics"], ["/insights", "Insights"], ["/methodology", "Methodology"]] as const;
 
 function Shell() {
   const t = useT();
@@ -88,6 +96,7 @@ function Shell() {
             <Route path="/overview" element={<MapOverview />} />
             <Route path="/state/:code" element={<StateExplorer />} />
             <Route path="/cities" element={<Cities />} />
+            <Route path="/analytics" element={<Analytics />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/methodology" element={<Methodology />} />
             <Route path="/admin/*" element={me.isLoading ? <Skeleton className="h-96" /> : me.data?.role === "admin" ? <AdminConsole /> : <Navigate to="/" />} />

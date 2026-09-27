@@ -123,3 +123,15 @@ def test_rbac_viewer_cannot_reach_model_internals(client):
     assert r["forecast"] == "CarbonScope Forecast" and "model" not in r and "version" not in r
     ra = client.get("/api/v1/states/IN-MH/forecast", headers=a).json()
     assert ra["model"] == "gru"
+
+
+def test_analytics_endpoints(client):
+    assert client.get("/api/v2/analytics/national").status_code == 401
+    client.post("/api/v1/auth/register", json={"email": "an@example.com", "password": "viewerpass1"})
+    h = {"Authorization": f"Bearer {_login(client, 'an@example.com', 'viewerpass1')['access_token']}"}
+    for path in ("national", "world", "states", "cities", "facilities?limit=5"):
+        assert client.get(f"/api/v2/analytics/{path}", headers=h).status_code == 200, path
+    st = client.get("/api/v2/analytics/states", headers=h).json()
+    if st["years"]:
+        assert all(len(v) == len(st["years"]) for s in st["data"].values() for v in s.values())
+    assert client.get("/api/v2/analytics/facilities?state=bad", headers=h).status_code == 422

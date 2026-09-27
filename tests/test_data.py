@@ -140,3 +140,17 @@ def test_real_panel_integrity():
     assert (df.co2_mt.dropna() >= 0).all() and df.emissions_source.eq("EDGAR-downscaled").all()
     nat = df.groupby("year").co2_mt.sum()
     assert 400 < nat.loc[1990] < 900 and 2000 < nat.iloc[-1] < 4500  # plausible India fossil CO2 (Mt)
+
+
+def test_climatetrace_subsector_mapping():
+    from src.data.external import ct_sector
+    assert ct_sector("electricity-generation") == "POWER"
+    assert ct_sector("net-forest-land") is None and ct_sector("international-aviation") is None
+    assert ct_sector("iron-and-steel") == "INDUSTRY" and ct_sector("coal-mining") == "OTHER"
+    assert ct_sector("road-transportation") == "TRANSPORT" and ct_sector("rice-cultivation") == "AGRICULTURE"
+
+
+def test_recent_population_anchors_drop_contradiction():
+    from src.data.drivers import recent_anchors
+    assert set(recent_anchors(585764, 0.551, 1263000, 657587)) == {2023}  # DNH&DD source contradiction
+    assert recent_anchors(1e8, 0.2, 1.2e8, 1.21e8) == {2023: 1.2e8, 2024: 1.21e8}

@@ -10,15 +10,23 @@ Output: results/flow_field.json {sector: {bbox, nx, ny, res, u, v, s, dom}} with
 from __future__ import annotations
 
 import json
+from functools import lru_cache
 
 import numpy as np
+import pandas as pd
 from scipy.ndimage import gaussian_filter
 
 from src.data import edgar
-from src.data.cache import ROOT
-from src.data.sectors import BIO, GWP, MAP, SECTORS
+from src.data.cache import PROCESSED, ROOT
+from src.data.sectors import BIO, DIFFUSE, GWP, MAP, SECTORS, undump
 
 RES_DEG = 0.2
+
+
+@lru_cache(1)
+def _india_cells():
+    u = pd.read_parquet(PROCESSED / "edgar_state_weights.parquet", columns=["iy", "ix"]).drop_duplicates()
+    return u.iy.values, u.ix.values
 
 
 def sector_grids(year: int) -> dict[str, np.ndarray]:
@@ -33,6 +41,8 @@ def sector_grids(year: int) -> dict[str, np.ndarray]:
                 except RuntimeError:
                     continue
                 lat, lon = da.lat.values, da.lon.values
+                if sub in DIFFUSE:
+                    arr = undump(arr, _india_cells())
                 f = 1.0 if gas == "CO2" else GWP["N2O"] if gas == "N2O" else GWP["CH4_bio"] if sector in BIO else GWP["CH4_fossil"]
                 acc = arr * f if acc is None else acc + arr * f
         if acc is not None:

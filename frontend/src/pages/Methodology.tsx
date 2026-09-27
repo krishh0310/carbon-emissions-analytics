@@ -13,13 +13,16 @@ const F = ({ name, f, notes }: { name: string; f: string; notes?: string }) => (
 );
 
 const SOURCES: [string, string, string, string, string][] = [
-  ["EDGAR 2025 GHG (EU JRC)", "https://edgar.jrc.ec.europa.eu/dataset_ghg2025", "CO₂/CH₄/N₂O 0.1° sector grids, 1990–2024 — state & city emissions backbone", "CC BY 4.0 (cite JRC)", "all emission layers"],
+  ["EDGAR 2025 GHG (EU JRC)", "https://edgar.jrc.ec.europa.eu/dataset_ghg2025", "CO₂/CH₄/N₂O 0.1° sector grids, 1970–2024 (1970–1989 display-only back-history) — state & city emissions backbone", "CC BY 4.0 (cite JRC)", "all emission layers"],
   ["CEA CO₂ Baseline Database v22", "https://cea.nic.in/cdm-co2-baseline-database/", "Plant-level net generation & CO₂, FY2017–FY2025", "Government of India open data", "power calibration, GEF, generation mix"],
   ["MoSPI GSDP (via Wikipedia mirror of MoSPI tables)", "https://mospi.gov.in", "Real & nominal GSDP 2011-12 series", "GODL-India", "carbon intensity, decoupling"],
   ["Census 2001/2011 + 2023/24 estimates", "https://censusindia.gov.in", "State population, urban share; UA population for cities", "GODL-India", "per-capita values"],
   ["World Bank WDI", "https://data.worldbank.org", "India real GDP & deflator (GSDP back-cast, constant prices)", "CC BY 4.0", "GSDP pre-2011"],
   ["NASA POWER (monthly)", "https://power.larc.nasa.gov", "Temperature, precipitation → CDD/HDD, JJAS monsoon, drought flag", "Public domain (NASA)", "climate layers & drivers"],
   ["OxCGRT subnational", "https://github.com/OxCGRT/covid-policy-dataset", "Lockdown stringency 2020–22", "CC BY 4.0", "COVID shock feature"],
+  ["Our World in Data CO₂ & GHG", "https://github.com/owid/co2-data", "India + peers 1850–latest: fossil CO₂ by fuel, per-capita, cumulative, share of world, total GHG (Jones et al. 2023)", "CC BY 4.0", "Analytics → Global, Sources"],
+  ["World Bank WDI API (EN.GHG.*)", "https://api.worldbank.org/v2/country/IND/indicator/EN.GHG.ALL.MT.CE.AR5", "India total GHG, CO₂, CH₄, N₂O (AR5 CO₂e) 1970–latest", "CC BY 4.0", "Analytics → Sources"],
+  ["Climate TRACE v6 API", "https://api.climatetrace.org/v6", "India emissions by subsector (2021+) and top 900 facilities with coordinates, owner, capacity", "CC BY 4.0", "Analytics → Facilities, Sources"],
   ["Boundaries: datta07/INDIAN-SHAPEFILES", "https://github.com/datta07/INDIAN-SHAPEFILES", "36 state/UT polygons incl. Ladakh", "Open (repository licence)", "maps, grid→state allocation"],
 ];
 
@@ -82,6 +85,10 @@ export default function Methodology() {
             notes="City forecast = Σ_sector state reconciled forecast × city's mean share of that state-sector over the last 3 years." />
           <F name="Source triangulation (power)" f="agreement = 1 − |EDGAR_power − CEA_power| ÷ CEA_power;  divergence flag if > 15 %"
             notes="CEA (plant-level, FY2017+) is the calibration anchor for the power sector; EDGAR is the baseline elsewhere." />
+          <F name="EDGAR single-cell correction (diffuse sectors)" f="if max_cell ÷ Σ_India cells > 20 %:  cell → 0,  others × (Σ_India ÷ Σ_others)"
+            notes="EDGAR parks part of India's enteric-fermentation and manure CH₄ (~57 %) and waste-incineration (~96 %) in one grid cell (11.25°N 78.15°E, Tamil Nadu). For diffuse sectors (livestock, soils, waste, buildings, road) that cell is spread over India's other cells in proportion to their own emissions; the national total is unchanged." />
+          <F name="Climate TRACE → CarbonScope sectors" f="subsector → sector by keyword rules; LULUCF (net-forest, removals, fires) and international aviation/shipping excluded"
+            notes="Coal mining and oil & gas production/refining map to Other. Used only for comparison, never for training." />
           <F name="Scenario counterfactual" f="power × (1 − ΔRE ÷ fossil share) + EV load;  transport × (1 − EV share × road share);  industry × (1+Δg)^t;  buildings × (1 − efficiency)"
             notes="Applied to the reconciled forecast, ramping to 2029; bands widened by ±20 % of the change. The levers never varied in the training data, so they are applied as explicit identities rather than learned responses." />
         </div>

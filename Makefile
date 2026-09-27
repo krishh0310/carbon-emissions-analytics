@@ -3,7 +3,7 @@ export MLFLOW_DISABLE_AGENT_HINT=1
 
 
 .PHONY: scheduler cycle drift
-.PHONY: setup ingest refresh train train-fast train-sectors flow tune explain insights seed api worker web test lint up down paper all
+.PHONY: localdb external setup ingest refresh train train-fast train-sectors flow tune explain insights seed api worker web test lint up down paper all
 
 setup:            ## create venv + install everything
 	python3.11 -m venv .venv || python3 -m venv .venv
@@ -22,6 +22,8 @@ tune:             ## Optuna, 30 trials per deep model -> configs/tuned/*.yaml
 	$(PY) -m src.train.tune --trials 30
 train-sectors:    ## v2: 36x7 state x sector models, two-level MinT, experiments E10-E14
 	$(PY) -m src.train.sector_run
+external:         ## live open APIs (OWID, World Bank, Climate TRACE) + EDGAR 1970–1989 back-history
+	$(PY) -m src.data.external --history
 flow:             ## v2: particle flow field from EDGAR sector grids
 	$(PY) -m src.flowfield
 explain:
@@ -30,8 +32,14 @@ insights:         ## v1 analytics + ATAR insight feed
 	$(PY) -m src.insights
 seed:             ## load processed data + results into PostGIS
 	$(PY) -m alembic upgrade head && $(PY) -m backend.app.seed
-all: ingest train train-sectors flow explain insights seed
+all: ingest external train train-sectors flow explain insights seed
 
+localdb:          ## local Postgres+PostGIS (:5433) and Redis (:6380) with data kept in ~/.carbonscope (survives reboots)
+	@mkdir -p $(HOME)/.carbonscope
+	@test -d $(HOME)/.carbonscope/pg || (initdb -D $(HOME)/.carbonscope/pg -U carbonscope --auth=trust >/dev/null)
+	@pg_ctl -D $(HOME)/.carbonscope/pg status >/dev/null || pg_ctl -D $(HOME)/.carbonscope/pg -o "-p 5433 -k /tmp" -l $(HOME)/.carbonscope/pg.log start
+	@sleep 2; createdb -h 127.0.0.1 -p 5433 -U carbonscope carbonscope 2>/dev/null && psql -h 127.0.0.1 -p 5433 -U carbonscope carbonscope -qc "create extension postgis" && echo "new DB: run make seed" || true
+	@redis-cli -p 6380 ping >/dev/null 2>&1 || redis-server --port 6380 --daemonize yes --dir $(HOME)/.carbonscope
 api:
 	$(PY) -m uvicorn backend.app.main:app --reload --port 8000
 scheduler:        ## continuous-learning scheduler (enqueues jobs for the worker)

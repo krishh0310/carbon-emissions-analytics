@@ -278,6 +278,8 @@ def run_cycle(job_id: int, kind: str = "full", models: list[str] | None = None, 
     try:
         if kind == "incremental":
             before = {k: v.get("sha256") for k, v in _raw_digest().items()}
+            # live external APIs (OWID, World Bank, Climate TRACE) feed Analytics only — never block the cycle
+            _run(job_id, [py, "-m", "src.data.external"], env={"CARBONSCOPE_REFRESH": "1"})
             if not _run(job_id, [py, "-m", "src.data.ingest", "--refresh"]):
                 raise RuntimeError("ingest failed")
             after = {k: v.get("sha256") for k, v in _raw_digest().items()}

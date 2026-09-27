@@ -175,7 +175,7 @@ export function SectorBreakdown({ d }: { d: D }) {
     <div className="grid gap-4">
       <div className="flex items-center gap-2"><h2 className="text-lg font-semibold">Sector breakdown</h2>
         <span className="text-xs text-slate-500 dark:text-slate-500">7 sectors · CO₂e with IPCC AR6 GWP-100 · forecasts reconciled so sectors sum to the state total</span></div>
-      <div className="grid gap-4 lg:grid-cols-[1.6fr_1fr]">
+      <div className="grid gap-4 @3xl:grid-cols-[1.6fr_1fr]">
         <ChartCard name={`${d.name}_sector_stack`} title="1 · Sector composition over time" sub="Stacked: each band is one sector; the top edge is the state total" data={stacked}
           unit="MtCO₂e" source={SRC_EDGAR} loading={d.loading}
           how={how("Band height = sector CO₂e; stack top = Σ sectors = state total", "EDGAR CO₂/CH₄/N₂O sub-sector grids mapped to 7 sectors", "Right-hand shaded years are the reconciled forecast (P50).")}
@@ -207,7 +207,7 @@ export function SectorBreakdown({ d }: { d: D }) {
       <ChartCard name={`${d.name}_small_multiples`} title="2 · Every sector's own trajectory" unit="MtCO₂e (each panel has its own scale)" source={SRC_EDGAR}
         sub="Green area = observed · blue = forecast P50 with P10–P90 fan · arrow = 10-year compound annual growth (CAGR)"
         how={how("CAGR = (value_end ÷ value_start)^(1/years) − 1", `${y0}→${y} observed; forecast = reconciled sector P50`)} loading={d.loading}>
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-7">
+        <div className="grid grid-cols-2 gap-3 @2xl:grid-cols-4 @5xl:grid-cols-7">
           {SECTORS.map((s) => {
             const rows: any[] = d.years.filter((yy) => yy >= 2000).map((yy) => ({ year: yy, hist: d.bySector[s][yy] }));
             const f = d.secFc[s] ?? [];
@@ -241,7 +241,7 @@ export function SectorBreakdown({ d }: { d: D }) {
         </div>
       </ChartCard>
 
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 @3xl:grid-cols-2">
         <ChartCard name={`${d.name}_waterfall`} title={`4 · What changed, ${y0} → ${y}`} data={wf.map(({ name, delta, v }) => ({ name, delta_mt: delta ?? v }))}
           sub="Grey = totals · amber = sector increase · green = sector decrease" unit="MtCO₂e" source={SRC_EDGAR}
           how={how("Δ sector = CO₂e(end) − CO₂e(start); end total = start total + Σ Δ sectors")} loading={d.loading}>
@@ -262,7 +262,7 @@ export function SectorBreakdown({ d }: { d: D }) {
         <ChartCard name={`${d.name}_intensity`} title="6 · Sector carbon intensity" unit="tCO₂e per ₹ crore real GSDP (2011-12 prices)" source={`${SRC_EDGAR} · MoSPI GSDP`}
           sub={`Emissions per unit of economic output, ${d.years.find((yy) => yy >= 2000) ?? 2000}–${y}. Falling = decoupling.`}
           how={how("Sector intensity = sector CO₂e (t) ÷ state real GSDP (₹ crore)", "GSDP at 2011-12 prices; years before FY2011 are back-cast")} loading={d.loading}>
-          <div className="grid grid-cols-2 gap-x-4 gap-y-2 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-4 gap-y-2 @xl:grid-cols-3">
             {SECTORS.map((s) => {
               const rows = d.years.filter((yy) => yy >= 2000 && d.gsdp[yy]).map((yy) => ({ year: yy, v: ((d.bySector[s][yy] ?? 0) * 1e6) / d.gsdp[yy] }));
               const a = rows[0]?.v, b = rows[rows.length - 1]?.v;
@@ -284,7 +284,7 @@ export function SectorBreakdown({ d }: { d: D }) {
         source="CEA · MoSPI · Census · NASA POWER · EDGAR"
         how={how("Influence % = share of the forecast-error increase when an input group is randomly shuffled (permutation importance), normalised to 100 %",
           "Driver values are the observed series used as model inputs", "Chips show the latest value and the change since " + y0 + "; '—' = source not available for this state/year.")}>
-        <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-3 @2xl:grid-cols-2 @5xl:grid-cols-4">
           {SECTORS.map((s) => {
             const inf = Object.entries(drivers.data?.sectors?.[s] ?? {}).slice(0, 3);
             const mets = DRIVER_METRICS[s].map((m) => ({ ...m, now: m.get(d, y), then: m.get(d, y0) })).filter((m) => m.now != null && Number.isFinite(m.now as number)).slice(0, 3);
@@ -330,15 +330,15 @@ export function KpiRow({ d, accent = "#10b981" }: { d: D; accent?: string }) {
     [`Forecast ${k.fcYear ?? ""}`, fmt(k.fc5, 1), "MtCO₂e (P50)", "Σ reconciled sector P50"],
   ];
   return (
-    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-6">
+    <div className="@container"><div className="grid grid-cols-2 gap-2 @xl:grid-cols-3 @5xl:grid-cols-6">
       {items.map(([l, v, u, f]) => (
         <div key={l} className="rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.03] px-3 py-2" style={{ borderTop: `2px solid ${accent}` }}>
-          <div className="flex items-center justify-between text-[11px] text-slate-600 dark:text-slate-400">{glossify(l)}<Info how={{ formula: f, source: SRC_EDGAR }} /></div>
+          <div className="flex items-center justify-between gap-1 text-[11px] text-slate-600 dark:text-slate-400"><span className="truncate">{glossify(l)}</span><Info how={{ formula: f, source: SRC_EDGAR }} /></div>
           <div className="text-lg font-semibold tabular-nums">{v}</div>
           <div className="text-[10px] text-slate-500 dark:text-slate-500">{glossify(u)} · {d.lastObs}</div>
         </div>
       ))}
-    </div>
+    </div></div>
   );
 }
 

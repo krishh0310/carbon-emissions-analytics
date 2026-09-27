@@ -38,13 +38,38 @@ MAP: dict[str, dict[str, list[str]]] = {
     "BUILDINGS": {"CO2": ["RCO"], "CH4": ["RCO"], "N2O": ["RCO"]},
     "AGRICULTURE": {"CO2": ["AGS"], "CH4": ["ENF", "MNM", "AGS", "AWB"], "N2O": ["AGS", "MNM", "AWB"]},
     "WASTE": {"CO2": ["SWD_INC"], "CH4": ["SWD_LDF", "SWD_INC", "WWT"], "N2O": ["SWD_LDF", "SWD_INC", "WWT"]},
-    # explicit OTHER non-CO2 sources; OTHER CO2 is the residual vs TOTALS
-    "OTHER": {"CO2": [], "CH4": ["PRO_COAL", "PRO_GAS", "PRO_OIL", "PRO_FFF"], "N2O": ["PRO_FFF", "IDE", "N2O"]},
+    # explicit OTHER non-CO2 sources; OTHER CO2 is the residual vs TOTALS. PRO_FFF is EDGAR's fuel-exploitation
+    # aggregate (= PRO_COAL + PRO_OIL + PRO_GAS + fossil-fuel fires, checked on the India grids), so the
+    # PRO_COAL/OIL/GAS split grids must not be added on top of it.
+    "OTHER": {"CO2": [], "CH4": ["PRO_FFF"], "N2O": ["PRO_FFF", "IDE", "N2O"]},
 }
 BIO = {"AGRICULTURE", "WASTE"}
 CONFIDENCE = {  # EDGAR sub-national allocation quality by sector (documented judgement, see README)
     "POWER": "B", "INDUSTRY": "B", "TRANSPORT": "B", "BUILDINGS": "C", "AGRICULTURE": "C", "WASTE": "C", "OTHER": "C",
 }
+
+
+# Diffuse (area) sources: no single 0.1° cell can plausibly hold a large share of India's total.
+DIFFUSE = {"ENF", "MNM", "AGS", "AWB", "SWD_LDF", "SWD_INC", "WWT", "RCO", "TRO"}
+DUMP_SHARE = 0.2
+
+
+def undump(arr, cells, share: float = DUMP_SHARE):
+    """EDGAR parks some unallocated national totals in a single cell (India: enteric/manure CH4 ~57% at
+    11.25N 78.15E in Tamil Nadu; waste incineration ~96% in one cell). For diffuse sectors, a cell holding
+    > `share` of India's total is spread over India's other cells in proportion to their own emissions,
+    preserving the national total. `cells` = (iy, ix) index arrays of cells inside India."""
+    v = arr[cells].astype("float64")
+    tot = v.sum()
+    for _ in range(3):
+        k = v.argmax()
+        if tot <= 0 or v[k] / tot < share:
+            break
+        v[k] = 0.0
+        v *= tot / v.sum() if v.sum() > 0 else 1.0
+    out = arr.copy()
+    out[cells] = v
+    return out
 
 
 def grid_jobs(years) -> list[tuple[str, str, int]]:
@@ -89,6 +114,10 @@ def build(bounds: gpd.GeoDataFrame, years) -> tuple[pd.DataFrame, pd.DataFrame]:
             if sw is None:
                 sw = edgar.state_weights(bounds, da.lat.values, da.lon.values)
                 cw = edgar.city_weights(da.lat.values, da.lon.values)
+                u = sw[["iy", "ix"]].drop_duplicates()
+                india = (u.iy.values, u.ix.values)
+            if sec in DIFFUSE:
+                arr = undump(arr, india)
             s, c = agg(arr)
             if sec == "TOTALS":
                 tot_s, tot_c = s, c

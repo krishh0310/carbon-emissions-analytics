@@ -35,11 +35,11 @@ export function Compare({ a, b }: { a: D; b: D }) {
   const names = [a.name ?? "A", b.name ?? "B"];
   return (
     <div className="grid gap-4">
-      <div className="grid gap-3 lg:grid-cols-2">
+      <div className="grid gap-3 @5xl:grid-cols-2">
         <div><div className="mb-1 text-sm font-semibold" style={{ color: A }}>{names[0]}</div><KpiRow d={a} accent={A} /></div>
         <div><div className="mb-1 text-sm font-semibold" style={{ color: B }}>{names[1]}</div><KpiRow d={b} accent={B} /></div>
       </div>
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 @5xl:grid-cols-2">
         {([["Total CO₂e", "a", "b", "MtCO₂e"], ["Per-capita CO₂e", "a_pc", "b_pc", "tCO₂e per person"]] as const).map(([title, ka, kb, unit]) => (
           <ChartCard key={title} name={`compare_${ka}`} title={`${title}: ${names[0]} vs ${names[1]}`} data={merged} unit={unit} source={SRC_EDGAR}
             sub="Charts are synchronised — hover one to read the same year on both" how={{ formula: title.startsWith("Per") ? "CO₂e ÷ population" : "Σ 7 sectors CO₂e" }}>
@@ -59,7 +59,7 @@ export function Compare({ a, b }: { a: D; b: D }) {
           </ChartCard>
         ))}
       </div>
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 @5xl:grid-cols-2">
         <ChartCard name="compare_radar" title={`Sector footprint per person, ${y}`} data={radar} unit="tCO₂e per person (by sector)" source={SRC_EDGAR}
           sub="Radar spokes = sectors; further out = more emissions per resident" how={{ formula: "Sector CO₂e ÷ state population" }}>
           <ResponsiveContainer width="100%" height={300}>

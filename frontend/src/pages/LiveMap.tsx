@@ -411,7 +411,7 @@ export default function LiveMap() {
   const groups = [...new Set(LAYERS.map((l) => l.group))];
 
   return (
-    <div className="relative h-[calc(100vh-49px)] w-full overflow-hidden bg-[#070b16] text-slate-100 select-none">
+    <div className="dark relative h-[calc(100vh-49px)] w-full overflow-hidden bg-[#070b16] text-slate-100 select-none">
       <div className="absolute inset-0"><div ref={el} className="h-full w-full" role="application" aria-label="Interactive India emissions map" /></div>
       <canvas ref={cv} className="pointer-events-none absolute inset-0 z-[1] mix-blend-screen" />
       {(geo.isLoading || ser.isLoading) && <div className="absolute inset-0 grid place-items-center text-sm text-slate-400"><div className="animate-pulse">Loading India…</div></div>}
@@ -529,7 +529,7 @@ export default function LiveMap() {
       )}
 
       {sel && !cmp && (
-        <aside className="absolute inset-y-0 right-0 z-30 flex w-full max-w-[920px] flex-col border-l border-white/10 bg-slate-950/95 shadow-2xl backdrop-blur-xl animate-[slidein_.25s_ease-out]"
+        <aside className="absolute inset-y-0 right-0 z-30 flex text-slate-100 w-full max-w-[920px] flex-col border-l border-white/10 bg-slate-950/95 shadow-2xl backdrop-blur-xl animate-[slidein_.25s_ease-out]"
           aria-label={`${nameOf(sel)} details`}>
           <div className="flex items-center gap-2 border-b border-white/10 px-4 py-2.5">
             <span className="text-base font-semibold">{nameOf(sel)}</span><span className="text-xs text-slate-500">{sel}</span>

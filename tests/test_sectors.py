@@ -143,3 +143,16 @@ def test_scenario_bounds_validated():
         Params(renewable_pp=90).validate()
     with pytest.raises(ValueError):
         Params(industrial_growth_pp=float("nan")).validate()
+
+
+def test_undump_spreads_single_cell_and_preserves_total():
+    import numpy as np
+
+    from src.data.sectors import undump
+    a = np.ones((4, 4))
+    a[1, 2] = 100.0  # one cell parked with most of the national total
+    cells = (np.repeat(np.arange(4), 4), np.tile(np.arange(4), 4))
+    b = undump(a, cells)
+    assert np.isclose(b.sum(), a.sum()) and b[1, 2] == 0 and np.allclose(b[b > 0], b[0, 0])
+    c = np.random.default_rng(0).uniform(1, 2, (4, 4))
+    assert np.array_equal(undump(c, cells), c)  # no dump -> untouched

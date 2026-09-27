@@ -3,6 +3,14 @@
  "best_model": "tcn",
  "decoupling": [
   {
+   "state_code": "IN-DH",
+   "gsdp_cagr": 12.6462074326,
+   "co2_cagr": 3.5738548567,
+   "decoupling_index": 9.072352576,
+   "status": "relative",
+   "gsdp_imputed": true
+  },
+  {
    "state_code": "IN-JK",
    "gsdp_cagr": 11.279605673,
    "co2_cagr": 2.8665634852,
@@ -12,9 +20,9 @@
   },
   {
    "state_code": "IN-LD",
-   "gsdp_cagr": 6.9698084475,
+   "gsdp_cagr": 6.781963123,
    "co2_cagr": -1.175028988,
-   "decoupling_index": 8.1448374355,
+   "decoupling_index": 7.956992111,
    "status": "absolute",
    "gsdp_imputed": true
   },
@@ -251,14 +259,6 @@
    "gsdp_imputed": false
   },
   {
-   "state_code": "IN-DH",
-   "gsdp_cagr": 4.855421183,
-   "co2_cagr": 3.5738548567,
-   "decoupling_index": 1.2815663264,
-   "status": "relative",
-   "gsdp_imputed": true
-  },
-  {
    "state_code": "IN-UP",
    "gsdp_cagr": 6.3079265065,
    "co2_cagr": 5.2573785036,
@@ -485,14 +485,6 @@
    "coal_dependence": 0.1484510145
   },
   {
-   "state_code": "IN-DH",
-   "co2_mt": 1.1565508279,
-   "gsdp_const_cr": 14794.015190174,
-   "tco2_per_crore": 78.1769393229,
-   "per_capita_t": 1.7587799453,
-   "coal_dependence": 0.0
-  },
-  {
    "state_code": "IN-NL",
    "co2_mt": 1.6689300133,
    "gsdp_const_cr": 27659.7053192139,
@@ -515,6 +507,14 @@
    "tco2_per_crore": 42.7511215131,
    "per_capita_t": 0.7548891046,
    "coal_dependence": 0.0006296966
+  },
+  {
+   "state_code": "IN-DH",
+   "co2_mt": 1.1565508279,
+   "gsdp_const_cr": 30293.0439320727,
+   "tco2_per_crore": 38.1787591388,
+   "per_capita_t": 0.858923827,
+   "coal_dependence": 0.0
   },
   {
    "state_code": "IN-KL",
@@ -553,7 +553,7 @@
    "co2_mt": 0.8492819932,
    "gsdp_const_cr": 30752.4571798011,
    "tco2_per_crore": 27.6167198036,
-   "per_capita_t": 0.6104834539,
+   "per_capita_t": 0.5041999347,
    "coal_dependence": 0.0749448721
   },
   {
@@ -575,8 +575,8 @@
   {
    "state_code": "IN-LD",
    "co2_mt": 0.0241404571,
-   "gsdp_const_cr": 1586.6077993441,
-   "tco2_per_crore": 15.2151382926,
+   "gsdp_const_cr": 1558.9651691899,
+   "tco2_per_crore": 15.4849239484,
    "per_capita_t": 0.3498616969,
    "coal_dependence": 0.9721824318
   }
@@ -585,10 +585,10 @@
   {
    "index": 5,
    "state_code": "IN-CG",
-   "forecast_cagr_5y": 5.3119873669,
-   "fair_share_cagr_5y": 0.8620513871,
-   "excess_pp": 4.4499359798,
-   "forecast_2029_mt": 314.709439551,
+   "forecast_cagr_5y": 5.3119883641,
+   "fair_share_cagr_5y": 0.8614384616,
+   "excess_pp": 4.4505499025,
+   "forecast_2029_mt": 314.7094544509,
    "p90_mt": 364.2001359198,
    "coal_dependence": 0.5774558415,
    "on_watchlist": true
@@ -596,10 +596,10 @@
   {
    "index": 15,
    "state_code": "IN-KA",
-   "forecast_cagr_5y": 4.8390139591,
-   "fair_share_cagr_5y": 2.3117664064,
-   "excess_pp": 2.5272475527,
-   "forecast_2029_mt": 256.0506530024,
+   "forecast_cagr_5y": 4.8390148932,
+   "fair_share_cagr_5y": 2.3101227219,
+   "excess_pp": 2.5288921714,
+   "forecast_2029_mt": 256.0506644094,
    "p90_mt": 275.5445934604,
    "coal_dependence": 0.2548603789,
    "on_watchlist": true
@@ -607,10 +607,10 @@
   {
    "index": 25,
    "state_code": "IN-OD",
-   "forecast_cagr_5y": 3.709446334,
-   "fair_share_cagr_5y": 1.4191693536,
-   "excess_pp": 2.2902769804,
-   "forecast_2029_mt": 270.1087949713,
+   "forecast_cagr_5y": 3.7094470861,
+   "fair_share_cagr_5y": 1.4181603127,
+   "excess_pp": 2.2912867733,
+   "forecast_2029_mt": 270.1088047654,
    "p90_mt": 293.5324812191,
    "coal_dependence": 0.4536468642,
    "on_watchlist": true
@@ -618,10 +618,10 @@
   {
    "index": 1,
    "state_code": "IN-AP",
-   "forecast_cagr_5y": 3.7046225578,
-   "fair_share_cagr_5y": 2.0262599276,
-   "excess_pp": 1.6783626302,
-   "forecast_2029_mt": 216.6510851715,
+   "forecast_cagr_5y": 3.704622882,
+   "fair_share_cagr_5y": 2.0248192404,
+   "excess_pp": 1.6798036416,
+   "forecast_2029_mt": 216.6510885582,
    "p90_mt": 236.1497909235,
    "coal_dependence": 0.367081231,
    "on_watchlist": true
@@ -629,10 +629,10 @@
   {
    "index": 17,
    "state_code": "IN-LA",
-   "forecast_cagr_5y": 2.0284013951,
-   "fair_share_cagr_5y": 0.6309001283,
-   "excess_pp": 1.3975012669,
-   "forecast_2029_mt": 3.6313170998,
+   "forecast_cagr_5y": 2.0284014248,
+   "fair_share_cagr_5y": 0.6304515532,
+   "excess_pp": 1.3979498716,
+   "forecast_2029_mt": 3.6313171051,
    "p90_mt": 3.9344359028,
    "coal_dependence": 0.0,
    "on_watchlist": false
@@ -640,10 +640,10 @@
   {
    "index": 10,
    "state_code": "IN-GJ",
-   "forecast_cagr_5y": 3.3091737941,
-   "fair_share_cagr_5y": 1.9934180726,
-   "excess_pp": 1.3157557215,
-   "forecast_2029_mt": 293.1224328748,
+   "forecast_cagr_5y": 3.3091775409,
+   "fair_share_cagr_5y": 1.9920007363,
+   "excess_pp": 1.3171768046,
+   "forecast_2029_mt": 293.1224860288,
    "p90_mt": 309.2456500574,
    "coal_dependence": 0.3708985614,
    "on_watchlist": true
@@ -651,10 +651,10 @@
   {
    "index": 28,
    "state_code": "IN-RJ",
-   "forecast_cagr_5y": 4.6138002711,
-   "fair_share_cagr_5y": 3.6882236051,
-   "excess_pp": 0.925576666,
-   "forecast_2029_mt": 190.9009464584,
+   "forecast_cagr_5y": 4.6138006669,
+   "fair_share_cagr_5y": 3.6856012484,
+   "excess_pp": 0.9281994185,
+   "forecast_2029_mt": 190.9009500697,
    "p90_mt": 205.6450580256,
    "coal_dependence": 0.3782312161,
    "on_watchlist": true
@@ -662,10 +662,10 @@
   {
    "index": 22,
    "state_code": "IN-MP",
-   "forecast_cagr_5y": 3.3180730518,
-   "fair_share_cagr_5y": 2.7791986355,
-   "excess_pp": 0.5388744163,
-   "forecast_2029_mt": 254.6408164543,
+   "forecast_cagr_5y": 3.3180744043,
+   "fair_share_cagr_5y": 2.7772226029,
+   "excess_pp": 0.5408518014,
+   "forecast_2029_mt": 254.6408331211,
    "p90_mt": 283.0340967247,
    "coal_dependence": 0.6827335634,
    "on_watchlist": true
@@ -673,10 +673,10 @@
   {
    "index": 19,
    "state_code": "IN-MH",
-   "forecast_cagr_5y": 2.7930413744,
-   "fair_share_cagr_5y": 2.6250899335,
-   "excess_pp": 0.1679514409,
-   "forecast_2029_mt": 382.553675265,
+   "forecast_cagr_5y": 2.7930428974,
+   "fair_share_cagr_5y": 2.6232234734,
+   "excess_pp": 0.169819424,
+   "forecast_2029_mt": 382.5537036035,
    "p90_mt": 427.7667406159,
    "coal_dependence": 0.5524165916,
    "on_watchlist": true
@@ -684,10 +684,10 @@
   {
    "index": 30,
    "state_code": "IN-TN",
-   "forecast_cagr_5y": 3.3206274832,
-   "fair_share_cagr_5y": 3.268743478,
-   "excess_pp": 0.0518840052,
-   "forecast_2029_mt": 190.5281649895,
+   "forecast_cagr_5y": 3.3206277159,
+   "fair_share_cagr_5y": 3.266419375,
+   "excess_pp": 0.0542083409,
+   "forecast_2029_mt": 190.5281671355,
    "p90_mt": 208.4202803923,
    "coal_dependence": 0.420162972,
    "on_watchlist": true
@@ -695,10 +695,10 @@
   {
    "index": 13,
    "state_code": "IN-JH",
-   "forecast_cagr_5y": 1.0786315853,
-   "fair_share_cagr_5y": 1.9612307944,
-   "excess_pp": -0.8825992091,
-   "forecast_2029_mt": 147.5158157298,
+   "forecast_cagr_5y": 1.0786323351,
+   "fair_share_cagr_5y": 1.9598363435,
+   "excess_pp": -0.8812040085,
+   "forecast_2029_mt": 147.5158212006,
    "p90_mt": 157.5855991898,
    "coal_dependence": 0.3983516782,
    "on_watchlist": false
@@ -706,10 +706,10 @@
   {
    "index": 32,
    "state_code": "IN-TS",
-   "forecast_cagr_5y": 1.4237852895,
-   "fair_share_cagr_5y": 2.3140973083,
-   "excess_pp": -0.8903120187,
-   "forecast_2029_mt": 121.7898380905,
+   "forecast_cagr_5y": 1.423785599,
+   "fair_share_cagr_5y": 2.3124519665,
+   "excess_pp": -0.8886663675,
+   "forecast_2029_mt": 121.7898399483,
    "p90_mt": 128.1797517909,
    "coal_dependence": 0.5835124189,
    "on_watchlist": false
@@ -717,10 +717,10 @@
   {
    "index": 12,
    "state_code": "IN-HR",
-   "forecast_cagr_5y": 1.9077985027,
-   "fair_share_cagr_5y": 3.1327569922,
-   "excess_pp": -1.2249584894,
-   "forecast_2029_mt": 73.5971308543,
+   "forecast_cagr_5y": 1.9078001726,
+   "fair_share_cagr_5y": 3.1305295767,
+   "excess_pp": -1.2227294041,
+   "forecast_2029_mt": 73.5971368841,
    "p90_mt": 79.89614502,
    "coal_dependence": 0.434758743,
    "on_watchlist": false
@@ -728,9 +728,9 @@
   {
    "index": 18,
    "state_code": "IN-LD",
-   "forecast_cagr_5y": 5.2349898698,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -1.2257394064,
+   "forecast_cagr_5y": 5.2349898716,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -1.2256657063,
    "forecast_2029_mt": 0.0311563308,
    "p90_mt": 0.0432032797,
    "coal_dependence": 0.9721824318,
@@ -739,10 +739,10 @@
   {
    "index": 11,
    "state_code": "IN-HP",
-   "forecast_cagr_5y": 1.476239151,
-   "fair_share_cagr_5y": 2.7409852221,
-   "excess_pp": -1.2647460711,
-   "forecast_2029_mt": 20.215209947,
+   "forecast_cagr_5y": 1.4762392353,
+   "fair_share_cagr_5y": 2.7390363595,
+   "excess_pp": -1.2627971242,
+   "forecast_2029_mt": 20.2152100311,
    "p90_mt": 21.2507467409,
    "coal_dependence": 0.0,
    "on_watchlist": false
@@ -750,10 +750,10 @@
   {
    "index": 20,
    "state_code": "IN-ML",
-   "forecast_cagr_5y": 1.5056390899,
-   "fair_share_cagr_5y": 2.8334549373,
-   "excess_pp": -1.3278158475,
-   "forecast_2029_mt": 8.8172908808,
+   "forecast_cagr_5y": 1.5056391168,
+   "fair_share_cagr_5y": 2.831440328,
+   "excess_pp": -1.3258012112,
+   "forecast_2029_mt": 8.8172908925,
    "p90_mt": 9.320024907,
    "coal_dependence": 0.0163216771,
    "on_watchlist": false
@@ -761,43 +761,43 @@
   {
    "index": 35,
    "state_code": "IN-WB",
-   "forecast_cagr_5y": 2.6112169492,
-   "fair_share_cagr_5y": 4.3862131986,
-   "excess_pp": -1.7749962494,
-   "forecast_2029_mt": 177.1719092643,
+   "forecast_cagr_5y": 2.6112176025,
+   "fair_share_cagr_5y": 4.3830945656,
+   "excess_pp": -1.7718769631,
+   "forecast_2029_mt": 177.1719149047,
    "p90_mt": 194.6878337092,
    "coal_dependence": 0.3828787306,
    "on_watchlist": false
   },
   {
-   "index": 0,
-   "state_code": "IN-AN",
-   "forecast_cagr_5y": 1.0114058725,
-   "fair_share_cagr_5y": 2.8081189972,
-   "excess_pp": -1.7967131247,
-   "forecast_2029_mt": 1.038078922,
-   "p90_mt": 1.0958597631,
-   "coal_dependence": 0.3191648031,
-   "on_watchlist": false
-  },
-  {
    "index": 26,
    "state_code": "IN-PB",
-   "forecast_cagr_5y": 1.9191016923,
-   "fair_share_cagr_5y": 3.71618837,
-   "excess_pp": -1.7970866777,
-   "forecast_2029_mt": 62.7937478363,
+   "forecast_cagr_5y": 1.9191027425,
+   "fair_share_cagr_5y": 3.7135461301,
+   "excess_pp": -1.7944433876,
+   "forecast_2029_mt": 62.7937510717,
    "p90_mt": 74.0288269165,
    "coal_dependence": 0.5293202883,
    "on_watchlist": false
   },
   {
+   "index": 0,
+   "state_code": "IN-AN",
+   "forecast_cagr_5y": 1.0114058846,
+   "fair_share_cagr_5y": 2.806122402,
+   "excess_pp": -1.7947165173,
+   "forecast_2029_mt": 1.0380789226,
+   "p90_mt": 1.0958597631,
+   "coal_dependence": 0.3191648031,
+   "on_watchlist": false
+  },
+  {
    "index": 4,
    "state_code": "IN-BR",
-   "forecast_cagr_5y": 3.7175943777,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -2.7431348985,
-   "forecast_2029_mt": 111.007156392,
+   "forecast_cagr_5y": 3.7175947927,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -2.7430607852,
+   "forecast_2029_mt": 111.0071586128,
    "p90_mt": 131.2520124027,
    "coal_dependence": 0.604687737,
    "on_watchlist": false
@@ -805,32 +805,21 @@
   {
    "index": 23,
    "state_code": "IN-MZ",
-   "forecast_cagr_5y": 1.2131886495,
-   "fair_share_cagr_5y": 4.0650816163,
-   "excess_pp": -2.8518929668,
-   "forecast_2029_mt": 2.2409837979,
+   "forecast_cagr_5y": 1.2131886627,
+   "fair_share_cagr_5y": 4.0621913105,
+   "excess_pp": -2.8490026478,
+   "forecast_2029_mt": 2.2409837994,
    "p90_mt": 2.3871915737,
-   "coal_dependence": 0.0,
-   "on_watchlist": false
-  },
-  {
-   "index": 7,
-   "state_code": "IN-DH",
-   "forecast_cagr_5y": 0.9200746177,
-   "fair_share_cagr_5y": 3.9012244036,
-   "excess_pp": -2.9811497859,
-   "forecast_2029_mt": 1.210744594,
-   "p90_mt": 1.2174643845,
    "coal_dependence": 0.0,
    "on_watchlist": false
   },
   {
    "index": 33,
    "state_code": "IN-UK",
-   "forecast_cagr_5y": 3.0856209472,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -3.375108329,
-   "forecast_2029_mt": 9.7955420303,
+   "forecast_cagr_5y": 3.0856209998,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -3.3750345781,
+   "forecast_2029_mt": 9.7955420553,
    "p90_mt": 11.1073090698,
    "coal_dependence": 0.0820347724,
    "on_watchlist": false
@@ -838,10 +827,10 @@
   {
    "index": 14,
    "state_code": "IN-JK",
-   "forecast_cagr_5y": 3.0380066998,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -3.4227225763,
-   "forecast_2029_mt": 12.0122030908,
+   "forecast_cagr_5y": 3.0380067339,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -3.422648844,
+   "forecast_2029_mt": 12.0122031106,
    "p90_mt": 13.4460091938,
    "coal_dependence": 0.0006296966,
    "on_watchlist": false
@@ -849,10 +838,10 @@
   {
    "index": 2,
    "state_code": "IN-AR",
-   "forecast_cagr_5y": 0.8658889663,
-   "fair_share_cagr_5y": 4.4388951333,
-   "excess_pp": -3.573006167,
-   "forecast_2029_mt": 2.5434041022,
+   "forecast_cagr_5y": 0.8658889929,
+   "fair_share_cagr_5y": 4.4357390431,
+   "excess_pp": -3.5698500502,
+   "forecast_2029_mt": 2.5434041056,
    "p90_mt": 2.7977863759,
    "coal_dependence": 0.0011262337,
    "on_watchlist": false
@@ -860,10 +849,10 @@
   {
    "index": 16,
    "state_code": "IN-KL",
-   "forecast_cagr_5y": 2.7046864975,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -3.7560427787,
-   "forecast_2029_mt": 32.0588593452,
+   "forecast_cagr_5y": 2.7046867272,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -3.7559688507,
+   "forecast_2029_mt": 32.0588597037,
    "p90_mt": 35.1890887337,
    "coal_dependence": 0.0222123082,
    "on_watchlist": false
@@ -871,10 +860,10 @@
   {
    "index": 3,
    "state_code": "IN-AS",
-   "forecast_cagr_5y": 2.2323583152,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -4.228370961,
-   "forecast_2029_mt": 34.3819769483,
+   "forecast_cagr_5y": 2.2323587923,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -4.2282967856,
+   "forecast_2029_mt": 34.3819777506,
    "p90_mt": 38.0831723789,
    "coal_dependence": 0.1484510145,
    "on_watchlist": false
@@ -882,10 +871,10 @@
   {
    "index": 29,
    "state_code": "IN-SK",
-   "forecast_cagr_5y": 1.1304934198,
-   "fair_share_cagr_5y": 5.419270411,
-   "excess_pp": -4.2887769911,
-   "forecast_2029_mt": 0.9308228816,
+   "forecast_cagr_5y": 1.1304934265,
+   "fair_share_cagr_5y": 5.415417266,
+   "excess_pp": -4.2849238396,
+   "forecast_2029_mt": 0.9308228819,
    "p90_mt": 0.9931790175,
    "coal_dependence": 2e-10,
    "on_watchlist": false
@@ -893,10 +882,10 @@
   {
    "index": 34,
    "state_code": "IN-UP",
-   "forecast_cagr_5y": 1.8655152572,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -4.5952140189,
-   "forecast_2029_mt": 275.1691539494,
+   "forecast_cagr_5y": 1.8655156296,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -4.5951399483,
+   "forecast_2029_mt": 275.1691589787,
    "p90_mt": 286.0218108567,
    "coal_dependence": 0.5830929747,
    "on_watchlist": false
@@ -904,10 +893,10 @@
   {
    "index": 31,
    "state_code": "IN-TR",
-   "forecast_cagr_5y": 1.7157801647,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -4.7449491114,
-   "forecast_2029_mt": 2.6581205133,
+   "forecast_cagr_5y": 1.7157801996,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -4.7448753783,
+   "forecast_2029_mt": 2.6581205179,
    "p90_mt": 2.7784166665,
    "coal_dependence": 0.3047660125,
    "on_watchlist": false
@@ -915,10 +904,10 @@
   {
    "index": 8,
    "state_code": "IN-DL",
-   "forecast_cagr_5y": 1.6765094469,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -4.7842198293,
-   "forecast_2029_mt": 15.0662085861,
+   "forecast_cagr_5y": 1.6765098342,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -4.7841457437,
+   "forecast_2029_mt": 15.066208873,
    "p90_mt": 16.3283929062,
    "coal_dependence": 0.1237244487,
    "on_watchlist": false
@@ -926,54 +915,65 @@
   {
    "index": 24,
    "state_code": "IN-NL",
-   "forecast_cagr_5y": 1.4580087018,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -5.0027205743,
-   "forecast_2029_mt": 1.7941956364,
+   "forecast_cagr_5y": 1.4580087099,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -5.002646868,
+   "forecast_2029_mt": 1.7941956371,
    "p90_mt": 1.9924630706,
    "coal_dependence": 0.0289012493,
    "on_watchlist": false
   },
   {
-   "index": 21,
-   "state_code": "IN-MN",
-   "forecast_cagr_5y": 1.2528508426,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -5.2078784335,
-   "forecast_2029_mt": 2.9217025373,
-   "p90_mt": 3.1402496671,
+   "index": 9,
+   "state_code": "IN-GA",
+   "forecast_cagr_5y": 0.864157181,
+   "fair_share_cagr_5y": 6.0715477681,
+   "excess_pp": -5.2073905871,
+   "forecast_2029_mt": 1.8662480144,
+   "p90_mt": 2.0767530698,
    "coal_dependence": 0.0,
    "on_watchlist": false
   },
   {
-   "index": 9,
-   "state_code": "IN-GA",
-   "forecast_cagr_5y": 0.864157168,
-   "fair_share_cagr_5y": 6.0758677591,
-   "excess_pp": -5.2117105911,
-   "forecast_2029_mt": 1.8662480132,
-   "p90_mt": 2.0767530698,
+   "index": 21,
+   "state_code": "IN-MN",
+   "forecast_cagr_5y": 1.2528508611,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -5.2078047168,
+   "forecast_2029_mt": 2.92170254,
+   "p90_mt": 3.1402496671,
    "coal_dependence": 0.0,
    "on_watchlist": false
   },
   {
    "index": 27,
    "state_code": "IN-PY",
-   "forecast_cagr_5y": 1.0426202339,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -5.4181090422,
-   "forecast_2029_mt": 0.8944888166,
-   "p90_mt": 0.9514050921,
+   "forecast_cagr_5y": 1.0261610741,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -5.4344945038,
+   "forecast_2029_mt": 0.893760523,
+   "p90_mt": 0.9501112722,
    "coal_dependence": 0.0749448721,
+   "on_watchlist": false
+  },
+  {
+   "index": 7,
+   "state_code": "IN-DH",
+   "forecast_cagr_5y": 0.8251909119,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -5.635464666,
+   "forecast_2029_mt": 1.2050636568,
+   "p90_mt": 1.2720981498,
+   "coal_dependence": 0.0,
    "on_watchlist": false
   },
   {
    "index": 6,
    "state_code": "IN-CH",
-   "forecast_cagr_5y": 0.7472174202,
-   "fair_share_cagr_5y": 6.4607292761,
-   "excess_pp": -5.713511856,
-   "forecast_2029_mt": 0.8213742974,
+   "forecast_cagr_5y": 0.7472174307,
+   "fair_share_cagr_5y": 6.4606555779,
+   "excess_pp": -5.7134381472,
+   "forecast_2029_mt": 0.8213742978,
    "p90_mt": 0.8867655351,
    "coal_dependence": 0.0,
    "on_watchlist": false

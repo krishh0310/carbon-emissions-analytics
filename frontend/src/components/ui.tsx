@@ -17,12 +17,13 @@ export function Card({ className, ...p }: HTMLAttributes<HTMLDivElement>) {
 
 export function CardTitle({ children, sub, right }: { children: ReactNode; sub?: ReactNode; right?: ReactNode }) {
   return (
-    <div className="mb-3 flex flex-wrap items-start justify-between gap-2">
-      <div>
+    <div className="mb-3 flex items-start justify-between gap-2">
+      {/* text wraps; action buttons stay pinned top-right instead of dropping under a long subtitle */}
+      <div className="min-w-0 flex-1">
         <h3 className="text-sm font-semibold tracking-tight">{children}</h3>
         {sub && <p className="mt-0.5 text-xs text-slate-500 dark:text-slate-400">{sub}</p>}
       </div>
-      {right}
+      {right && <div className="shrink-0">{right}</div>}
     </div>
   );
 }

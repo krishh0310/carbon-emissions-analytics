@@ -1,16 +1,16 @@
-\begin{tabular}{lrrrrrr}
+\begin{tabular}{lrrrrrrrrr}
 \toprule
-Group & GRU + emb. & LightGBM (panel) & mt_tft & Ridge (panel) & Seq2Seq-Attn & TFT-lite \\
+Group & GRU + emb. & LightGBM (panel) & lightgbm_sector & mt_gru & mt_tft & Ridge (panel) & Seq2Seq-Attn & TCN + emb. & TFT-lite \\
 \midrule
-climate & 0.133 & -0.026 & 0.038 & 0.122 & -0.047 & -0.002 \\
-demography & 0.302 & 0.133 & 0.046 & 0.731 & 0.271 & 0.012 \\
-economy & 0.705 & 0.176 & 0.004 & 0.804 & 0.229 & 0.173 \\
-energy & -0.046 & 0.064 & nan & 0.996 & -0.193 & -0.069 \\
-history & 0.932 & 0.688 & nan & 0.560 & 0.697 & 0.480 \\
-policy & 0.187 & 0.006 & 0.161 & 0.239 & 0.200 & 0.061 \\
-sector_drivers & nan & nan & 0.632 & nan & nan & nan \\
-sector_history & nan & nan & 0.741 & nan & nan & nan \\
-state_total_history & nan & nan & 0.000 & nan & nan & nan \\
-transport & 0.350 & 0.169 & nan & 0.487 & 0.145 & 0.009 \\
+climate & 0.025 & -0.002 & 0.092 & 0.054 & 0.264 & 0.197 & 0.024 & 0.066 & 0.021 \\
+demography & 0.113 & 0.046 & 0.397 & 0.086 & 0.296 & 0.570 & 0.070 & 0.071 & 0.123 \\
+economy & 0.328 & 0.104 & 0.921 & 0.469 & 0.024 & 1.308 & 0.177 & 0.151 & 0.105 \\
+energy & 0.232 & 0.059 & nan & nan & nan & 1.658 & 0.151 & nan & -0.009 \\
+history & 0.673 & 0.741 & nan & nan & nan & 0.589 & 0.483 & nan & 0.517 \\
+policy & 0.130 & 0.000 & 0.000 & 0.065 & 0.005 & 0.369 & 0.104 & -0.024 & 0.006 \\
+sector_drivers & 0.029 & 0.034 & 0.093 & 0.052 & 0.063 & nan & -0.049 & 0.016 & 0.053 \\
+sector_history & 1.357 & 6.396 & 6.145 & 1.058 & 2.040 & nan & 1.385 & 0.967 & 1.095 \\
+state_total_history & 0.020 & 0.030 & 0.459 & 0.044 & 0.144 & nan & -0.007 & 0.015 & 0.020 \\
+transport & 0.296 & 0.161 & nan & nan & nan & 0.407 & -0.024 & nan & 0.595 \\
 \bottomrule
 \end{tabular}

@@ -1,5 +1,40 @@
 # Changelog
 
+## v3.1 — live open-data APIs, 1970+ history, Analytics page (2026-09-27)
+
+### Data
+- **New sources (no API key, SHA-256 cached, `make external`):**
+  - Our World in Data CO₂/GHG: India + 11 peers, 1850–2024.
+  - World Bank WDI `EN.GHG.*` API: India, 1970–2024.
+  - Climate TRACE v6 API: India by subsector 2021–2025, plus the top 900 facilities with coordinates, owner and capacity, assigned to states by point-in-polygon.
+- **EDGAR back-history 1970–1989:** state and city × sector, built with the same method as the panel from 1,000 extra grids. It is used for display only; training splits are unchanged.
+- **Fix: single-cell dumps.** EDGAR parks ~57% of India's enteric/manure CH₄ and ~96% of waste-incineration emissions in one 0.1° cell in Tamil Nadu. As a result, Tamil Nadu showed 269 Mt of agriculture. For diffuse sectors, such a cell is now spread over India's other cells in proportion to their own emissions, preserving the national total. Uttar Pradesh is now the top agriculture state (106 Mt).
+- **Fix: fuel-exploitation CH₄ double count.** `PRO_FFF` is EDGAR's aggregate of `PRO_COAL + PRO_OIL + PRO_GAS` (+ fires), verified on the India grids. It had been added on top of its own parts, inflating OTHER by ~88 Mt CO₂e in 2023.
+- The monthly incremental cycle now refreshes the external APIs. Analytics picks up new files without an API restart (mtime-keyed cache).
+
+### Product
+- **`/analytics`** (viewer): Sectors · States · Cities · Compare · Global · Facilities · Sources.
+  - **Sectors:** every sector on its own chart with its top-5 states.
+  - **States (36) and cities (64):** small multiples with a drill-down (stacked chart plus 7 per-sector charts).
+  - **Compare:** up to 8 states or cities; absolute, indexed or share views; sector mix; key-number table.
+  - **Global:** India vs peers since 1850; CO₂ by fuel.
+  - **Facilities:** Climate TRACE facility rankings.
+  - **Sources:** 4-source triangulation (EDGAR, OWID, World Bank, Climate TRACE) and EDGAR-vs-Climate TRACE by sector.
+  - Every chart exports to PNG and CSV.
+- **API `/api/v2/analytics/{national,world,states,cities,facilities}`:** viewer-auth, parquet-backed, no model internals.
+- **Methodology:** added 3 new sources and 2 new formulas (dump correction, Climate TRACE mapping).
+- **Sector models retrained** on the corrected panel. Results are updated in the README.
+- **Fix: contradictory population anchors.** The source table gives DNH&DD 1.26 M (2023) but 0.66 M (2024), and Puducherry has a similar drop. When the 2023 and 2024 figures differ by more than 10%, the one closer to the 2001–2011 trend is kept. This removes a false 2024 per-capita spike.
+- State models were retrained as a result. Deep-model rankings moved noticeably: TFT went from 2.90 to 4.47 at h=5, and Seq2Seq is now best. This is reported as-is; paper tables were regenerated.
+
+### UI fixes
+- **Live Map slide-over and compare in light mode:** the panel is always dark, but its cards switched to light styling, giving white-on-white text. The Live Map now scopes `.dark` to itself.
+- **Congested KPI and compare grids:** layouts now use container queries (`@container`, `@xl` / `@5xl`), so they adapt to the panel width rather than the window width. KPIs show 3 per row in the slide-over and in compare halves.
+- **KPI labels:** labels such as "10-yr CAGR" no longer get split across the card by `justify-between`.
+- **Chart cards:** export and info buttons stay pinned top-right instead of wrapping under long subtitles.
+- **Create account:** runs form validation first (valid email, 10+ characters), explains itself on the login card, and shows clear messages for duplicate email, wrong password and rate limiting.
+- **Local database:** moved to `~/.carbonscope` via `make localdb`. It previously lived in a temporary folder, so it and every account in it could vanish.
+
 ## v3.0 — premium optimization pass (2026-09-26)
 
 ### Stage 1 — RBAC split (viewer / admin)

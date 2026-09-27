@@ -144,6 +144,16 @@ def gsdp() -> pd.DataFrame:
 
 
 # ---- Population (Census 2001/2011 + 2023/2024 estimates) ------------------------------------------
+def recent_anchors(p2011: float, growth: float | None, p2023: float | None, p2024: float | None) -> dict[int, float]:
+    """2023/2024 population anchors. The source table sometimes carries contradictory figures (e.g. DNH&DD:
+    2023 = 1.26 M, 2024 = 0.66 M). If the two differ by > 10 %, keep the one closer to the 2001–2011 trend."""
+    a = {y: v for y, v in ((2023, p2023), (2024, p2024)) if v is not None and pd.notna(v) and v > 0}
+    if len(a) == 2 and abs(np.log(a[2024] / a[2023])) > np.log(1.1):
+        g = (1 + growth) ** 0.1 - 1 if growth is not None and pd.notna(growth) else 0.012
+        a = {y: v for y, v in a.items() if y == min(a, key=lambda k: abs(np.log(a[k] / (p2011 * (1 + g) ** (k - 2011)))))}
+    return a
+
+
 def population() -> pd.DataFrame:
     t = _wiki_tables("List_of_states_and_union_territories_of_India_by_population")[1]
     t.columns = [" ".join(dict.fromkeys(map(str, c))) if isinstance(c, tuple) else str(c) for c in t.columns]
@@ -164,9 +174,7 @@ def population() -> pd.DataFrame:
         anchors = {2011: r.p2011}
         if pd.notna(r.growth):
             anchors[2001] = r.p2011 / (1 + r.growth)
-        for y, v in ((2023, r.p2023), (2024, r.p2024)):
-            if pd.notna(v) and v > 0:
-                anchors[y] = v
+        anchors.update(recent_anchors(r.p2011, r.growth, r.p2023, r.p2024))
         ay = np.array(sorted(anchors))
         av = np.log([anchors[y] for y in ay])
         for y in range(1990, 2026):

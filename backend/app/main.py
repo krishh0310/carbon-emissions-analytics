@@ -332,7 +332,9 @@ def healthz():
 app.include_router(api)
 
 from backend.app.admin import router as admin_router  # noqa: E402
+from backend.app.analytics import router as analytics_router  # noqa: E402
 from backend.app.v2 import router as v2_router  # noqa: E402
 
 app.include_router(v2_router)
 app.include_router(admin_router)
+app.include_router(analytics_router)

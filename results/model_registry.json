@@ -1,7 +1,7 @@
 {
  "naive": {
   "name": "naive",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -25,7 +25,7 @@
  },
  "drift": {
   "name": "drift",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -49,7 +49,7 @@
  },
  "ridge": {
   "name": "ridge",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -71,11 +71,11 @@
    "test_mase_h5": 10.99692639208695
   },
   "checkpoint_path": "models/checkpoints/ridge.joblib",
-  "train_time_s": 0.06
+  "train_time_s": 0.07
  },
  "lightgbm": {
   "name": "lightgbm",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -99,11 +99,11 @@
    "test_mase_h5": 6.25154934530779
   },
   "checkpoint_path": "models/checkpoints/lightgbm.joblib",
-  "train_time_s": 1.53
+  "train_time_s": 1.55
  },
  "arima": {
   "name": "arima",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -129,7 +129,7 @@
  },
  "lstm": {
   "name": "lstm",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -157,11 +157,11 @@
    "test_mase_h5": 4.68236473256587
   },
   "checkpoint_path": "models/checkpoints/final/lstm.ckpt",
-  "train_time_s": 3.39
+  "train_time_s": 3.74
  },
  "gru": {
   "name": "gru",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -189,11 +189,11 @@
    "test_mase_h5": 7.909274471752113
   },
   "checkpoint_path": "models/checkpoints/final/gru.ckpt",
-  "train_time_s": 2.02
+  "train_time_s": 2.17
  },
  "tcn": {
   "name": "tcn",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -221,11 +221,11 @@
    "test_mase_h5": 7.914616115487383
   },
   "checkpoint_path": "models/checkpoints/final/tcn.ckpt",
-  "train_time_s": 8.31
+  "train_time_s": 8.81
  },
  "seq2seq_attn": {
   "name": "seq2seq_attn",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -253,11 +253,11 @@
    "test_mase_h5": 3.0782401490131375
   },
   "checkpoint_path": "models/checkpoints/final/seq2seq_attn.ckpt",
-  "train_time_s": 1.16
+  "train_time_s": 1.28
  },
  "tft": {
   "name": "tft",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -284,11 +284,11 @@
    "test_mase_h5": 4.469442979343959
   },
   "checkpoint_path": "models/checkpoints/final/tft.ckpt",
-  "train_time_s": 7.45
+  "train_time_s": 7.95
  },
  "deepar": {
   "name": "deepar",
-  "version": "20260926",
+  "version": "20260927",
   "target": "co2_mt",
   "horizons": [
    1,
@@ -316,6 +316,6 @@
    "test_mase_h5": 3.188027594660081
   },
   "checkpoint_path": "models/checkpoints/final/deepar.ckpt",
-  "train_time_s": 2.56
+  "train_time_s": 2.61
  }
 }

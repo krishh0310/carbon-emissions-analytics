@@ -17,7 +17,8 @@ export function StateView({ code, compact = false }: { code: string; compact?: b
   const b = useStateData(other);
   const opts = (states.data?.items ?? []) as any[];
   return (
-    <div className="grid gap-4">
+    // @container: grids below respond to this panel's width (full page or Live Map slide-over), not the viewport
+    <div className="@container grid gap-4">
       <div className="flex flex-wrap items-center gap-2">
         {other ? (
           <button onClick={() => setOther(null)} className="flex items-center gap-1 rounded-md border border-slate-200 dark:border-white/10 px-2 py-1 text-xs text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-white/5"><X size={12} />Exit compare</button>

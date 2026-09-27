@@ -94,15 +94,20 @@ make test lint
 
 | Model | h=1 | h=3 | h=5 |
 |---|---|---|---|
-| TFT-lite | 2.92 | 3.75 | **2.90** |
-| Seq2Seq-Attention | 2.23 | 3.73 | 3.07 |
-| LSTM | **1.72** | **3.25** | 3.45 |
+| Seq2Seq-Attention | 1.96 | **3.32** | **3.08** |
+| DeepAR-style | 2.92 | 4.27 | 3.19 |
 | ARIMA (top 10 only) | 1.75 | 3.58 | 3.91 |
 | Naive | 2.18 | 3.84 | 4.02 |
-| LightGBM | **1.72** | 3.90 | 6.64 |
-| Ridge | 2.21 | 5.16 | 12.50 |
+| TFT-lite | 4.29 | 4.44 | 4.47 |
+| LSTM | 1.86 | 4.05 | 4.68 |
+| LightGBM | **1.72** | 3.83 | 6.25 |
+| Ridge | 2.31 | 5.12 | 11.00 |
 
-MASE is scaled by each state's naive-1 error over the train period. The test window contains the COVID-19 shock, so every model scores above 1. Attention-based models win at the 5-year horizon; LSTM and LightGBM tie for best at 1 year. Selecting models on validation data picks GRU for 5 years, but GRU does poorly on test, which is an honest sign of how small the panel is.
+MASE is scaled by each state's naive-1 error over the train period. The test window contains the COVID-19 shock, so every model scores above 1.
+
+- **Best by horizon:** Seq2Seq-Attention is best at 3 and 5 years; LightGBM is best at 1 year.
+- **Deep models are unstable on this 36-state panel.** Re-running with only two small UTs' population corrected (v3.1) moved TFT's h=5 score from 2.90 to 4.47. Treat single-run rankings between the deep models as noisy.
+- **Why sector forecasts are served:** the state × sector models (below) are far steadier, which is why State Explorer forecasts are built from the reconciled sector forecasts.
 
 ### Explainability
 
@@ -218,24 +223,26 @@ The backbone is the EDGAR 2025 CO₂, CH₄ and N₂O sub-sector grids: 1,785 fi
   - E13: counterfactual sanity (unit tests in CI).
   - E14: zero-shot transfer to 6 held-out states, using the mean state embedding.
 
-### v2 results (test 2020–2024, 227 material cells)
+### v2 results (test 2020–2024, material cells; re-run in v3.1 on the corrected panel)
 
 | Model | MASE h=1 | h=3 | h=5 | two-level MinT h=5 |
 |---|---|---|---|---|
-| TFT-lite (+state/sector emb.) | 1.45 | **2.53** | **2.50** | **2.54** |
-| GRU | 1.54 | 2.84 | 2.92 | 2.89 |
-| MT-TFT (multi-task) | 1.53 | 2.79 | 2.85 | 2.90 |
-| MT-GRU (multi-task) | 1.55 | 2.90 | 2.96 | 2.97 |
-| TCN | 1.48 | 2.74 | 3.11 | 3.10 |
-| LightGBM (sector-aware) | **1.36** | 2.57 | 3.45 | 3.40 |
-| Naive | 1.73 | 3.17 | 3.72 | 3.19 |
+| TFT-lite (+state/sector emb.) | 1.44 | **2.49** | **2.28** | **2.50** |
+| MT-GRU (multi-task) | 1.41 | 2.73 | 2.53 | 2.63 |
+| TCN | 1.49 | 2.84 | 2.64 | 2.70 |
+| GRU | 1.53 | 2.71 | 2.66 | 2.76 |
+| MT-TFT (multi-task) | 1.37 | 2.72 | 3.07 | 3.20 |
+| LightGBM | **1.31** | 2.58 | 3.33 | 3.42 |
+| Naive | 1.69 | 3.15 | 3.65 | 3.21 |
 
 Findings, reported as they came out:
 
-- **E10:** summing the sector forecasts beats a direct state-total model at every horizon for the deep models. For example, GRU scores 1.65 vs 2.52 at h=1 and 2.61 vs 2.95 at h=5.
-- **E11:** multi-task heads did **not** beat single-task TFT on test (2.85 vs 2.50). They were best on validation (MT-TFT 2.26), so validation-based selection keeps MT-TFT as the serving model. This is a real validation/test disagreement on a small panel.
-- **E12:** two-level MinT costs about 0.1 MASE at h=1, is neutral or slightly better at h=5, and guarantees coherent totals.
-- **E14:** GRU transfers zero-shot to 6 held-out states almost perfectly (2.30 vs 2.47 when trained on all states). MT-TFT does not (7.70); its cross-sector mixing leans on the state identity.
+- **E10:** bottom-up sector forecasts beat a direct state-total model for most models. For example, GRU scores 1.64 vs 1.99 at h=1 and 2.57 vs 4.24 at h=5.
+- **E11:** multi-task heads do not beat single-task TFT on test at h=5 (MT-GRU 2.53, MT-TFT 3.07 vs TFT 2.28). MT-TFT is best at h=1 (1.37).
+- **E12:** two-level MinT costs about 0.05–0.2 MASE on these cells, but it guarantees Σ cells = state = national exactly.
+- **E14:** GRU transfers zero-shot to held-out states with a modest cost (h=5 MASE 2.49 vs 2.26 when those states are in training). MT-TFT scores 2.86 zero-shot vs 3.70.
+
+Before v3.1, Tamil Nadu agriculture and fuel-exploitation CH₄ were distorted by EDGAR artefacts (see CHANGELOG). The earlier numbers (TFT 2.50 h=5) are superseded.
 
 ### Scenario engine (`src/scenarios.py`)
 
@@ -341,6 +348,21 @@ See `CHANGELOG.md` for the stage-by-stage record. In short:
   - Quarterly full retrain, monthly incremental refresh, and a daily drift / shadow review.
   - Champion → challenger (≥ 2% better backtest + consistency) → 14-day shadow at 20% traffic → promotion.
   - Deep models retrain from scratch; online learning is out of scope.
+
+## v3.1: Live open-data APIs, history since 1970/1850, Analytics page
+
+- **Data:** `make external` pulls three no-key sources, cached with SHA-256 like everything else:
+  - Our World in Data (India + peers, 1850+)
+  - the World Bank GHG API
+  - Climate TRACE v6 (subsector totals + 900 geolocated facilities)
+
+  It also extends EDGAR state/city × sector estimates back to **1970**. The 1970–1989 years are display-only; training stays 1990+.
+- **`/analytics`** shows every sector, state and city individually. It adds up-to-8-way comparison, India vs the world, facility rankings, and a 4-source triangulation of the national total.
+- **Data fixes:**
+  - EDGAR single-cell dumps in diffuse sectors are redistributed (Tamil Nadu's agriculture artefact).
+  - The `PRO_FFF` fuel-exploitation CH₄ double count is removed.
+
+  See `CHANGELOG.md` v3.1.
 
 ## Paper
 

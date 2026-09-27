@@ -7,6 +7,7 @@ const hi: Record<string, string> = {
   Methodology: "कार्यप्रणाली",
   "State Explorer": "राज्य विश्लेषण",
   Cities: "शहर",
+  Analytics: "एनालिटिक्स",
   Insights: "अंतर्दृष्टि",
   "Model Lab": "मॉडल लैब",
   "Data Quality": "डेटा गुणवत्ता",
