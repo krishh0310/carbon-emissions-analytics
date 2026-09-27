@@ -25,6 +25,7 @@ from src.data.sectors import SECTORS
 from src.models import baselines as B
 from src.models.deep import DeepForecaster
 from src.train import evaluate as E
+from src.train.coverage import require_sector_coverage
 from src.train.run import load_config
 
 RES = ROOT / "results"
@@ -161,6 +162,7 @@ def run(models: list[str], fast: bool = False, final: bool = True, transfer: boo
         recl, _ = E.reconcile_two_level(wl, E.to_level(wl, ql)[..., 1], sbase_latest, wd)
         f = E.to_frame(wl, ql, name, recl)
         f["sector"] = np.tile(np.array(w.sectors)[wl.sector], len(E.HORIZONS))
+        require_sector_coverage(f, list(w.codes), latest)
         fcs.append(f)
         allr = {(x["split"], x["horizon"]): x for x in r if x["state_code"] == "ALL" and x["sector"] == "ALL"}
         summ = {f"{s}_mase_h{h}": allr[(s, h)]["mase"] for s in ("val", "test") for h in REPORT_HORIZONS if (s, h) in allr}

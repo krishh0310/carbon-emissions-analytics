@@ -60,6 +60,7 @@ const SectorLegend = () => (
 
 // ---- Sectors ----------------------------------------------------------------------------------------------
 function SectorsTab({ nat, st }: { nat: any; st: Panel }) {
+  const navigate = useNavigate();
   const years: number[] = nat.years;
   const [year, setYear] = useState(years[years.length - 1]);
   const i = years.indexOf(year);
@@ -102,7 +103,7 @@ function SectorsTab({ nat, st }: { nat: any; st: Panel }) {
                 <BarChart data={top} layout="vertical" margin={{ left: 10 }}>
                   <XAxis type="number" {...AX} /><YAxis type="category" dataKey="name" {...AX} width={110} />
                   <Tooltip contentStyle={TT} formatter={(x: any) => [`${fmt(x, 1)} Mt`, SECTOR_LABEL[s]]} />
-                  <Bar dataKey="v" fill={colorOf(s)} isAnimationActive={false} />
+                  <Bar dataKey="v" fill={colorOf(s)} isAnimationActive={false} style={{ cursor: "pointer" }} onClick={(point: any) => { const code = point?.payload?.code ?? point?.code; if (code) navigate(`/state/${code}/sector/${s.toLowerCase()}`); }} />
                 </BarChart>
               </ResponsiveContainer>
             </ChartCard>

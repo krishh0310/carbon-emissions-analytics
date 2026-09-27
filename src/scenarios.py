@@ -124,5 +124,6 @@ def run(params: Params, states: list[str] | None = None, model: str | None = Non
             "by_state": by_state.round(4).reset_index().to_dict("records"),
             "by_sector": by_sector.round(4).reset_index().to_dict("records"),
             "path": out.groupby("year")[["p50", "scenario_p50", "scenario_p10", "scenario_p90"]].sum().round(3).reset_index().to_dict("records"),
+            "cell_path": out[["state_code", "sector", "year", "p50", "scenario_p50", "scenario_p10", "scenario_p90"]].round(4).to_dict("records"),
             "cells": end[["state_code", "sector", "p50", "scenario_p50", "scenario_p10", "scenario_p90", "delta_mt"]].round(4).to_dict("records"),
             "method": __doc__.split("\n\n")[1].strip()[:600]}

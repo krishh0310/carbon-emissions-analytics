@@ -4,6 +4,8 @@ State/UT- and city-level CO₂ forecasting for all **28 states + 8 union territo
 
 > **Data honesty.** State emissions are **EDGAR-downscaled estimates**: EDGAR 2025 gridded CO₂, area-weighted to state polygons. They are not official inventories. City values are **proxy estimates** with a confidence tier, never measured inventories.
 
+For city CO₂e forecasts, trailing three-year city shares allocate each reconciled state-sector forecast. Overlapping city shares are capped collectively at 100%; the rest remains an explicit unallocated state amount. City forecasts plus this remainder reconcile to state totals within `1e-6` Mt before public rounding. After rounding city points to five decimals, allow `0.000005 × (number of cities + 1)` Mt per state and year.
+
 ## Architecture
 
 ```

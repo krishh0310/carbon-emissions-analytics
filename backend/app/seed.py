@@ -197,6 +197,8 @@ def _seed_cities_v3(db) -> None:
         return
     from src.champion import best
     from src.data.reference import cities_df
+    from src.train.city_share import allocate
+    from src.train.coverage import require_city_coverage
 
     cs, ss = pd.read_parquet(cp), pd.read_parquet(sp)
     meta = cities_df().set_index("id")
@@ -205,7 +207,9 @@ def _seed_cities_v3(db) -> None:
     fc = pd.read_parquet(RES / "forecasts_sector.parquet") if (RES / "forecasts_sector.parquet").exists() else pd.DataFrame()
     if len(fc):
         fc = fc[fc.model == best("state_sector")]
-    st_sec = ss.set_index(["state_code", "sector", "year"]).co2e_mt
+    city_fc, unallocated = allocate(cs, ss, fc, meta.state_code) if len(fc) else (pd.DataFrame(), pd.DataFrame())
+    if len(fc):
+        require_city_coverage(city_fc, meta.index.tolist(), last)
     st_tot = ss.groupby(["state_code", "year"]).co2e_mt.sum()
     details, ranking = {}, []
     for cid, g in cs.groupby("city_id"):
@@ -215,18 +219,9 @@ def _seed_cities_v3(db) -> None:
         share = (tot / st_tot.xs(m.state_code, level=0).reindex(tot.index)).replace([np.inf], np.nan)
         # forecast
         fpts = []
-        if len(fc):
-            f = fc[fc.state_code == m.state_code]
-            for y, fy in f.groupby("year"):
-                p10 = p50 = p90 = 0.0
-                for r in fy.itertuples():
-                    shr = np.nanmean([piv.get(r.sector, pd.Series(dtype=float)).get(yy, 0) / max(st_sec.get((m.state_code, r.sector, yy), np.nan), 1e-9)
-                                      for yy in range(last - 2, last + 1)])
-                    shr = 0.0 if not np.isfinite(shr) else shr
-                    p10 += shr * r.p10
-                    p50 += shr * (r.p50_reconciled if pd.notna(r.p50_reconciled) else r.p50)
-                    p90 += shr * r.p90
-                fpts.append({"year": int(y), "p10": round(p10, 5), "p50": round(p50, 5), "p90": round(p90, 5)})
+        if len(city_fc):
+            fpts = [{"year": int(r.year), "p10": round(r.p10, 5), "p50": round(r.p50, 5), "p90": round(r.p90, 5)}
+                    for r in city_fc[city_fc.city_id == cid].itertuples()]
         pop = cm.pop_2011.get(cid) if len(cm) else np.nan
         pop = float(pop) if pd.notna(pop) else None
         v0, v1 = tot.get(last - 10), tot.get(last)
@@ -244,7 +239,8 @@ def _seed_cities_v3(db) -> None:
                              "history": [{"year": int(y), "co2e_mt": round(float(tot[y]), 5), "share_of_state_pct": round(float(100 * share[y]), 3) if pd.notna(share[y]) else None,
                                           **{k: round(float(piv.loc[y, k]), 5) for k in piv.columns}} for y in tot.index],
                              "forecast": fpts}
-    db.add(Artifact(key="cities_v3", data=_nan_free({"year": last, "ranking": sorted(ranking, key=lambda r: -r["co2e_mt"]), "details": details})))
+    db.add(Artifact(key="cities_v3", data=_nan_free({"year": last, "ranking": sorted(ranking, key=lambda r: -r["co2e_mt"]), "details": details,
+                                               "unallocated_forecast": _records(unallocated) if len(unallocated) else []})))
 
 
 def _seed_triangulation(db, sec: pd.DataFrame, panel: pd.DataFrame) -> None:

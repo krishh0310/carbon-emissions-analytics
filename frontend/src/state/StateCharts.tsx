@@ -1,5 +1,6 @@
 // State Explorer charts: history+forecast (full-opacity history, connected fan) and the 6-part sector deep-dive.
 import { useMemo, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import {
   Area, AreaChart, Bar, BarChart, Cell, ComposedChart, LabelList, Line, LineChart, Pie, PieChart, ReferenceArea, ReferenceLine,
@@ -104,7 +105,7 @@ export function HistoryForecast({ d, height = 360 }: { d: D; height?: number }) 
 }
 
 // ---- B. sector deep-dive -------------------------------------------------------------------------------
-const DRIVER_METRICS: Record<string, { label: string; unit: string; get: (d: D, y: number) => number | null | undefined }[]> = {
+export const DRIVER_METRICS: Record<string, { label: string; unit: string; get: (d: D, y: number) => number | null | undefined }[]> = {
   POWER: [
     { label: "Coal generation", unit: "TWh", get: (d, y) => (d.feats[y]?.coal_generation_gwh ?? null) && d.feats[y].coal_generation_gwh / 1000 },
     { label: "Grid emission factor (GEF)", unit: "tCO₂/MWh", get: (d, y) => d.feats[y]?.grid_emission_factor },
@@ -146,7 +147,8 @@ function Delta({ v }: { v: number | null | undefined }) {
   return <span className={cn("inline-flex items-center", up ? "text-amber-400" : "text-emerald-400")}>{up ? <ArrowUpRight size={12} /> : <ArrowDownRight size={12} />}{fmt(Math.abs(v), 1)}%</span>;
 }
 
-export function SectorBreakdown({ d }: { d: D }) {
+export function SectorBreakdown({ d, code }: { d: D; code: string }) {
+  const navigate = useNavigate();
   const drivers = useQuery({ queryKey: ["drivers"], queryFn: () => api("/api/v2/drivers"), retry: false, staleTime: Infinity });
   const y = d.lastObs, y0 = y - 10;
   const stacked = useMemo(() => [
@@ -186,7 +188,7 @@ export function SectorBreakdown({ d }: { d: D }) {
               <YAxis {...AX} width={50} />
               <Tooltip contentStyle={TT} formatter={(v: any, n: any) => [`${fmt(v, 1)} Mt`, SECTOR_LABEL[n] ?? n]} labelFormatter={(yy: any) => `${yy}${Number(yy) > y ? " (forecast)" : ""}`} />
               {d.fcYears.length > 0 && <ReferenceArea x1={y} x2={d.fcYears[d.fcYears.length - 1]} fill="#ffffff" fillOpacity={0.06} label={{ value: "forecast", position: "insideTop", fill: "#94a3b8", fontSize: 10 }} />}
-              {SECTORS.map((s) => <Area key={s} type="monotone" dataKey={s} stackId="1" stroke={colorOf(s)} fill={colorOf(s)} fillOpacity={0.85} isAnimationActive={false} />)}
+              {SECTORS.map((s) => <Area key={s} type="monotone" dataKey={s} stackId="1" stroke={colorOf(s)} fill={colorOf(s)} fillOpacity={0.85} isAnimationActive={false} onClick={() => navigate(`/state/${code}/sector/${s.toLowerCase()}`)} style={{ cursor: "pointer" }} />)}
             </AreaChart>
           </ResponsiveContainer>
         </ChartCard>
@@ -216,7 +218,7 @@ export function SectorBreakdown({ d }: { d: D }) {
             rows.push(...f.map((p) => ({ year: p.year, p50: d.val(p), band: [p.p10, p.p90] })));
             const g = d.cagr(d.bySector[s][y0], d.bySector[s][y]);
             return (
-              <div key={s} className="rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.02] p-2">
+              <Link key={s} to={`/state/${code}/sector/${s.toLowerCase()}`} aria-label={`Explore ${SECTOR_LABEL[s]} in detail`} className="block cursor-pointer rounded-lg border border-slate-200 dark:border-white/10 bg-white dark:bg-white/[0.02] p-2 transition hover:border-emerald-400 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-emerald-400">
                 <div className="flex items-center justify-between text-[11px]">
                   <span className="flex items-center gap-1 font-medium"><i className="inline-block h-2 w-2 rounded-full" style={{ background: colorOf(s) }} />{SECTOR_LABEL[s]}</span>
                   <Delta v={g} />
@@ -235,7 +237,7 @@ export function SectorBreakdown({ d }: { d: D }) {
                   </ResponsiveContainer>
                 </div>
                 <div className="text-[10px] text-slate-500 dark:text-slate-500">{f.length ? `${f[f.length - 1].year}: ${fmt(d.val(f[f.length - 1]), 1)} Mt` : ""}</div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -289,7 +291,7 @@ export function SectorBreakdown({ d }: { d: D }) {
             const inf = Object.entries(drivers.data?.sectors?.[s] ?? {}).slice(0, 3);
             const mets = DRIVER_METRICS[s].map((m) => ({ ...m, now: m.get(d, y), then: m.get(d, y0) })).filter((m) => m.now != null && Number.isFinite(m.now as number)).slice(0, 3);
             return (
-              <div key={s} className="rounded-lg border border-slate-200 dark:border-white/10 p-2.5" style={{ borderLeft: `3px solid ${colorOf(s)}` }}>
+              <Link key={s} to={`/state/${code}/sector/${s.toLowerCase()}`} className="block cursor-pointer rounded-lg border border-slate-200 dark:border-white/10 p-2.5 hover:border-emerald-400 focus-visible:outline-2 focus-visible:outline-emerald-400" style={{ borderLeft: `3px solid ${colorOf(s)}` }}>
                 <div className="text-xs font-semibold">{SECTOR_LABEL[s]}</div>
                 <div className="mt-1.5 flex flex-wrap gap-1.5">
                   {mets.length ? mets.map((m) => (
@@ -310,7 +312,7 @@ export function SectorBreakdown({ d }: { d: D }) {
                     ))}
                   </div>
                 )}
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -341,4 +343,3 @@ export function KpiRow({ d, accent = "#10b981" }: { d: D; accent?: string }) {
     </div></div>
   );
 }
-

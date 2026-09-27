@@ -10,6 +10,7 @@ import { Button, Skeleton } from "./components/ui";
 const LiveMap = lazy(() => import("./pages/LiveMap"));
 const MapOverview = lazy(() => import("./pages/MapOverview"));
 const StateExplorer = lazy(() => import("./pages/StateExplorer"));
+const SectorDetail = lazy(() => import("./pages/SectorDetail"));
 const Cities = lazy(() => import("./pages/Cities"));
 const Insights = lazy(() => import("./pages/Insights"));
 const Analytics = lazy(() => import("./pages/Analytics"));
@@ -19,7 +20,7 @@ const Landing = lazy(() => import("./pages/Landing"));
 
 // Viewer navigation. Model/training/data-quality internals live only under /admin (role-gated here AND in the API).
 const NAV = [["/", "Live Map"], ["/overview", "India Map"], ["/state/IN-MH", "State Explorer"], ["/cities", "Cities"],
-  ["/analytics", "Analytics"], ["/insights", "Insights"], ["/methodology", "Methodology"], ["/about", "About"]] as const;
+  ["/analytics", "Analytics"], ["/insights", "Insights"], ["/methodology", "Methodology"]] as const;
 
 function Shell() {
   const t = useT();
@@ -55,11 +56,12 @@ function Shell() {
             <Route path="/" element={<LiveMap />} />
             <Route path="/overview" element={<MapOverview />} />
             <Route path="/state/:code" element={<StateExplorer />} />
+            <Route path="/state/:code/sector/:sector" element={<SectorDetail />} />
             <Route path="/cities" element={<Cities />} />
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/methodology" element={<Methodology />} />
-            <Route path="/about" element={<Landing />} />
+            <Route path="/about" element={<Navigate to="/" replace />} />
             <Route path="/admin/*" element={me.isLoading ? <Skeleton className="h-96" /> : me.data?.role === "admin" ? <AdminConsole /> : <Navigate to="/" />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

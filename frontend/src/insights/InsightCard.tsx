@@ -143,7 +143,7 @@ export function InsightCard({ i, onGo, compact = false }: { i: any; onGo?: (code
       <header className="flex flex-wrap items-center gap-1.5 text-[10px]">
         <span className={cn("inline-flex items-center gap-1 rounded-full bg-gradient-to-r px-2 py-0.5 font-semibold text-white", sev.chip)}><I size={11} />{lang === "hi" ? sev.hi : sev.label}</span>
         <span className="rounded-full bg-slate-100 dark:bg-white/5 px-2 py-0.5 text-slate-700 dark:text-slate-300">{TYPE_LABEL[i.type] ?? i.type}</span>
-        {i.sector && <span className="rounded-full px-2 py-0.5 text-slate-800 dark:text-slate-200" style={{ background: `${colorOf(i.sector)}33` }}>{SECTOR_LABEL[i.sector]}</span>}
+        {i.sector && i.state_code && onGo ? <button onClick={() => onGo(`${i.state_code}/sector/${i.sector.toLowerCase()}`)} className="cursor-pointer rounded-full px-2 py-0.5 text-slate-800 hover:underline dark:text-slate-200" style={{ background: `${colorOf(i.sector)}33` }}>{SECTOR_LABEL[i.sector]} ↗</button> : i.sector && <span className="rounded-full px-2 py-0.5 text-slate-800 dark:text-slate-200" style={{ background: `${colorOf(i.sector)}33` }}>{SECTOR_LABEL[i.sector]}</span>}
         <button disabled={!i.state_code || !onGo} onClick={() => i.state_code && onGo?.(i.state_code)}
           className="ml-auto rounded-full bg-slate-100 dark:bg-white/5 px-2 py-0.5 text-slate-700 dark:text-slate-300 enabled:hover:bg-emerald-500/20">{i.state_code ?? "India"}</button>
       </header>

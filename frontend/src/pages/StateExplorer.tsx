@@ -35,7 +35,7 @@ export function StateView({ code, compact = false }: { code: string; compact?: b
         <>
           <KpiRow d={a} />
           <HistoryForecast d={a} height={compact ? 300 : 380} />
-          <SectorBreakdown d={a} />
+          <SectorBreakdown d={a} code={code} />
         </>
       )}
     </div>

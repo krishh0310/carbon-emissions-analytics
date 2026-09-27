@@ -1,5 +1,24 @@
 # Changelog
 
+## v4 follow-up — landing placement (2026-09-27)
+
+- `frontend/src/App.tsx`, `frontend/src/pages/Landing.tsx`: About is linked from the public header at `/about`; it stays outside the signed-in navigation. Authenticated `/about` returns to the dashboard.
+
+## v4 — stages 1–2 (2026-09-27)
+
+### Stage 1 — full sector drill-down
+- `frontend/src/pages/SectorDetail.tsx`: added `/state/:code/sector/:sector` with a full history and P10–P90 forecast, detected annual shifts and smoothed trend, indexed drivers, sector intensity, national benchmark, up to three peer forecasts and fans, scenario levers, and a copyable/exportable yearly table. Charts have units, sources, formulas, tooltips, legends, brush controls and PNG/CSV export.
+- `frontend/src/App.tsx`, `frontend/src/pages/StateExplorer.tsx`, `frontend/src/pages/Analytics.tsx`, `frontend/src/state/StateCharts.tsx`, `frontend/src/insights/InsightCard.tsx`: wired state sector panels, stacked areas, driver panels, analytics top-state bars and state-specific insight sector chips to the URL-addressable drill-down.
+- `src/scenarios.py`: scenario responses now include per-state, per-sector yearly paths so the drill-down can overlay the entire counterfactual band.
+
+### Stage 2 — five-year coverage and city allocation
+- `src/train/coverage.py`, `src/train/sector_run.py`: training fails if any state × sector × horizon 1–5 forecast or reconciled median is missing.
+- `src/train/city_share.py`, `backend/app/seed.py`: seeded city forecasts use the trailing three-year city/state-sector shares, cap overlapping city buffers collectively at the state sector total, and keep the remainder as an explicit unallocated state amount. No rural emissions are assigned to sampled cities merely to force coverage. At full precision, city forecasts plus the unallocated remainder equal the state-sector sums to `1e-6` Mt; the public five-decimal city values can differ by up to `0.000005 × (number of cities + 1)` Mt per state/year due to rounding.
+- `backend/app/v2.py`: added viewer-safe `GET /api/v2/cities/{city_id}/forecast`; sector endpoints now return nonnegative bounds enclosing reconciled P50.
+- `tests/test_forecast_coverage.py`, `tests/test_api.py`: CI checks the complete 36 × 7 × 5 and 64 × 5 coverage contracts, real artifacts when present, city/state reconciliation, and the viewer city forecast endpoint.
+
+The existing state × sector models already forecast through 2029, and the city-share model is an allocation of those forecasts. Regenerate the city analytics artifact with `python -m backend.app.seed` before serving the new city values.
+
 ## v3.2 — public landing page (2026-09-27)
 
 - A public home page greets visitors before sign-in, and signed-in users can reach it at `/about`.

@@ -1,4 +1,4 @@
-// Public landing page (shown before sign-in, and at /about after). Its own identity: fog + coal palette, Archivo with
+// Public landing/About page (shown before sign-in at / and /about). Its own identity: fog + coal palette, Archivo with
 // the width axis as the display device, and one signature element — India's emission stripes, 1970 → latest.
 import { useEffect, useMemo, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -207,6 +207,7 @@ export default function Landing({ onDone }: { onDone?: () => void }) {
           <nav className="hidden flex-1 gap-5 text-[15px] md:flex" style={{ color: SLATE }}>
             {nav.map(([h, l]) => <a key={h} href={h} className="hover:text-[#14202B]">{l}</a>)}
           </nav>
+          <a href="/about" className="ml-auto text-[15px] font-semibold hover:underline md:ml-0">About</a>
           {onDone ? <a href="#signin" className="ml-auto rounded-md px-4 py-2 text-[15px] font-semibold text-white md:ml-0" style={{ background: INK }}>Sign in</a>
             : <Link to="/" className="ml-auto rounded-md px-4 py-2 text-[15px] font-semibold text-white md:ml-0" style={{ background: INK }}>Open the dashboard</Link>}
         </div>

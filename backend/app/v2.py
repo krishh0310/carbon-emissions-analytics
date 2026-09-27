@@ -74,6 +74,12 @@ def _code(code: str) -> str:
     return code
 
 
+def _sector_point(f: ForecastSector) -> dict:
+    median = max(0.0, f.p50_reconciled if f.p50_reconciled is not None else f.p50)
+    return {"year": f.year, "p10": max(0.0, min(f.p10, median)), "p50": median,
+            "p90": max(f.p90, median)}
+
+
 # ---- sectors ------------------------------------------------------------------------------------------
 @router.get("/states/{code}/sectors")
 def state_sectors(code: str, db: DB, _: Viewer):
@@ -104,7 +110,7 @@ def sector_forecast(code: str, sector: Sector, db: DB, user: Viewer, horizon: in
     rows = db.scalars(select(ForecastSector).where(ForecastSector.model_id == m.id, ForecastSector.state_code == code,
                                                    ForecastSector.sector == sector).order_by(ForecastSector.year).limit(horizon)).all()
     return {"code": code, "sector": sector, **registry.describe(m, user), "unit": "MtCO2e",
-            "points": [{"year": f.year, "p10": f.p10, "p50": f.p50, "p90": f.p90, "p50_reconciled": f.p50_reconciled} for f in rows]}
+            "points": [_sector_point(f) for f in rows]}
 
 
 @router.get("/states/{code}/sectors/forecast")
@@ -115,7 +121,7 @@ def sector_forecast_all(code: str, db: DB, user: Viewer, model: str | None = Mod
     out: dict[str, list] = {s: [] for s in SECTORS}
     for f in db.scalars(select(ForecastSector).where(ForecastSector.model_id == m.id, ForecastSector.state_code == code)
                         .order_by(ForecastSector.year)):
-        out[f.sector].append({"year": f.year, "p10": f.p10, "p50": f.p50, "p90": f.p90, "p50_reconciled": f.p50_reconciled})
+        out[f.sector].append(_sector_point(f))
     return {"code": code, **registry.describe(m, user), "unit": "MtCO2e", "sectors": out}
 
 
@@ -152,8 +158,7 @@ def sector_series(db: DB, user: Viewer, model: str | None = ModelName):
         if m:
             for f in db.scalars(select(ForecastSector).where(ForecastSector.model_id == m.id)):
                 fc.setdefault(f.state_code, {}).setdefault(f.sector, []).append(
-                    {"year": f.year, "p10": round(f.p10, 5), "p50": round(f.p50_reconciled if f.p50_reconciled is not None else f.p50, 5),
-                     "p90": round(f.p90, 5)})
+                    {k: round(v, 5) if k != "year" else v for k, v in _sector_point(f).items()})
         return {"sectors": SECTORS, "history": hist, "forecast": fc}
     return {**cached(f"series:{m_.id}", 3600, build), **registry.describe(m_, user)}
 
@@ -161,7 +166,8 @@ def sector_series(db: DB, user: Viewer, model: str | None = ModelName):
 # ---- cities (v3 analytics) ------------------------------------------------------------------------------
 CITY_METHOD = ("City CO₂e = Σ EDGAR 0.1° grid cells whose centre lies within the city buffer (25 km for metros, "
                "12 km otherwise); sector split = the same cells per sector. Forecast = Σ_sector state reconciled "
-               "forecast × the city's mean share of that state-sector in the last 3 observed years. These are "
+               "forecast × the city's mean share of that state-sector in the last 3 observed years; overlapping "
+               "shares are capped at 100% collectively, and the remainder stays unallocated within the state. These are "
                "estimates, not measured municipal inventories.")
 
 
@@ -180,6 +186,14 @@ def city_detail(city_id: int, db: DB, _: Viewer):
     a = db.get(Artifact, "cities_v3") or _404("cities")
     d = a.data["details"].get(str(city_id)) or _404("city")
     return {**d, "method": CITY_METHOD}
+
+
+@router.get("/cities/{city_id}/forecast")
+def city_forecast_v2(city_id: int, db: DB, _: Viewer):
+    a = db.get(Artifact, "cities_v3") or _404("cities")
+    d = a.data["details"].get(str(city_id)) or _404("city")
+    return {"city_id": city_id, "state_code": d["state_code"], "unit": "MtCO2e", "method": CITY_METHOD,
+            "points": d["forecast"]}
 
 
 # ---- insights -----------------------------------------------------------------------------------------

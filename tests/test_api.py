@@ -105,6 +105,18 @@ def test_v2_sectors_insights_and_validation(client):
     assert client.post("/api/v2/insights", json={}, headers=h).status_code == 405
 
 
+def test_city_five_year_forecast_endpoint(client):
+    with dbm.session() as s:
+        s.add(dbm.Artifact(key="cities_v3", data={"details": {"1": {"state_code": "IN-MH", "forecast": [
+            {"year": y, "p10": 1.0, "p50": 2.0, "p90": 3.0} for y in range(2025, 2030)]}}}))
+        s.commit()
+    h = {"Authorization": f"Bearer {_login(client, 'v@example.com', 'viewerpass1')['access_token']}"}
+    r = client.get("/api/v2/cities/1/forecast", headers=h)
+    assert r.status_code == 200 and [p["year"] for p in r.json()["points"]] == list(range(2025, 2030))
+    assert "model" not in r.text.lower()
+    assert client.get("/api/v2/cities/1/forecast").status_code == 401
+
+
 # ---- v3 RBAC: viewers never see model internals ----------------------------------------------------------
 def test_rbac_viewer_cannot_reach_model_internals(client):
     v = {"Authorization": f"Bearer {_login(client, 'v@example.com', 'viewerpass1')['access_token']}"}
