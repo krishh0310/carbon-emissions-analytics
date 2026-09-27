@@ -1,0 +1,17 @@
+\begin{tabular}{lrrrrrr}
+\toprule
+ & \multicolumn{3}{c}{MASE (unreconciled)} & \multicolumn{3}{c}{MASE (two-level MinT)} \\
+Model & $h{=}1$ & $h{=}3$ & $h{=}5$ & $h{=}1$ & $h{=}3$ & $h{=}5$ \\
+\midrule
+TFT-lite & 1.45 & 2.53 & 2.50 & 1.59 & \textbf{2.63} & \textbf{2.54} \\
+GRU + emb. & 1.54 & 2.84 & 2.92 & 1.65 & 2.83 & 2.89 \\
+MT-TFT (ours) & 1.53 & 2.79 & 2.85 & 1.63 & 2.82 & 2.90 \\
+MT-GRU (ours) & 1.55 & 2.90 & 2.96 & 1.66 & 2.89 & 2.97 \\
+Seq2Seq-Attn & 1.74 & 2.81 & 2.99 & 1.80 & 2.86 & 2.98 \\
+TCN + emb. & 1.48 & 2.74 & 3.11 & 1.60 & 2.78 & 3.10 \\
+Naive (RW) & 1.73 & 3.17 & 3.72 & 1.78 & 2.97 & 3.19 \\
+LightGBM (panel) & 1.36 & 2.57 & 3.45 & \textbf{1.48} & 2.66 & 3.40 \\
+RW + drift & 1.42 & 3.04 & 3.95 & 1.58 & 3.11 & 3.87 \\
+LightGBM (per sector) & 1.51 & 2.95 & 4.09 & 1.59 & 2.98 & 4.06 \\
+\bottomrule
+\end{tabular}

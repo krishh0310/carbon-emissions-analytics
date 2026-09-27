@@ -1,0 +1,25 @@
+[project]
+name = "carbonscope-india"
+version = "1.0.0"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning", "ignore::UserWarning", "ignore::FutureWarning"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py311"
+extend-exclude = ["frontend", "paper", "alembic/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008", "UP007"]
+
+[tool.black]
+line-length = 130
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+files = ["backend/app"]

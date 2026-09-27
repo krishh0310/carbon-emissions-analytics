@@ -1,0 +1,1566 @@
+{
+ "year": 2024,
+ "best_model": "tcn",
+ "decoupling": [
+  {
+   "state_code": "IN-JK",
+   "gsdp_cagr": 11.279605673,
+   "co2_cagr": 2.8665634852,
+   "decoupling_index": 8.4130421878,
+   "status": "relative",
+   "gsdp_imputed": true
+  },
+  {
+   "state_code": "IN-LD",
+   "gsdp_cagr": 6.9698084475,
+   "co2_cagr": -1.175028988,
+   "decoupling_index": 8.1448374355,
+   "status": "absolute",
+   "gsdp_imputed": true
+  },
+  {
+   "state_code": "IN-HR",
+   "gsdp_cagr": 6.7550662324,
+   "co2_cagr": 1.239379898,
+   "decoupling_index": 5.5156863344,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-SK",
+   "gsdp_cagr": 8.9681856441,
+   "co2_cagr": 3.5861041487,
+   "decoupling_index": 5.3820814955,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-GJ",
+   "gsdp_cagr": 7.6589072661,
+   "co2_cagr": 2.5625429182,
+   "decoupling_index": 5.0963643479,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-AS",
+   "gsdp_cagr": 8.5480399649,
+   "co2_cagr": 3.8387673179,
+   "decoupling_index": 4.7092726469,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-MP",
+   "gsdp_cagr": 8.1639306616,
+   "co2_cagr": 3.6757901303,
+   "decoupling_index": 4.4881405313,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-WB",
+   "gsdp_cagr": 6.1085817383,
+   "co2_cagr": 1.7727864234,
+   "decoupling_index": 4.3357953149,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-RJ",
+   "gsdp_cagr": 7.1746778413,
+   "co2_cagr": 3.0065935888,
+   "decoupling_index": 4.1680842525,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-AN",
+   "gsdp_cagr": 5.9973128358,
+   "co2_cagr": 1.9999365429,
+   "decoupling_index": 3.9973762929,
+   "status": "relative",
+   "gsdp_imputed": true
+  },
+  {
+   "state_code": "IN-TN",
+   "gsdp_cagr": 7.3511502724,
+   "co2_cagr": 3.5449931406,
+   "decoupling_index": 3.8061571319,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-TR",
+   "gsdp_cagr": 7.5058007778,
+   "co2_cagr": 3.900399618,
+   "decoupling_index": 3.6054011598,
+   "status": "relative",
+   "gsdp_imputed": true
+  },
+  {
+   "state_code": "IN-AP",
+   "gsdp_cagr": 8.0060653957,
+   "co2_cagr": 4.4826494709,
+   "decoupling_index": 3.5234159247,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-KA",
+   "gsdp_cagr": 7.825149687,
+   "co2_cagr": 4.5721484127,
+   "decoupling_index": 3.2530012744,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-OD",
+   "gsdp_cagr": 7.372656496,
+   "co2_cagr": 4.1509642411,
+   "decoupling_index": 3.2216922549,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-MN",
+   "gsdp_cagr": 6.6584859768,
+   "co2_cagr": 3.7651393081,
+   "decoupling_index": 2.8933466687,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-GA",
+   "gsdp_cagr": 5.7782816999,
+   "co2_cagr": 2.9799972151,
+   "decoupling_index": 2.7982844848,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-NL",
+   "gsdp_cagr": 5.9373901007,
+   "co2_cagr": 3.1669904705,
+   "decoupling_index": 2.7703996302,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-TS",
+   "gsdp_cagr": 8.4619480879,
+   "co2_cagr": 5.7229272738,
+   "decoupling_index": 2.7390208141,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-KL",
+   "gsdp_cagr": 5.8641403427,
+   "co2_cagr": 3.2055493687,
+   "decoupling_index": 2.658590974,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-MH",
+   "gsdp_cagr": 5.1849457808,
+   "co2_cagr": 2.557477127,
+   "decoupling_index": 2.6274686538,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-MZ",
+   "gsdp_cagr": 6.3041185374,
+   "co2_cagr": 3.7100561205,
+   "decoupling_index": 2.5940624169,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-AR",
+   "gsdp_cagr": 6.2597418848,
+   "co2_cagr": 3.7420180672,
+   "decoupling_index": 2.5177238176,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-CH",
+   "gsdp_cagr": 5.736326936,
+   "co2_cagr": 3.3940785256,
+   "decoupling_index": 2.3422484103,
+   "status": "relative",
+   "gsdp_imputed": true
+  },
+  {
+   "state_code": "IN-PB",
+   "gsdp_cagr": 4.5619024835,
+   "co2_cagr": 2.5070344802,
+   "decoupling_index": 2.0548680033,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-ML",
+   "gsdp_cagr": 4.6723575497,
+   "co2_cagr": 2.7179343417,
+   "decoupling_index": 1.954423208,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-LA",
+   "gsdp_cagr": 4.2888207132,
+   "co2_cagr": 2.5354443522,
+   "decoupling_index": 1.753376361,
+   "status": "relative",
+   "gsdp_imputed": true
+  },
+  {
+   "state_code": "IN-HP",
+   "gsdp_cagr": 4.2209903162,
+   "co2_cagr": 2.592053325,
+   "decoupling_index": 1.6289369912,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-CG",
+   "gsdp_cagr": 5.7900410399,
+   "co2_cagr": 4.2120054214,
+   "decoupling_index": 1.5780356185,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-UK",
+   "gsdp_cagr": 5.38761521,
+   "co2_cagr": 3.8879947871,
+   "decoupling_index": 1.4996204229,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-PY",
+   "gsdp_cagr": 4.8874277849,
+   "co2_cagr": 3.4178233576,
+   "decoupling_index": 1.4696044273,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-DH",
+   "gsdp_cagr": 4.855421183,
+   "co2_cagr": 3.5738548567,
+   "decoupling_index": 1.2815663264,
+   "status": "relative",
+   "gsdp_imputed": true
+  },
+  {
+   "state_code": "IN-UP",
+   "gsdp_cagr": 6.3079265065,
+   "co2_cagr": 5.2573785036,
+   "decoupling_index": 1.050548003,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-JH",
+   "gsdp_cagr": 4.0464096375,
+   "co2_cagr": 3.4863354573,
+   "decoupling_index": 0.5600741803,
+   "status": "relative",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-BR",
+   "gsdp_cagr": 6.9963067695,
+   "co2_cagr": 7.6349342505,
+   "decoupling_index": -0.638627481,
+   "status": "none",
+   "gsdp_imputed": false
+  },
+  {
+   "state_code": "IN-DL",
+   "gsdp_cagr": -0.837649713,
+   "co2_cagr": 1.251220069,
+   "decoupling_index": -2.088869782,
+   "status": "none",
+   "gsdp_imputed": true
+  }
+ ],
+ "carbon_intensity": [
+  {
+   "state_code": "IN-CG",
+   "co2_mt": 242.9521389638,
+   "gsdp_const_cr": 327773.3434135537,
+   "tco2_per_crore": 741.2199431277,
+   "per_capita_t": 7.9593807811,
+   "coal_dependence": 0.5774558415
+  },
+  {
+   "state_code": "IN-LA",
+   "co2_mt": 3.2844205771,
+   "gsdp_const_cr": 5332.643952004,
+   "tco2_per_crore": 615.9084699246,
+   "per_capita_t": 10.8755648249,
+   "coal_dependence": 0.0
+  },
+  {
+   "state_code": "IN-JH",
+   "co2_mt": 139.8111527106,
+   "gsdp_const_cr": 274321.2546532163,
+   "tco2_per_crore": 509.6621218334,
+   "per_capita_t": 3.4985149441,
+   "coal_dependence": 0.3983516782
+  },
+  {
+   "state_code": "IN-OD",
+   "co2_mt": 225.1371410201,
+   "gsdp_const_cr": 540356.2684724065,
+   "tco2_per_crore": 416.6457468081,
+   "per_capita_t": 4.8347966546,
+   "coal_dependence": 0.4536468642
+  },
+  {
+   "state_code": "IN-ML",
+   "co2_mt": 8.1824680608,
+   "gsdp_const_cr": 30927.5186058721,
+   "tco2_per_crore": 264.5691743029,
+   "per_capita_t": 2.421564978,
+   "coal_dependence": 0.0163216771
+  },
+  {
+   "state_code": "IN-MP",
+   "co2_mt": 216.2950246058,
+   "gsdp_const_cr": 888203.3220754319,
+   "tco2_per_crore": 243.51972035,
+   "per_capita_t": 2.4688394545,
+   "coal_dependence": 0.6827335634
+  },
+  {
+   "state_code": "IN-AP",
+   "co2_mt": 180.6218527496,
+   "gsdp_const_cr": 957586.0006082279,
+   "tco2_per_crore": 188.6220690725,
+   "per_capita_t": 3.3862364595,
+   "coal_dependence": 0.367081231
+  },
+  {
+   "state_code": "IN-BR",
+   "co2_mt": 92.4887269523,
+   "gsdp_const_cr": 569533.1728175689,
+   "tco2_per_crore": 162.3939242989,
+   "per_capita_t": 0.7192416865,
+   "coal_dependence": 0.604687737
+  },
+  {
+   "state_code": "IN-UP",
+   "co2_mt": 250.8787153296,
+   "gsdp_const_cr": 1575027.6503605533,
+   "tco2_per_crore": 159.2852768472,
+   "per_capita_t": 1.0407017404,
+   "coal_dependence": 0.5830929747
+  },
+  {
+   "state_code": "IN-GJ",
+   "co2_mt": 249.0890377581,
+   "gsdp_const_cr": 1628071.2624600586,
+   "tco2_per_crore": 152.9963973332,
+   "per_capita_t": 3.4420252015,
+   "coal_dependence": 0.3708985614
+  },
+  {
+   "state_code": "IN-RJ",
+   "co2_mt": 152.3572717891,
+   "gsdp_const_cr": 1039339.6865833728,
+   "tco2_per_crore": 146.5904494515,
+   "per_capita_t": 1.8603522936,
+   "coal_dependence": 0.3782312161
+  },
+  {
+   "state_code": "IN-WB",
+   "co2_mt": 155.7473528217,
+   "gsdp_const_cr": 1097051.6033781038,
+   "tco2_per_crore": 141.9690307567,
+   "per_capita_t": 1.564309561,
+   "coal_dependence": 0.3828787306
+  },
+  {
+   "state_code": "IN-HP",
+   "co2_mt": 18.786956925,
+   "gsdp_const_cr": 132521.4995357273,
+   "tco2_per_crore": 141.7653512133,
+   "per_capita_t": 2.5032587508,
+   "coal_dependence": 0.0
+  },
+  {
+   "state_code": "IN-MH",
+   "co2_mt": 333.329537168,
+   "gsdp_const_cr": 2490423.8472856763,
+   "tco2_per_crore": 133.8445010199,
+   "per_capita_t": 2.6137753056,
+   "coal_dependence": 0.5524165916
+  },
+  {
+   "state_code": "IN-KA",
+   "co2_mt": 202.1674576158,
+   "gsdp_const_cr": 1639216.8399199105,
+   "tco2_per_crore": 123.3317354315,
+   "per_capita_t": 2.9680313825,
+   "coal_dependence": 0.2548603789
+  },
+  {
+   "state_code": "IN-PB",
+   "co2_mt": 57.1003103611,
+   "gsdp_const_cr": 468406.0223572362,
+   "tco2_per_crore": 121.9034505016,
+   "per_capita_t": 1.8463529186,
+   "coal_dependence": 0.5293202883
+  },
+  {
+   "state_code": "IN-AN",
+   "co2_mt": 0.9871389642,
+   "gsdp_const_cr": 8314.7324073446,
+   "tco2_per_crore": 118.7216756753,
+   "per_capita_t": 2.4434132777,
+   "coal_dependence": 0.3191648031
+  },
+  {
+   "state_code": "IN-TS",
+   "co2_mt": 113.4780796827,
+   "gsdp_const_cr": 962254.3053034539,
+   "tco2_per_crore": 117.929407078,
+   "per_capita_t": 2.9650417977,
+   "coal_dependence": 0.5835124189
+  },
+  {
+   "state_code": "IN-MZ",
+   "co2_mt": 2.1098577749,
+   "gsdp_const_cr": 21007.3711285169,
+   "tco2_per_crore": 100.4341648475,
+   "per_capita_t": 1.6878862199,
+   "coal_dependence": 0.0
+  },
+  {
+   "state_code": "IN-HR",
+   "co2_mt": 66.9612859509,
+   "gsdp_const_cr": 709582.313674348,
+   "tco2_per_crore": 94.3671856815,
+   "per_capita_t": 2.1902098568,
+   "coal_dependence": 0.434758743
+  },
+  {
+   "state_code": "IN-MN",
+   "co2_mt": 2.745362506,
+   "gsdp_const_cr": 29118.550536472,
+   "tco2_per_crore": 94.2822515357,
+   "per_capita_t": 0.8439478961,
+   "coal_dependence": 0.0
+  },
+  {
+   "state_code": "IN-TN",
+   "co2_mt": 161.8169493752,
+   "gsdp_const_cr": 1841121.0179884338,
+   "tco2_per_crore": 87.8904470669,
+   "per_capita_t": 2.0990925991,
+   "coal_dependence": 0.420162972
+  },
+  {
+   "state_code": "IN-AR",
+   "co2_mt": 2.436092446,
+   "gsdp_const_cr": 27893.1205539752,
+   "tco2_per_crore": 87.3366764873,
+   "per_capita_t": 1.5457439378,
+   "coal_dependence": 0.0011262337
+  },
+  {
+   "state_code": "IN-AS",
+   "co2_mt": 30.7885295987,
+   "gsdp_const_cr": 375273.343687478,
+   "tco2_per_crore": 82.0429431415,
+   "per_capita_t": 0.8541218298,
+   "coal_dependence": 0.1484510145
+  },
+  {
+   "state_code": "IN-DH",
+   "co2_mt": 1.1565508279,
+   "gsdp_const_cr": 14794.015190174,
+   "tco2_per_crore": 78.1769393229,
+   "per_capita_t": 1.7587799453,
+   "coal_dependence": 0.0
+  },
+  {
+   "state_code": "IN-NL",
+   "co2_mt": 1.6689300133,
+   "gsdp_const_cr": 27659.7053192139,
+   "tco2_per_crore": 60.3379534958,
+   "per_capita_t": 0.7407589939,
+   "coal_dependence": 0.0289012493
+  },
+  {
+   "state_code": "IN-TR",
+   "co2_mt": 2.441366576,
+   "gsdp_const_cr": 51366.2703309325,
+   "tco2_per_crore": 47.5285933804,
+   "per_capita_t": 0.5835006157,
+   "coal_dependence": 0.3047660125
+  },
+  {
+   "state_code": "IN-JK",
+   "co2_mt": 10.3427356216,
+   "gsdp_const_cr": 241928.9893589608,
+   "tco2_per_crore": 42.7511215131,
+   "per_capita_t": 0.7548891046,
+   "coal_dependence": 0.0006296966
+  },
+  {
+   "state_code": "IN-KL",
+   "co2_mt": 28.0541270719,
+   "gsdp_const_cr": 765251.8471649179,
+   "tco2_per_crore": 36.6599926232,
+   "per_capita_t": 0.7810169007,
+   "coal_dependence": 0.0222123082
+  },
+  {
+   "state_code": "IN-UK",
+   "co2_mt": 8.4146879639,
+   "gsdp_const_cr": 230322.4829007115,
+   "tco2_per_crore": 36.5343750116,
+   "per_capita_t": 0.7158390441,
+   "coal_dependence": 0.0820347724
+  },
+  {
+   "state_code": "IN-DL",
+   "co2_mt": 13.8643921382,
+   "gsdp_const_cr": 384091.6266357284,
+   "tco2_per_crore": 36.0965748189,
+   "per_capita_t": 0.6373847066,
+   "coal_dependence": 0.1237244487
+  },
+  {
+   "state_code": "IN-SK",
+   "co2_mt": 0.8799468069,
+   "gsdp_const_cr": 30694.1033711108,
+   "tco2_per_crore": 28.6682688293,
+   "per_capita_t": 1.2661105135,
+   "coal_dependence": 2e-10
+  },
+  {
+   "state_code": "IN-PY",
+   "co2_mt": 0.8492819932,
+   "gsdp_const_cr": 30752.4571798011,
+   "tco2_per_crore": 27.6167198036,
+   "per_capita_t": 0.6104834539,
+   "coal_dependence": 0.0749448721
+  },
+  {
+   "state_code": "IN-GA",
+   "co2_mt": 1.7876604792,
+   "gsdp_const_cr": 70783.1699413638,
+   "tco2_per_crore": 25.2554453367,
+   "per_capita_t": 1.1292864682,
+   "coal_dependence": 0.0
+  },
+  {
+   "state_code": "IN-CH",
+   "co2_mt": 0.7913631231,
+   "gsdp_const_cr": 39086.3489234148,
+   "tco2_per_crore": 20.2465347853,
+   "per_capita_t": 0.6366557708,
+   "coal_dependence": 0.0
+  },
+  {
+   "state_code": "IN-LD",
+   "co2_mt": 0.0241404571,
+   "gsdp_const_cr": 1586.6077993441,
+   "tco2_per_crore": 15.2151382926,
+   "per_capita_t": 0.3498616969,
+   "coal_dependence": 0.9721824318
+  }
+ ],
+ "watchlist": [
+  {
+   "index": 5,
+   "state_code": "IN-CG",
+   "forecast_cagr_5y": 5.3119873669,
+   "fair_share_cagr_5y": 0.8620513871,
+   "excess_pp": 4.4499359798,
+   "forecast_2029_mt": 314.709439551,
+   "p90_mt": 364.2001359198,
+   "coal_dependence": 0.5774558415,
+   "on_watchlist": true
+  },
+  {
+   "index": 15,
+   "state_code": "IN-KA",
+   "forecast_cagr_5y": 4.8390139591,
+   "fair_share_cagr_5y": 2.3117664064,
+   "excess_pp": 2.5272475527,
+   "forecast_2029_mt": 256.0506530024,
+   "p90_mt": 275.5445934604,
+   "coal_dependence": 0.2548603789,
+   "on_watchlist": true
+  },
+  {
+   "index": 25,
+   "state_code": "IN-OD",
+   "forecast_cagr_5y": 3.709446334,
+   "fair_share_cagr_5y": 1.4191693536,
+   "excess_pp": 2.2902769804,
+   "forecast_2029_mt": 270.1087949713,
+   "p90_mt": 293.5324812191,
+   "coal_dependence": 0.4536468642,
+   "on_watchlist": true
+  },
+  {
+   "index": 1,
+   "state_code": "IN-AP",
+   "forecast_cagr_5y": 3.7046225578,
+   "fair_share_cagr_5y": 2.0262599276,
+   "excess_pp": 1.6783626302,
+   "forecast_2029_mt": 216.6510851715,
+   "p90_mt": 236.1497909235,
+   "coal_dependence": 0.367081231,
+   "on_watchlist": true
+  },
+  {
+   "index": 17,
+   "state_code": "IN-LA",
+   "forecast_cagr_5y": 2.0284013951,
+   "fair_share_cagr_5y": 0.6309001283,
+   "excess_pp": 1.3975012669,
+   "forecast_2029_mt": 3.6313170998,
+   "p90_mt": 3.9344359028,
+   "coal_dependence": 0.0,
+   "on_watchlist": false
+  },
+  {
+   "index": 10,
+   "state_code": "IN-GJ",
+   "forecast_cagr_5y": 3.3091737941,
+   "fair_share_cagr_5y": 1.9934180726,
+   "excess_pp": 1.3157557215,
+   "forecast_2029_mt": 293.1224328748,
+   "p90_mt": 309.2456500574,
+   "coal_dependence": 0.3708985614,
+   "on_watchlist": true
+  },
+  {
+   "index": 28,
+   "state_code": "IN-RJ",
+   "forecast_cagr_5y": 4.6138002711,
+   "fair_share_cagr_5y": 3.6882236051,
+   "excess_pp": 0.925576666,
+   "forecast_2029_mt": 190.9009464584,
+   "p90_mt": 205.6450580256,
+   "coal_dependence": 0.3782312161,
+   "on_watchlist": true
+  },
+  {
+   "index": 22,
+   "state_code": "IN-MP",
+   "forecast_cagr_5y": 3.3180730518,
+   "fair_share_cagr_5y": 2.7791986355,
+   "excess_pp": 0.5388744163,
+   "forecast_2029_mt": 254.6408164543,
+   "p90_mt": 283.0340967247,
+   "coal_dependence": 0.6827335634,
+   "on_watchlist": true
+  },
+  {
+   "index": 19,
+   "state_code": "IN-MH",
+   "forecast_cagr_5y": 2.7930413744,
+   "fair_share_cagr_5y": 2.6250899335,
+   "excess_pp": 0.1679514409,
+   "forecast_2029_mt": 382.553675265,
+   "p90_mt": 427.7667406159,
+   "coal_dependence": 0.5524165916,
+   "on_watchlist": true
+  },
+  {
+   "index": 30,
+   "state_code": "IN-TN",
+   "forecast_cagr_5y": 3.3206274832,
+   "fair_share_cagr_5y": 3.268743478,
+   "excess_pp": 0.0518840052,
+   "forecast_2029_mt": 190.5281649895,
+   "p90_mt": 208.4202803923,
+   "coal_dependence": 0.420162972,
+   "on_watchlist": true
+  },
+  {
+   "index": 13,
+   "state_code": "IN-JH",
+   "forecast_cagr_5y": 1.0786315853,
+   "fair_share_cagr_5y": 1.9612307944,
+   "excess_pp": -0.8825992091,
+   "forecast_2029_mt": 147.5158157298,
+   "p90_mt": 157.5855991898,
+   "coal_dependence": 0.3983516782,
+   "on_watchlist": false
+  },
+  {
+   "index": 32,
+   "state_code": "IN-TS",
+   "forecast_cagr_5y": 1.4237852895,
+   "fair_share_cagr_5y": 2.3140973083,
+   "excess_pp": -0.8903120187,
+   "forecast_2029_mt": 121.7898380905,
+   "p90_mt": 128.1797517909,
+   "coal_dependence": 0.5835124189,
+   "on_watchlist": false
+  },
+  {
+   "index": 12,
+   "state_code": "IN-HR",
+   "forecast_cagr_5y": 1.9077985027,
+   "fair_share_cagr_5y": 3.1327569922,
+   "excess_pp": -1.2249584894,
+   "forecast_2029_mt": 73.5971308543,
+   "p90_mt": 79.89614502,
+   "coal_dependence": 0.434758743,
+   "on_watchlist": false
+  },
+  {
+   "index": 18,
+   "state_code": "IN-LD",
+   "forecast_cagr_5y": 5.2349898698,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -1.2257394064,
+   "forecast_2029_mt": 0.0311563308,
+   "p90_mt": 0.0432032797,
+   "coal_dependence": 0.9721824318,
+   "on_watchlist": false
+  },
+  {
+   "index": 11,
+   "state_code": "IN-HP",
+   "forecast_cagr_5y": 1.476239151,
+   "fair_share_cagr_5y": 2.7409852221,
+   "excess_pp": -1.2647460711,
+   "forecast_2029_mt": 20.215209947,
+   "p90_mt": 21.2507467409,
+   "coal_dependence": 0.0,
+   "on_watchlist": false
+  },
+  {
+   "index": 20,
+   "state_code": "IN-ML",
+   "forecast_cagr_5y": 1.5056390899,
+   "fair_share_cagr_5y": 2.8334549373,
+   "excess_pp": -1.3278158475,
+   "forecast_2029_mt": 8.8172908808,
+   "p90_mt": 9.320024907,
+   "coal_dependence": 0.0163216771,
+   "on_watchlist": false
+  },
+  {
+   "index": 35,
+   "state_code": "IN-WB",
+   "forecast_cagr_5y": 2.6112169492,
+   "fair_share_cagr_5y": 4.3862131986,
+   "excess_pp": -1.7749962494,
+   "forecast_2029_mt": 177.1719092643,
+   "p90_mt": 194.6878337092,
+   "coal_dependence": 0.3828787306,
+   "on_watchlist": false
+  },
+  {
+   "index": 0,
+   "state_code": "IN-AN",
+   "forecast_cagr_5y": 1.0114058725,
+   "fair_share_cagr_5y": 2.8081189972,
+   "excess_pp": -1.7967131247,
+   "forecast_2029_mt": 1.038078922,
+   "p90_mt": 1.0958597631,
+   "coal_dependence": 0.3191648031,
+   "on_watchlist": false
+  },
+  {
+   "index": 26,
+   "state_code": "IN-PB",
+   "forecast_cagr_5y": 1.9191016923,
+   "fair_share_cagr_5y": 3.71618837,
+   "excess_pp": -1.7970866777,
+   "forecast_2029_mt": 62.7937478363,
+   "p90_mt": 74.0288269165,
+   "coal_dependence": 0.5293202883,
+   "on_watchlist": false
+  },
+  {
+   "index": 4,
+   "state_code": "IN-BR",
+   "forecast_cagr_5y": 3.7175943777,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -2.7431348985,
+   "forecast_2029_mt": 111.007156392,
+   "p90_mt": 131.2520124027,
+   "coal_dependence": 0.604687737,
+   "on_watchlist": false
+  },
+  {
+   "index": 23,
+   "state_code": "IN-MZ",
+   "forecast_cagr_5y": 1.2131886495,
+   "fair_share_cagr_5y": 4.0650816163,
+   "excess_pp": -2.8518929668,
+   "forecast_2029_mt": 2.2409837979,
+   "p90_mt": 2.3871915737,
+   "coal_dependence": 0.0,
+   "on_watchlist": false
+  },
+  {
+   "index": 7,
+   "state_code": "IN-DH",
+   "forecast_cagr_5y": 0.9200746177,
+   "fair_share_cagr_5y": 3.9012244036,
+   "excess_pp": -2.9811497859,
+   "forecast_2029_mt": 1.210744594,
+   "p90_mt": 1.2174643845,
+   "coal_dependence": 0.0,
+   "on_watchlist": false
+  },
+  {
+   "index": 33,
+   "state_code": "IN-UK",
+   "forecast_cagr_5y": 3.0856209472,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -3.375108329,
+   "forecast_2029_mt": 9.7955420303,
+   "p90_mt": 11.1073090698,
+   "coal_dependence": 0.0820347724,
+   "on_watchlist": false
+  },
+  {
+   "index": 14,
+   "state_code": "IN-JK",
+   "forecast_cagr_5y": 3.0380066998,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -3.4227225763,
+   "forecast_2029_mt": 12.0122030908,
+   "p90_mt": 13.4460091938,
+   "coal_dependence": 0.0006296966,
+   "on_watchlist": false
+  },
+  {
+   "index": 2,
+   "state_code": "IN-AR",
+   "forecast_cagr_5y": 0.8658889663,
+   "fair_share_cagr_5y": 4.4388951333,
+   "excess_pp": -3.573006167,
+   "forecast_2029_mt": 2.5434041022,
+   "p90_mt": 2.7977863759,
+   "coal_dependence": 0.0011262337,
+   "on_watchlist": false
+  },
+  {
+   "index": 16,
+   "state_code": "IN-KL",
+   "forecast_cagr_5y": 2.7046864975,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -3.7560427787,
+   "forecast_2029_mt": 32.0588593452,
+   "p90_mt": 35.1890887337,
+   "coal_dependence": 0.0222123082,
+   "on_watchlist": false
+  },
+  {
+   "index": 3,
+   "state_code": "IN-AS",
+   "forecast_cagr_5y": 2.2323583152,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -4.228370961,
+   "forecast_2029_mt": 34.3819769483,
+   "p90_mt": 38.0831723789,
+   "coal_dependence": 0.1484510145,
+   "on_watchlist": false
+  },
+  {
+   "index": 29,
+   "state_code": "IN-SK",
+   "forecast_cagr_5y": 1.1304934198,
+   "fair_share_cagr_5y": 5.419270411,
+   "excess_pp": -4.2887769911,
+   "forecast_2029_mt": 0.9308228816,
+   "p90_mt": 0.9931790175,
+   "coal_dependence": 2e-10,
+   "on_watchlist": false
+  },
+  {
+   "index": 34,
+   "state_code": "IN-UP",
+   "forecast_cagr_5y": 1.8655152572,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -4.5952140189,
+   "forecast_2029_mt": 275.1691539494,
+   "p90_mt": 286.0218108567,
+   "coal_dependence": 0.5830929747,
+   "on_watchlist": false
+  },
+  {
+   "index": 31,
+   "state_code": "IN-TR",
+   "forecast_cagr_5y": 1.7157801647,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -4.7449491114,
+   "forecast_2029_mt": 2.6581205133,
+   "p90_mt": 2.7784166665,
+   "coal_dependence": 0.3047660125,
+   "on_watchlist": false
+  },
+  {
+   "index": 8,
+   "state_code": "IN-DL",
+   "forecast_cagr_5y": 1.6765094469,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -4.7842198293,
+   "forecast_2029_mt": 15.0662085861,
+   "p90_mt": 16.3283929062,
+   "coal_dependence": 0.1237244487,
+   "on_watchlist": false
+  },
+  {
+   "index": 24,
+   "state_code": "IN-NL",
+   "forecast_cagr_5y": 1.4580087018,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -5.0027205743,
+   "forecast_2029_mt": 1.7941956364,
+   "p90_mt": 1.9924630706,
+   "coal_dependence": 0.0289012493,
+   "on_watchlist": false
+  },
+  {
+   "index": 21,
+   "state_code": "IN-MN",
+   "forecast_cagr_5y": 1.2528508426,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -5.2078784335,
+   "forecast_2029_mt": 2.9217025373,
+   "p90_mt": 3.1402496671,
+   "coal_dependence": 0.0,
+   "on_watchlist": false
+  },
+  {
+   "index": 9,
+   "state_code": "IN-GA",
+   "forecast_cagr_5y": 0.864157168,
+   "fair_share_cagr_5y": 6.0758677591,
+   "excess_pp": -5.2117105911,
+   "forecast_2029_mt": 1.8662480132,
+   "p90_mt": 2.0767530698,
+   "coal_dependence": 0.0,
+   "on_watchlist": false
+  },
+  {
+   "index": 27,
+   "state_code": "IN-PY",
+   "forecast_cagr_5y": 1.0426202339,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -5.4181090422,
+   "forecast_2029_mt": 0.8944888166,
+   "p90_mt": 0.9514050921,
+   "coal_dependence": 0.0749448721,
+   "on_watchlist": false
+  },
+  {
+   "index": 6,
+   "state_code": "IN-CH",
+   "forecast_cagr_5y": 0.7472174202,
+   "fair_share_cagr_5y": 6.4607292761,
+   "excess_pp": -5.713511856,
+   "forecast_2029_mt": 0.8213742974,
+   "p90_mt": 0.8867655351,
+   "coal_dependence": 0.0,
+   "on_watchlist": false
+  }
+ ],
+ "cities": [
+  {
+   "city_id": 9,
+   "name": "Surat",
+   "state_code": "IN-GJ",
+   "co2_mt": 65.2420785112,
+   "share_of_state": 0.2619227209,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 21,
+   "name": "Visakhapatnam",
+   "state_code": "IN-AP",
+   "co2_mt": 49.808188,
+   "share_of_state": 0.2757594789,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 4,
+   "name": "Chennai",
+   "state_code": "IN-TN",
+   "co2_mt": 32.5145557666,
+   "share_of_state": 0.2009341784,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 2,
+   "name": "Mumbai",
+   "state_code": "IN-MH",
+   "co2_mt": 22.2618989805,
+   "share_of_state": 0.0667864575,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 28,
+   "name": "Jamshedpur",
+   "state_code": "IN-JH",
+   "co2_mt": 21.948212,
+   "share_of_state": 0.156984701,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 1,
+   "name": "Delhi",
+   "state_code": "IN-DL",
+   "co2_mt": 20.524152,
+   "share_of_state": 1.480349935,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 29,
+   "name": "Asansol",
+   "state_code": "IN-WB",
+   "co2_mt": 15.795291,
+   "share_of_state": 0.1014161121,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 34,
+   "name": "Vijayawada",
+   "state_code": "IN-AP",
+   "co2_mt": 14.1895612031,
+   "share_of_state": 0.0785594931,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 64,
+   "name": "Amaravati",
+   "state_code": "IN-AP",
+   "co2_mt": 14.0292837002,
+   "share_of_state": 0.0776721282,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 5,
+   "name": "Bengaluru",
+   "state_code": "IN-KA",
+   "co2_mt": 12.725934,
+   "share_of_state": 0.0629474899,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 17,
+   "name": "Vadodara",
+   "state_code": "IN-GJ",
+   "co2_mt": 11.96835,
+   "share_of_state": 0.0480484814,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 3,
+   "name": "Kolkata",
+   "state_code": "IN-WB",
+   "co2_mt": 10.3029144961,
+   "share_of_state": 0.0661514582,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 7,
+   "name": "Ahmedabad",
+   "state_code": "IN-GJ",
+   "co2_mt": 10.0614291016,
+   "share_of_state": 0.040392902,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 39,
+   "name": "Kota",
+   "state_code": "IN-RJ",
+   "co2_mt": 8.8450809023,
+   "share_of_state": 0.0580548654,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 6,
+   "name": "Hyderabad",
+   "state_code": "IN-TS",
+   "co2_mt": 7.638684,
+   "share_of_state": 0.067314181,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 35,
+   "name": "Raipur",
+   "state_code": "IN-CG",
+   "co2_mt": 7.0234899004,
+   "share_of_state": 0.0289089445,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 12,
+   "name": "Kanpur",
+   "state_code": "IN-UP",
+   "co2_mt": 5.5239141016,
+   "share_of_state": 0.0220182653,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 23,
+   "name": "Kochi",
+   "state_code": "IN-KL",
+   "co2_mt": 5.1099606016,
+   "share_of_state": 0.1821464838,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 8,
+   "name": "Pune",
+   "state_code": "IN-MH",
+   "co2_mt": 4.757642501,
+   "share_of_state": 0.0142730901,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "B"
+  },
+  {
+   "city_id": 49,
+   "name": "Gandhinagar",
+   "state_code": "IN-GJ",
+   "co2_mt": 4.372867,
+   "share_of_state": 0.0175554374,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 20,
+   "name": "Nashik",
+   "state_code": "IN-MH",
+   "co2_mt": 4.3240772969,
+   "share_of_state": 0.0129723796,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 63,
+   "name": "Ghaziabad",
+   "state_code": "IN-UP",
+   "co2_mt": 4.123927,
+   "share_of_state": 0.016437931,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 30,
+   "name": "Dhanbad",
+   "state_code": "IN-JH",
+   "co2_mt": 3.487584,
+   "share_of_state": 0.0249449628,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 13,
+   "name": "Nagpur",
+   "state_code": "IN-MH",
+   "co2_mt": 3.112962,
+   "share_of_state": 0.0093389924,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 62,
+   "name": "Faridabad",
+   "state_code": "IN-HR",
+   "co2_mt": 2.96121,
+   "share_of_state": 0.044222717,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 42,
+   "name": "Chandigarh",
+   "state_code": "IN-CH",
+   "co2_mt": 2.270887,
+   "share_of_state": 2.8695891098,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 22,
+   "name": "Coimbatore",
+   "state_code": "IN-TN",
+   "co2_mt": 2.069507,
+   "share_of_state": 0.0127891856,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 18,
+   "name": "Ludhiana",
+   "state_code": "IN-PB",
+   "co2_mt": 1.7557205977,
+   "share_of_state": 0.0307480045,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 14,
+   "name": "Indore",
+   "state_code": "IN-MP",
+   "co2_mt": 1.7519976016,
+   "share_of_state": 0.0081000365,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 61,
+   "name": "Silvassa",
+   "state_code": "IN-DH",
+   "co2_mt": 1.629527,
+   "share_of_state": 1.4089540734,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 31,
+   "name": "Aurangabad",
+   "state_code": "IN-MH",
+   "co2_mt": 1.600786,
+   "share_of_state": 0.0048024127,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 43,
+   "name": "Guwahati",
+   "state_code": "IN-AS",
+   "co2_mt": 1.5184764185,
+   "share_of_state": 0.0493195498,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 33,
+   "name": "Amritsar",
+   "state_code": "IN-PB",
+   "co2_mt": 1.338775,
+   "share_of_state": 0.0234460197,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 11,
+   "name": "Lucknow",
+   "state_code": "IN-UP",
+   "co2_mt": 1.306345,
+   "share_of_state": 0.0052070778,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 10,
+   "name": "Jaipur",
+   "state_code": "IN-RJ",
+   "co2_mt": 1.19775,
+   "share_of_state": 0.0078614561,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 41,
+   "name": "Thiruvananthapuram",
+   "state_code": "IN-KL",
+   "co2_mt": 1.119923,
+   "share_of_state": 0.0399200801,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 25,
+   "name": "Varanasi",
+   "state_code": "IN-UP",
+   "co2_mt": 1.066124,
+   "share_of_state": 0.0042495594,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 26,
+   "name": "Meerut",
+   "state_code": "IN-UP",
+   "co2_mt": 0.9562112031,
+   "share_of_state": 0.0038114481,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 15,
+   "name": "Bhopal",
+   "state_code": "IN-MP",
+   "co2_mt": 0.9143576016,
+   "share_of_state": 0.0042273631,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 46,
+   "name": "Srinagar",
+   "state_code": "IN-JK",
+   "co2_mt": 0.8890981016,
+   "share_of_state": 0.0859635336,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 57,
+   "name": "Puducherry",
+   "state_code": "IN-PY",
+   "co2_mt": 0.8548358008,
+   "share_of_state": 1.0065394152,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 24,
+   "name": "Madurai",
+   "state_code": "IN-TN",
+   "co2_mt": 0.829678,
+   "share_of_state": 0.0051272626,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 19,
+   "name": "Agra",
+   "state_code": "IN-UP",
+   "co2_mt": 0.7377732969,
+   "share_of_state": 0.0029407568,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 32,
+   "name": "Allahabad",
+   "state_code": "IN-UP",
+   "co2_mt": 0.6933745,
+   "share_of_state": 0.0027637837,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 44,
+   "name": "Bhubaneswar",
+   "state_code": "IN-OD",
+   "co2_mt": 0.6903126992,
+   "share_of_state": 0.0030661876,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 16,
+   "name": "Patna",
+   "state_code": "IN-BR",
+   "co2_mt": 0.6768598984,
+   "share_of_state": 0.0073182962,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 37,
+   "name": "Jabalpur",
+   "state_code": "IN-MP",
+   "co2_mt": 0.5415733984,
+   "share_of_state": 0.0025038643,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 40,
+   "name": "Ranchi",
+   "state_code": "IN-JH",
+   "co2_mt": 0.5168133008,
+   "share_of_state": 0.0036965098,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 27,
+   "name": "Rajkot",
+   "state_code": "IN-GJ",
+   "co2_mt": 0.4797916016,
+   "share_of_state": 0.0019261851,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 38,
+   "name": "Jodhpur",
+   "state_code": "IN-RJ",
+   "co2_mt": 0.4682542012,
+   "share_of_state": 0.0030733958,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 51,
+   "name": "Shillong",
+   "state_code": "IN-ML",
+   "co2_mt": 0.4404481982,
+   "share_of_state": 0.053828282,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 50,
+   "name": "Imphal",
+   "state_code": "IN-MN",
+   "co2_mt": 0.436868,
+   "share_of_state": 0.1591294407,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 48,
+   "name": "Panaji",
+   "state_code": "IN-GA",
+   "co2_mt": 0.3757098984,
+   "share_of_state": 0.2101684871,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 54,
+   "name": "Agartala",
+   "state_code": "IN-TR",
+   "co2_mt": 0.375142791,
+   "share_of_state": 0.1536609843,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 36,
+   "name": "Gwalior",
+   "state_code": "IN-MP",
+   "co2_mt": 0.3235446592,
+   "share_of_state": 0.0014958488,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 45,
+   "name": "Dehradun",
+   "state_code": "IN-UK",
+   "co2_mt": 0.2934617993,
+   "share_of_state": 0.0348749473,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 58,
+   "name": "Port Blair",
+   "state_code": "IN-AN",
+   "co2_mt": 0.2303528984,
+   "share_of_state": 0.2333540735,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 47,
+   "name": "Shimla",
+   "state_code": "IN-HP",
+   "co2_mt": 0.2106088008,
+   "share_of_state": 0.0112103733,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 53,
+   "name": "Kohima",
+   "state_code": "IN-NL",
+   "co2_mt": 0.1160260571,
+   "share_of_state": 0.0695212239,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 52,
+   "name": "Aizawl",
+   "state_code": "IN-MZ",
+   "co2_mt": 0.1080143477,
+   "share_of_state": 0.0511950848,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 59,
+   "name": "Leh",
+   "state_code": "IN-LA",
+   "co2_mt": 0.0999856802,
+   "share_of_state": 0.0304424107,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 55,
+   "name": "Gangtok",
+   "state_code": "IN-SK",
+   "co2_mt": 0.0942474004,
+   "share_of_state": 0.1071057928,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 60,
+   "name": "Kavaratti",
+   "state_code": "IN-LD",
+   "co2_mt": 0.0420815023,
+   "share_of_state": 1.7431940984,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  },
+  {
+   "city_id": 56,
+   "name": "Itanagar",
+   "state_code": "IN-AR",
+   "co2_mt": 0.0409627805,
+   "share_of_state": 0.0168149532,
+   "estimation_method": "EDGAR-grid-buffer",
+   "confidence_tier": "C"
+  }
+ ],
+ "notes": {
+  "emissions": "EDGAR-downscaled estimates (not official state inventories).",
+  "cities": "City values are EDGAR grid-buffer ESTIMATES, never measured inventories.",
+  "watchlist": "Only states/UTs emitting >= 5 Mt are eligible.",
+  "fair_share": "Fair-share CAGR = national forecast CAGR \u00d7 (national per-capita / state per-capita), capped at 2\u00d7."
+ }
+}

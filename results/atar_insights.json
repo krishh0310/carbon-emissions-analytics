@@ -1,0 +1,5111 @@
+[
+ {
+  "state_code": "IN-CG",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "alert",
+  "title": "Chhattisgarh forecast exceeds fair-share path by 11%",
+  "body": "Chhattisgarh's 2029 forecast (340.2 Mt CO₂e, +2.6%/yr) exceeds its fair-share trajectory (+0.5%/yr) by 11% — driven by power + industry.",
+  "title_hi": "छत्तीसगढ़ का पूर्वानुमान उचित-हिस्सा पथ से 11% अधिक",
+  "body_hi": "छत्तीसगढ़ का 2029 पूर्वानुमान (340.2 Mt CO₂e, +2.6% प्रति वर्ष) उसके उचित-हिस्सा पथ (+0.5% प्रति वर्ष) से 11% अधिक है — मुख्यतः बिजली + उद्योग के कारण।",
+  "evidence": {
+   "forecast_mt": 340.1801,
+   "now_mt": 299.0507,
+   "cagr_pct": 2.6107,
+   "fair_cagr_pct": 0.5083,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 10.9058,
+   "drivers": {
+    "POWER": 21.58,
+    "INDUSTRY": 13.608,
+    "OTHER": 3.626
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 237.756
+    },
+    {
+     "year": 2019,
+     "observed": 235.143
+    },
+    {
+     "year": 2020,
+     "observed": 228.233
+    },
+    {
+     "year": 2021,
+     "observed": 252.953
+    },
+    {
+     "year": 2022,
+     "observed": 274.266
+    },
+    {
+     "year": 2023,
+     "observed": 294.095
+    },
+    {
+     "year": 2024,
+     "observed": 299.051,
+     "forecast": 299.051,
+     "fair": 299.051,
+     "fair_hi": 299.051,
+     "band": [
+      299.051,
+      299.051
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 303.422,
+     "band": [
+      288.493,
+      326.277
+     ],
+     "fair": 300.571,
+     "fair_hi": 304.029
+    },
+    {
+     "year": 2026,
+     "forecast": 312.07,
+     "band": [
+      283.377,
+      345.459
+     ],
+     "fair": 302.099,
+     "fair_hi": 309.091
+    },
+    {
+     "year": 2027,
+     "forecast": 323.229,
+     "band": [
+      293.676,
+      351.924
+     ],
+     "fair": 303.634,
+     "fair_hi": 314.236
+    },
+    {
+     "year": 2028,
+     "forecast": 332.722,
+     "band": [
+      292.368,
+      369.252
+     ],
+     "fair": 305.178,
+     "fair_hi": 319.468
+    },
+    {
+     "year": 2029,
+     "forecast": 340.18,
+     "band": [
+      293.477,
+      384.678
+     ],
+     "fair": 306.729,
+     "fair_hi": 324.786
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+0.5%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-OD",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "warning",
+  "title": "Odisha forecast exceeds fair-share path by 6%",
+  "body": "Odisha's 2029 forecast (297.1 Mt CO₂e, +2.0%/yr) exceeds its fair-share trajectory (+0.9%/yr) by 6% — driven by power + industry.",
+  "title_hi": "ओडिशा का पूर्वानुमान उचित-हिस्सा पथ से 6% अधिक",
+  "body_hi": "ओडिशा का 2029 पूर्वानुमान (297.1 Mt CO₂e, +2.0% प्रति वर्ष) उसके उचित-हिस्सा पथ (+0.9% प्रति वर्ष) से 6% अधिक है — मुख्यतः बिजली + उद्योग के कारण।",
+  "evidence": {
+   "forecast_mt": 297.0943,
+   "now_mt": 269.2604,
+   "cagr_pct": 1.9869,
+   "fair_cagr_pct": 0.8613,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 5.706,
+   "drivers": {
+    "POWER": 12.011,
+    "INDUSTRY": 11.652,
+    "AGRICULTURE": 0.972
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 203.163
+    },
+    {
+     "year": 2019,
+     "observed": 209.446
+    },
+    {
+     "year": 2020,
+     "observed": 202.727
+    },
+    {
+     "year": 2021,
+     "observed": 227.678
+    },
+    {
+     "year": 2022,
+     "observed": 243.831
+    },
+    {
+     "year": 2023,
+     "observed": 262.161
+    },
+    {
+     "year": 2024,
+     "observed": 269.26,
+     "forecast": 269.26,
+     "fair": 269.26,
+     "fair_hi": 269.26,
+     "band": [
+      269.26,
+      269.26
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 273.339,
+     "band": [
+      257.436,
+      291.458
+     ],
+     "fair": 271.579,
+     "fair_hi": 273.743
+    },
+    {
+     "year": 2026,
+     "forecast": 282.864,
+     "band": [
+      254.165,
+      302.679
+     ],
+     "fair": 273.918,
+     "fair_hi": 278.3
+    },
+    {
+     "year": 2027,
+     "forecast": 287.951,
+     "band": [
+      259.038,
+      315.853
+     ],
+     "fair": 276.278,
+     "fair_hi": 282.933
+    },
+    {
+     "year": 2028,
+     "forecast": 294.333,
+     "band": [
+      267.275,
+      326.19
+     ],
+     "fair": 278.657,
+     "fair_hi": 287.644
+    },
+    {
+     "year": 2029,
+     "forecast": 297.094,
+     "band": [
+      271.584,
+      338.737
+     ],
+     "fair": 281.057,
+     "fair_hi": 292.432
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+0.9%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-GJ",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "warning",
+  "title": "Gujarat forecast exceeds fair-share path by 4%",
+  "body": "Gujarat's 2029 forecast (333.5 Mt CO₂e, +2.1%/yr) exceeds its fair-share trajectory (+1.2%/yr) by 4% — driven by power + industry.",
+  "title_hi": "गुजरात का पूर्वानुमान उचित-हिस्सा पथ से 4% अधिक",
+  "body_hi": "गुजरात का 2029 पूर्वानुमान (333.5 Mt CO₂e, +2.1% प्रति वर्ष) उसके उचित-हिस्सा पथ (+1.2% प्रति वर्ष) से 4% अधिक है — मुख्यतः बिजली + उद्योग के कारण।",
+  "evidence": {
+   "forecast_mt": 333.5381,
+   "now_mt": 301.1019,
+   "cagr_pct": 2.0672,
+   "fair_cagr_pct": 1.1969,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 4.3747,
+   "drivers": {
+    "POWER": 14.24,
+    "INDUSTRY": 10.8,
+    "WASTE": 2.544
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 251.281
+    },
+    {
+     "year": 2019,
+     "observed": 254.046
+    },
+    {
+     "year": 2020,
+     "observed": 242.741
+    },
+    {
+     "year": 2021,
+     "observed": 262.785
+    },
+    {
+     "year": 2022,
+     "observed": 277.032
+    },
+    {
+     "year": 2023,
+     "observed": 293.682
+    },
+    {
+     "year": 2024,
+     "observed": 301.102,
+     "forecast": 301.102,
+     "fair": 301.102,
+     "fair_hi": 301.102,
+     "band": [
+      301.102,
+      301.102
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 308.097,
+     "band": [
+      293.999,
+      322.148
+     ],
+     "fair": 304.706,
+     "fair_hi": 306.115
+    },
+    {
+     "year": 2026,
+     "forecast": 314.013,
+     "band": [
+      284.55,
+      337.534
+     ],
+     "fair": 308.353,
+     "fair_hi": 311.211
+    },
+    {
+     "year": 2027,
+     "forecast": 320.789,
+     "band": [
+      294.909,
+      344.279
+     ],
+     "fair": 312.044,
+     "fair_hi": 316.392
+    },
+    {
+     "year": 2028,
+     "forecast": 327.219,
+     "band": [
+      295.908,
+      354.423
+     ],
+     "fair": 315.779,
+     "fair_hi": 321.659
+    },
+    {
+     "year": 2029,
+     "forecast": 333.538,
+     "band": [
+      299.768,
+      371.067
+     ],
+     "fair": 319.558,
+     "fair_hi": 327.014
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+1.2%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-MP",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "warning",
+  "title": "Madhya Pradesh forecast exceeds fair-share path by 4%",
+  "body": "Madhya Pradesh's 2029 forecast (337.4 Mt CO₂e, +2.3%/yr) exceeds its fair-share trajectory (+1.4%/yr) by 4% — driven by power + other.",
+  "title_hi": "मध्य प्रदेश का पूर्वानुमान उचित-हिस्सा पथ से 4% अधिक",
+  "body_hi": "मध्य प्रदेश का 2029 पूर्वानुमान (337.4 Mt CO₂e, +2.3% प्रति वर्ष) उसके उचित-हिस्सा पथ (+1.4% प्रति वर्ष) से 4% अधिक है — मुख्यतः बिजली + अन्य के कारण।",
+  "evidence": {
+   "forecast_mt": 337.3809,
+   "now_mt": 301.3545,
+   "cagr_pct": 2.2842,
+   "fair_cagr_pct": 1.4478,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 4.1907,
+   "drivers": {
+    "POWER": 22.642,
+    "OTHER": 4.791,
+    "INDUSTRY": 2.526
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 237.608
+    },
+    {
+     "year": 2019,
+     "observed": 240.946
+    },
+    {
+     "year": 2020,
+     "observed": 235.5
+    },
+    {
+     "year": 2021,
+     "observed": 259.409
+    },
+    {
+     "year": 2022,
+     "observed": 281.896
+    },
+    {
+     "year": 2023,
+     "observed": 297.325
+    },
+    {
+     "year": 2024,
+     "observed": 301.354,
+     "forecast": 301.354,
+     "fair": 301.354,
+     "fair_hi": 301.354,
+     "band": [
+      301.354,
+      301.354
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 304.996,
+     "band": [
+      287.956,
+      326.565
+     ],
+     "fair": 305.718,
+     "fair_hi": 306.371
+    },
+    {
+     "year": 2026,
+     "forecast": 315.22,
+     "band": [
+      287.093,
+      339.549
+     ],
+     "fair": 310.144,
+     "fair_hi": 311.472
+    },
+    {
+     "year": 2027,
+     "forecast": 325.05,
+     "band": [
+      295.212,
+      348.752
+     ],
+     "fair": 314.634,
+     "fair_hi": 316.657
+    },
+    {
+     "year": 2028,
+     "forecast": 333.097,
+     "band": [
+      297.541,
+      368.64
+     ],
+     "fair": 319.19,
+     "fair_hi": 321.929
+    },
+    {
+     "year": 2029,
+     "forecast": 337.381,
+     "band": [
+      300.2,
+      380.348
+     ],
+     "fair": 323.811,
+     "fair_hi": 327.288
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+1.4%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-TN",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "warning",
+  "title": "Tamil Nadu forecast exceeds fair-share path by 4%",
+  "body": "Tamil Nadu's 2029 forecast (486.0 Mt CO₂e, +1.7%/yr) exceeds its fair-share trajectory (+0.9%/yr) by 4% — driven by agriculture + power.",
+  "title_hi": "तमिलनाडु का पूर्वानुमान उचित-हिस्सा पथ से 4% अधिक",
+  "body_hi": "तमिलनाडु का 2029 पूर्वानुमान (486.0 Mt CO₂e, +1.7% प्रति वर्ष) उसके उचित-हिस्सा पथ (+0.9% प्रति वर्ष) से 4% अधिक है — मुख्यतः कृषि + बिजली के कारण।",
+  "evidence": {
+   "forecast_mt": 486.0338,
+   "now_mt": 447.8081,
+   "cagr_pct": 1.6518,
+   "fair_cagr_pct": 0.8573,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 4.001,
+   "drivers": {
+    "AGRICULTURE": 18.704,
+    "POWER": 9.408,
+    "INDUSTRY": 4.28
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 399.127
+    },
+    {
+     "year": 2019,
+     "observed": 407.057
+    },
+    {
+     "year": 2020,
+     "observed": 394.177
+    },
+    {
+     "year": 2021,
+     "observed": 411.94
+    },
+    {
+     "year": 2022,
+     "observed": 425.171
+    },
+    {
+     "year": 2023,
+     "observed": 438.583
+    },
+    {
+     "year": 2024,
+     "observed": 447.808,
+     "forecast": 447.808,
+     "fair": 447.808,
+     "fair_hi": 447.808,
+     "band": [
+      447.808,
+      447.808
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 455.675,
+     "band": [
+      437.847,
+      470.515
+     ],
+     "fair": 451.647,
+     "fair_hi": 455.263
+    },
+    {
+     "year": 2026,
+     "forecast": 463.038,
+     "band": [
+      429.826,
+      485.164
+     ],
+     "fair": 455.519,
+     "fair_hi": 462.842
+    },
+    {
+     "year": 2027,
+     "forecast": 470.799,
+     "band": [
+      438.327,
+      495.367
+     ],
+     "fair": 459.425,
+     "fair_hi": 470.548
+    },
+    {
+     "year": 2028,
+     "forecast": 478.728,
+     "band": [
+      435.146,
+      500.79
+     ],
+     "fair": 463.363,
+     "fair_hi": 478.381
+    },
+    {
+     "year": 2029,
+     "forecast": 486.034,
+     "band": [
+      450.299,
+      516.926
+     ],
+     "fair": 467.336,
+     "fair_hi": 486.345
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+0.9%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-KA",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "warning",
+  "title": "Karnataka forecast exceeds fair-share path by 4%",
+  "body": "Karnataka's 2029 forecast (270.3 Mt CO₂e, +2.2%/yr) exceeds its fair-share trajectory (+1.4%/yr) by 4% — driven by industry + power.",
+  "title_hi": "कर्नाटक का पूर्वानुमान उचित-हिस्सा पथ से 4% अधिक",
+  "body_hi": "कर्नाटक का 2029 पूर्वानुमान (270.3 Mt CO₂e, +2.2% प्रति वर्ष) उसके उचित-हिस्सा पथ (+1.4% प्रति वर्ष) से 4% अधिक है — मुख्यतः उद्योग + बिजली के कारण।",
+  "evidence": {
+   "forecast_mt": 270.2886,
+   "now_mt": 242.5443,
+   "cagr_pct": 2.1897,
+   "fair_cagr_pct": 1.3986,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 3.9625,
+   "drivers": {
+    "INDUSTRY": 9.334,
+    "POWER": 7.986,
+    "TRANSPORT": 6.197
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 202.775
+    },
+    {
+     "year": 2019,
+     "observed": 202.207
+    },
+    {
+     "year": 2020,
+     "observed": 191.185
+    },
+    {
+     "year": 2021,
+     "observed": 209.343
+    },
+    {
+     "year": 2022,
+     "observed": 223.458
+    },
+    {
+     "year": 2023,
+     "observed": 236.264
+    },
+    {
+     "year": 2024,
+     "observed": 242.544,
+     "forecast": 242.544,
+     "fair": 242.544,
+     "fair_hi": 242.544,
+     "band": [
+      242.544,
+      242.544
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 245.443,
+     "band": [
+      236.95,
+      261.252
+     ],
+     "fair": 245.937,
+     "fair_hi": 246.582
+    },
+    {
+     "year": 2026,
+     "forecast": 252.785,
+     "band": [
+      229.995,
+      270.902
+     ],
+     "fair": 249.376,
+     "fair_hi": 250.687
+    },
+    {
+     "year": 2027,
+     "forecast": 258.519,
+     "band": [
+      239.511,
+      279.969
+     ],
+     "fair": 252.864,
+     "fair_hi": 254.861
+    },
+    {
+     "year": 2028,
+     "forecast": 265.521,
+     "band": [
+      245.959,
+      290.634
+     ],
+     "fair": 256.401,
+     "fair_hi": 259.103
+    },
+    {
+     "year": 2029,
+     "forecast": 270.289,
+     "band": [
+      249.626,
+      306.774
+     ],
+     "fair": 259.987,
+     "fair_hi": 263.417
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+1.4%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-AP",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "warning",
+  "title": "Andhra Pradesh forecast exceeds fair-share path by 2%",
+  "body": "Andhra Pradesh's 2029 forecast (254.9 Mt CO₂e, +1.5%/yr) exceeds its fair-share trajectory (+1.1%/yr) by 2% — driven by industry + power.",
+  "title_hi": "आंध्र प्रदेश का पूर्वानुमान उचित-हिस्सा पथ से 2% अधिक",
+  "body_hi": "आंध्र प्रदेश का 2029 पूर्वानुमान (254.9 Mt CO₂e, +1.5% प्रति वर्ष) उसके उचित-हिस्सा पथ (+1.1% प्रति वर्ष) से 2% अधिक है — मुख्यतः उद्योग + बिजली के कारण।",
+  "evidence": {
+   "forecast_mt": 254.926,
+   "now_mt": 236.9104,
+   "cagr_pct": 1.4766,
+   "fair_cagr_pct": 1.1213,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 1.7694,
+   "drivers": {
+    "INDUSTRY": 7.774,
+    "POWER": 5.68,
+    "TRANSPORT": 1.635
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 195.866
+    },
+    {
+     "year": 2019,
+     "observed": 191.895
+    },
+    {
+     "year": 2020,
+     "observed": 187.624
+    },
+    {
+     "year": 2021,
+     "observed": 198.886
+    },
+    {
+     "year": 2022,
+     "observed": 208.893
+    },
+    {
+     "year": 2023,
+     "observed": 227.973
+    },
+    {
+     "year": 2024,
+     "observed": 236.91,
+     "forecast": 236.91,
+     "fair": 236.91,
+     "fair_hi": 236.91,
+     "band": [
+      236.91,
+      236.91
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 239.528,
+     "band": [
+      228.643,
+      255.907
+     ],
+     "fair": 239.567,
+     "fair_hi": 240.854
+    },
+    {
+     "year": 2026,
+     "forecast": 242.508,
+     "band": [
+      222.038,
+      265.462
+     ],
+     "fair": 242.253,
+     "fair_hi": 244.864
+    },
+    {
+     "year": 2027,
+     "forecast": 246.867,
+     "band": [
+      229.453,
+      270.673
+     ],
+     "fair": 244.969,
+     "fair_hi": 248.941
+    },
+    {
+     "year": 2028,
+     "forecast": 251.901,
+     "band": [
+      229.479,
+      278.864
+     ],
+     "fair": 247.716,
+     "fair_hi": 253.085
+    },
+    {
+     "year": 2029,
+     "forecast": 254.926,
+     "band": [
+      234.403,
+      292.893
+     ],
+     "fair": 250.494,
+     "fair_hi": 257.298
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+1.1%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-MH",
+  "sector": null,
+  "type": "WATCHLIST",
+  "severity": "warning",
+  "title": "Maharashtra forecast exceeds fair-share path by 1%",
+  "body": "Maharashtra's 2029 forecast (447.1 Mt CO₂e, +1.8%/yr) exceeds its fair-share trajectory (+1.6%/yr) by 1% — driven by power + industry.",
+  "title_hi": "महाराष्ट्र का पूर्वानुमान उचित-हिस्सा पथ से 1% अधिक",
+  "body_hi": "महाराष्ट्र का 2029 पूर्वानुमान (447.1 Mt CO₂e, +1.8% प्रति वर्ष) उसके उचित-हिस्सा पथ (+1.6% प्रति वर्ष) से 1% अधिक है — मुख्यतः बिजली + उद्योग के कारण।",
+  "evidence": {
+   "forecast_mt": 447.0659,
+   "now_mt": 407.9825,
+   "cagr_pct": 1.8465,
+   "fair_cagr_pct": 1.5567,
+   "national_cagr_pct": 1.6648,
+   "excess_pct": 1.4348,
+   "drivers": {
+    "POWER": 21.107,
+    "INDUSTRY": 8.31,
+    "TRANSPORT": 3.359
+   }
+  },
+  "viz": {
+   "kind": "corridor",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "year": 2018,
+     "observed": 362.825
+    },
+    {
+     "year": 2019,
+     "observed": 361.013
+    },
+    {
+     "year": 2020,
+     "observed": 323.52
+    },
+    {
+     "year": 2021,
+     "observed": 340.269
+    },
+    {
+     "year": 2022,
+     "observed": 370.91
+    },
+    {
+     "year": 2023,
+     "observed": 395.419
+    },
+    {
+     "year": 2024,
+     "observed": 407.982,
+     "forecast": 407.982,
+     "fair": 407.982,
+     "fair_hi": 407.982,
+     "band": [
+      407.982,
+      407.982
+     ]
+    },
+    {
+     "year": 2025,
+     "forecast": 402.554,
+     "band": [
+      396.548,
+      440.126
+     ],
+     "fair": 414.334,
+     "fair_hi": 414.774
+    },
+    {
+     "year": 2026,
+     "forecast": 416.977,
+     "band": [
+      377.113,
+      456.718
+     ],
+     "fair": 420.783,
+     "fair_hi": 421.68
+    },
+    {
+     "year": 2027,
+     "forecast": 428.036,
+     "band": [
+      395.189,
+      470.134
+     ],
+     "fair": 427.334,
+     "fair_hi": 428.7
+    },
+    {
+     "year": 2028,
+     "forecast": 439.192,
+     "band": [
+      403.462,
+      485.144
+     ],
+     "fair": 433.986,
+     "fair_hi": 435.837
+    },
+    {
+     "year": 2029,
+     "forecast": 447.066,
+     "band": [
+      413.412,
+      514.189
+     ],
+     "fair": 440.742,
+     "fair_hi": 443.092
+    }
+   ],
+   "labels": {
+    "fair": "fair-share path (+1.6%/yr)",
+    "fair_hi": "national pace (+1.7%/yr)"
+   }
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Fair-share CAGR = national forecast CAGR × min(national per-capita CO₂e ÷ state per-capita CO₂e, 2); excess = forecast_2029 ÷ (CO₂e_2024 × (1 + fair CAGR)^5) − 1",
+   "inputs": "State & national CO₂e 2024; population 2024; reconciled P50 forecast 2029; national CAGR +1.66%/yr",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50, 5-yr) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-TS",
+  "sector": "POWER",
+  "type": "ANOMALY",
+  "severity": "warning",
+  "title": "Telangana power emissions jumped 32% in 2024",
+  "body": "Telangana's power CO₂e jumped 32.5% in 2024 against a 5-year average of +7.0%/yr (z = +3.2) — the largest power deviation of any state.",
+  "title_hi": "तेलंगाना: बिजली उत्सर्जन 2024 में 32% उछला",
+  "body_hi": "तेलंगाना का बिजली CO₂e 2024 में 32.5% उछला, जबकि पिछले 5 वर्षों का औसत +7.0% प्रति वर्ष था (z = +3.2)।",
+  "evidence": {
+   "year": 2024,
+   "growth_pct": 32.4595,
+   "trend_growth_pct": 7.0348,
+   "z": 3.1979,
+   "level_mt": 67.3555
+  },
+  "viz": {
+   "kind": "deviation",
+   "unit": "% growth y/y",
+   "trend": 7.03,
+   "z": 3.2,
+   "series": [
+    {
+     "year": 2017,
+     "value": 2.56,
+     "is_latest": false
+    },
+    {
+     "year": 2018,
+     "value": 14.65,
+     "is_latest": false
+    },
+    {
+     "year": 2019,
+     "value": -2.66,
+     "is_latest": false
+    },
+    {
+     "year": 2020,
+     "value": 0.21,
+     "is_latest": false
+    },
+    {
+     "year": 2021,
+     "value": 8.76,
+     "is_latest": false
+    },
+    {
+     "year": 2022,
+     "value": 14.24,
+     "is_latest": false
+    },
+    {
+     "year": 2023,
+     "value": 14.62,
+     "is_latest": false
+    },
+    {
+     "year": 2024,
+     "value": 32.46,
+     "is_latest": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "z = (growth_latest − mean(growth over prior 5 yrs)) ÷ max(sd(growth over prior 5 yrs), 1 pp); growth = CO₂e_t ÷ CO₂e_(t−1) − 1",
+   "inputs": "Telangana power CO₂e 2018–2024; flagged when |z| ≥ 2 (≥ 3 = warning); sector ≥ 1 Mt",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-UP",
+  "sector": "POWER",
+  "type": "ANOMALY",
+  "severity": "notice",
+  "title": "Uttar Pradesh power emissions jumped 26% in 2024",
+  "body": "Uttar Pradesh's power CO₂e jumped 25.8% in 2024 against a 5-year average of +5.8%/yr (z = +2.1).",
+  "title_hi": "उत्तर प्रदेश: बिजली उत्सर्जन 2024 में 26% उछला",
+  "body_hi": "उत्तर प्रदेश का बिजली CO₂e 2024 में 25.8% उछला, जबकि पिछले 5 वर्षों का औसत +5.8% प्रति वर्ष था (z = +2.1)।",
+  "evidence": {
+   "year": 2024,
+   "growth_pct": 25.8182,
+   "trend_growth_pct": 5.7963,
+   "z": 2.0855,
+   "level_mt": 149.2727
+  },
+  "viz": {
+   "kind": "deviation",
+   "unit": "% growth y/y",
+   "trend": 5.8,
+   "z": 2.09,
+   "series": [
+    {
+     "year": 2017,
+     "value": 9.24,
+     "is_latest": false
+    },
+    {
+     "year": 2018,
+     "value": 6.13,
+     "is_latest": false
+    },
+    {
+     "year": 2019,
+     "value": -3.68,
+     "is_latest": false
+    },
+    {
+     "year": 2020,
+     "value": -2.89,
+     "is_latest": false
+    },
+    {
+     "year": 2021,
+     "value": 17.57,
+     "is_latest": false
+    },
+    {
+     "year": 2022,
+     "value": 13.69,
+     "is_latest": false
+    },
+    {
+     "year": 2023,
+     "value": 4.29,
+     "is_latest": false
+    },
+    {
+     "year": 2024,
+     "value": 25.82,
+     "is_latest": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "z = (growth_latest − mean(growth over prior 5 yrs)) ÷ max(sd(growth over prior 5 yrs), 1 pp); growth = CO₂e_t ÷ CO₂e_(t−1) − 1",
+   "inputs": "Uttar Pradesh power CO₂e 2018–2024; flagged when |z| ≥ 2 (≥ 3 = warning); sector ≥ 1 Mt",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-CG",
+  "sector": "INDUSTRY",
+  "type": "LEADER",
+  "severity": "notice",
+  "title": "Chhattisgarh has India's highest industrial emissions intensity",
+  "body": "Chhattisgarh leads all states on industrial emissions intensity (27.57 MtCO₂e per ₹ lakh crore); Uttar Pradesh is lowest among high-GSDP states (2.58).",
+  "title_hi": "छत्तीसगढ़: भारत में सर्वाधिक औद्योगिक उत्सर्जन तीव्रता",
+  "body_hi": "छत्तीसगढ़ औद्योगिक उत्सर्जन तीव्रता में सभी राज्यों में सबसे आगे है (27.57 MtCO₂e per ₹ lakh crore); उच्च-GSDP राज्यों में उत्तर प्रदेश सबसे कम (2.58)।",
+  "evidence": {
+   "metric": "industrial emissions intensity",
+   "value": 27.5673,
+   "highest": "IN-CG",
+   "lowest_high_gsdp": "IN-UP",
+   "year": 2024
+  },
+  "viz": {
+   "kind": "ranking",
+   "unit": "MtCO₂e per ₹ lakh crore",
+   "highlight": "IN-CG",
+   "series": [
+    {
+     "state_code": "IN-CG",
+     "value": 27.5673
+    },
+    {
+     "state_code": "IN-JH",
+     "value": 24.9244
+    },
+    {
+     "state_code": "IN-OD",
+     "value": 19.8509
+    },
+    {
+     "state_code": "IN-ML",
+     "value": 17.1255
+    },
+    {
+     "state_code": "IN-HP",
+     "value": 9.9229
+    },
+    {
+     "state_code": "IN-AP",
+     "value": 9.4375
+    },
+    {
+     "state_code": "IN-GJ",
+     "value": 7.7872
+    },
+    {
+     "state_code": "IN-WB",
+     "value": 6.2242
+    },
+    {
+     "state_code": "IN-KA",
+     "value": 5.5975
+    },
+    {
+     "state_code": "IN-RJ",
+     "value": 4.341
+    },
+    {
+     "state_code": "IN-MH",
+     "value": 3.7659
+    },
+    {
+     "state_code": "IN-AS",
+     "value": 3.5503
+    },
+    {
+     "state_code": "IN-MP",
+     "value": 3.516
+    },
+    {
+     "state_code": "IN-HR",
+     "value": 3.0973
+    },
+    {
+     "state_code": "IN-PB",
+     "value": 2.8824
+    },
+    {
+     "state_code": "IN-TS",
+     "value": 2.8138
+    },
+    {
+     "state_code": "IN-TN",
+     "value": 2.6804
+    },
+    {
+     "state_code": "IN-UP",
+     "value": 2.5785
+    },
+    {
+     "state_code": "IN-DL",
+     "value": 1.6733
+    },
+    {
+     "state_code": "IN-KL",
+     "value": 1.6701
+    },
+    {
+     "state_code": "IN-BR",
+     "value": 1.1988
+    },
+    {
+     "state_code": "IN-UK",
+     "value": 0.9304
+    },
+    {
+     "state_code": "IN-JK",
+     "value": 0.7808
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Industrial intensity = industry CO₂e (Mt) ÷ real GSDP (₹ lakh crore, 2011-12 prices)",
+   "inputs": "2024; states with ≥ 1 Mt in the sector and ≥ 2 M people; 'high-GSDP' = top third by real GSDP",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP · Census population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-KA",
+  "sector": "TRANSPORT",
+  "type": "LEADER",
+  "severity": "notice",
+  "title": "Karnataka has India's highest per-capita transport emissions",
+  "body": "Karnataka leads all states on per-capita transport emissions (0.71 tCO₂e per person); West Bengal is lowest among high-GSDP states (0.10).",
+  "title_hi": "कर्नाटक: भारत में सर्वाधिक प्रति व्यक्ति परिवहन उत्सर्जन",
+  "body_hi": "कर्नाटक प्रति व्यक्ति परिवहन उत्सर्जन में सभी राज्यों में सबसे आगे है (0.71 tCO₂e per person); उच्च-GSDP राज्यों में पश्चिम बंगाल सबसे कम (0.10)।",
+  "evidence": {
+   "metric": "per-capita transport emissions",
+   "value": 0.7056,
+   "highest": "IN-KA",
+   "lowest_high_gsdp": "IN-WB",
+   "year": 2024
+  },
+  "viz": {
+   "kind": "ranking",
+   "unit": "tCO₂e per person",
+   "highlight": "IN-KA",
+   "series": [
+    {
+     "state_code": "IN-KA",
+     "value": 0.7056
+    },
+    {
+     "state_code": "IN-MN",
+     "value": 0.5375
+    },
+    {
+     "state_code": "IN-ML",
+     "value": 0.529
+    },
+    {
+     "state_code": "IN-HP",
+     "value": 0.5266
+    },
+    {
+     "state_code": "IN-NL",
+     "value": 0.4724
+    },
+    {
+     "state_code": "IN-TN",
+     "value": 0.4347
+    },
+    {
+     "state_code": "IN-RJ",
+     "value": 0.4108
+    },
+    {
+     "state_code": "IN-JK",
+     "value": 0.3545
+    },
+    {
+     "state_code": "IN-HR",
+     "value": 0.3314
+    },
+    {
+     "state_code": "IN-AP",
+     "value": 0.2974
+    },
+    {
+     "state_code": "IN-GJ",
+     "value": 0.2965
+    },
+    {
+     "state_code": "IN-TS",
+     "value": 0.2847
+    },
+    {
+     "state_code": "IN-KL",
+     "value": 0.2696
+    },
+    {
+     "state_code": "IN-MH",
+     "value": 0.2597
+    },
+    {
+     "state_code": "IN-UK",
+     "value": 0.2496
+    },
+    {
+     "state_code": "IN-PB",
+     "value": 0.2416
+    },
+    {
+     "state_code": "IN-MP",
+     "value": 0.1926
+    },
+    {
+     "state_code": "IN-OD",
+     "value": 0.1702
+    },
+    {
+     "state_code": "IN-CG",
+     "value": 0.1565
+    },
+    {
+     "state_code": "IN-DL",
+     "value": 0.1437
+    },
+    {
+     "state_code": "IN-JH",
+     "value": 0.1301
+    },
+    {
+     "state_code": "IN-AS",
+     "value": 0.1277
+    },
+    {
+     "state_code": "IN-UP",
+     "value": 0.1065
+    },
+    {
+     "state_code": "IN-WB",
+     "value": 0.1028
+    },
+    {
+     "state_code": "IN-BR",
+     "value": 0.0868
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita transport = transport CO₂e (t) ÷ population",
+   "inputs": "2024; states with ≥ 1 Mt in the sector and ≥ 2 M people; 'high-GSDP' = top third by real GSDP",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP · Census population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-TN",
+  "sector": "AGRICULTURE",
+  "type": "LEADER",
+  "severity": "notice",
+  "title": "Tamil Nadu has India's highest agricultural emissions intensity",
+  "body": "Tamil Nadu leads all states on agricultural emissions intensity (14.61 MtCO₂e per ₹ lakh crore); Gujarat is lowest among high-GSDP states (1.10).",
+  "title_hi": "तमिलनाडु: भारत में सर्वाधिक कृषि उत्सर्जन तीव्रता",
+  "body_hi": "तमिलनाडु कृषि उत्सर्जन तीव्रता में सभी राज्यों में सबसे आगे है (14.61 MtCO₂e per ₹ lakh crore); उच्च-GSDP राज्यों में गुजरात सबसे कम (1.10)।",
+  "evidence": {
+   "metric": "agricultural emissions intensity",
+   "value": 14.6124,
+   "highest": "IN-TN",
+   "lowest_high_gsdp": "IN-GJ",
+   "year": 2024
+  },
+  "viz": {
+   "kind": "ranking",
+   "unit": "MtCO₂e per ₹ lakh crore",
+   "highlight": "IN-TN",
+   "series": [
+    {
+     "state_code": "IN-TN",
+     "value": 14.6124
+    },
+    {
+     "state_code": "IN-CG",
+     "value": 5.7622
+    },
+    {
+     "state_code": "IN-BR",
+     "value": 5.6722
+    },
+    {
+     "state_code": "IN-JH",
+     "value": 5.611
+    },
+    {
+     "state_code": "IN-AS",
+     "value": 5.0438
+    },
+    {
+     "state_code": "IN-ML",
+     "value": 5.0051
+    },
+    {
+     "state_code": "IN-UP",
+     "value": 4.6646
+    },
+    {
+     "state_code": "IN-AP",
+     "value": 4.6565
+    },
+    {
+     "state_code": "IN-OD",
+     "value": 4.6076
+    },
+    {
+     "state_code": "IN-MP",
+     "value": 4.3745
+    },
+    {
+     "state_code": "IN-PB",
+     "value": 4.1152
+    },
+    {
+     "state_code": "IN-RJ",
+     "value": 3.4586
+    },
+    {
+     "state_code": "IN-WB",
+     "value": 3.2294
+    },
+    {
+     "state_code": "IN-TR",
+     "value": 2.644
+    },
+    {
+     "state_code": "IN-TS",
+     "value": 2.3864
+    },
+    {
+     "state_code": "IN-JK",
+     "value": 2.3479
+    },
+    {
+     "state_code": "IN-HP",
+     "value": 2.3181
+    },
+    {
+     "state_code": "IN-UK",
+     "value": 1.8721
+    },
+    {
+     "state_code": "IN-HR",
+     "value": 1.7591
+    },
+    {
+     "state_code": "IN-KA",
+     "value": 1.2672
+    },
+    {
+     "state_code": "IN-MH",
+     "value": 1.2483
+    },
+    {
+     "state_code": "IN-GJ",
+     "value": 1.1027
+    },
+    {
+     "state_code": "IN-KL",
+     "value": 0.3613
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Agricultural intensity = agriculture CO₂e (Mt) ÷ real GSDP (₹ lakh crore)",
+   "inputs": "2024; states with ≥ 1 Mt in the sector and ≥ 2 M people; 'high-GSDP' = top third by real GSDP",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP · Census population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-WB",
+  "sector": "POWER",
+  "type": "DECOUPLING",
+  "severity": "info",
+  "title": "West Bengal: power decoupling for 2 straight years",
+  "body": "West Bengal's real GSDP grew 16% over 2022–2024 while power CO₂e fell 2% — 2 consecutive years of absolute decoupling.",
+  "title_hi": "पश्चिम बंगाल: लगातार 2 वर्षों से बिजली डीकपलिंग",
+  "body_hi": "2022–2024 में पश्चिम बंगाल का वास्तविक GSDP 16% बढ़ा जबकि बिजली CO₂e 2% घटा — लगातार 2 वर्ष पूर्ण डीकपलिंग।",
+  "evidence": {
+   "years": 2,
+   "gsdp_growth_pct": 15.7138,
+   "co2e_change_pct": -2.2742,
+   "from": 2022,
+   "to": 2024
+  },
+  "viz": {
+   "kind": "dual_index",
+   "unit": "index, 2019 = 100",
+   "base_year": 2019,
+   "highlight_from": 2022,
+   "series": [
+    {
+     "year": 2019,
+     "gsdp": 100.0,
+     "co2e": 100.0
+    },
+    {
+     "year": 2020,
+     "gsdp": 92.39,
+     "co2e": 97.01
+    },
+    {
+     "year": 2021,
+     "gsdp": 99.26,
+     "co2e": 106.28
+    },
+    {
+     "year": 2022,
+     "gsdp": 111.21,
+     "co2e": 117.65
+    },
+    {
+     "year": 2023,
+     "gsdp": 120.57,
+     "co2e": 116.3
+    },
+    {
+     "year": 2024,
+     "gsdp": 128.69,
+     "co2e": 114.97
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Absolute decoupling year: GSDP_t > GSDP_(t−1) AND CO₂e_t < CO₂e_(t−1); streak counted back from the latest year. Index_t = value_t ÷ value_2019 × 100",
+   "inputs": "Real GSDP (2011-12 ₹, MoSPI; imputed years excluded) and power CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-UP",
+  "sector": "INDUSTRY",
+  "type": "LAGGARD",
+  "severity": "info",
+  "title": "Uttar Pradesh: lowest industrial emissions intensity among high-GSDP states",
+  "body": "Uttar Pradesh records 2.58 MtCO₂e per ₹ lakh crore vs India-high Chhattisgarh at 27.57 (2024).",
+  "title_hi": "उत्तर प्रदेश: उच्च-GSDP राज्यों में न्यूनतम औद्योगिक उत्सर्जन तीव्रता",
+  "body_hi": "उत्तर प्रदेश: 2.58 MtCO₂e per ₹ lakh crore, जबकि सर्वाधिक छत्तीसगढ़ 27.57 (2024)।",
+  "evidence": {
+   "metric": "industrial emissions intensity",
+   "value": 2.5785,
+   "highest": "IN-CG",
+   "lowest_high_gsdp": "IN-UP",
+   "year": 2024
+  },
+  "viz": {
+   "kind": "ranking",
+   "unit": "MtCO₂e per ₹ lakh crore",
+   "highlight": "IN-UP",
+   "series": [
+    {
+     "state_code": "IN-CG",
+     "value": 27.5673
+    },
+    {
+     "state_code": "IN-JH",
+     "value": 24.9244
+    },
+    {
+     "state_code": "IN-OD",
+     "value": 19.8509
+    },
+    {
+     "state_code": "IN-ML",
+     "value": 17.1255
+    },
+    {
+     "state_code": "IN-HP",
+     "value": 9.9229
+    },
+    {
+     "state_code": "IN-AP",
+     "value": 9.4375
+    },
+    {
+     "state_code": "IN-GJ",
+     "value": 7.7872
+    },
+    {
+     "state_code": "IN-WB",
+     "value": 6.2242
+    },
+    {
+     "state_code": "IN-KA",
+     "value": 5.5975
+    },
+    {
+     "state_code": "IN-RJ",
+     "value": 4.341
+    },
+    {
+     "state_code": "IN-MH",
+     "value": 3.7659
+    },
+    {
+     "state_code": "IN-AS",
+     "value": 3.5503
+    },
+    {
+     "state_code": "IN-MP",
+     "value": 3.516
+    },
+    {
+     "state_code": "IN-HR",
+     "value": 3.0973
+    },
+    {
+     "state_code": "IN-PB",
+     "value": 2.8824
+    },
+    {
+     "state_code": "IN-TS",
+     "value": 2.8138
+    },
+    {
+     "state_code": "IN-TN",
+     "value": 2.6804
+    },
+    {
+     "state_code": "IN-UP",
+     "value": 2.5785
+    },
+    {
+     "state_code": "IN-DL",
+     "value": 1.6733
+    },
+    {
+     "state_code": "IN-KL",
+     "value": 1.6701
+    },
+    {
+     "state_code": "IN-BR",
+     "value": 1.1988
+    },
+    {
+     "state_code": "IN-UK",
+     "value": 0.9304
+    },
+    {
+     "state_code": "IN-JK",
+     "value": 0.7808
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Industrial intensity = industry CO₂e (Mt) ÷ real GSDP (₹ lakh crore, 2011-12 prices)",
+   "inputs": "2024; states with ≥ 1 Mt in the sector and ≥ 2 M people; 'high-GSDP' = top third by real GSDP",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP · Census population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-WB",
+  "sector": "TRANSPORT",
+  "type": "LAGGARD",
+  "severity": "info",
+  "title": "West Bengal: lowest per-capita transport emissions among high-GSDP states",
+  "body": "West Bengal records 0.10 tCO₂e per person vs India-high Karnataka at 0.71 (2024).",
+  "title_hi": "पश्चिम बंगाल: उच्च-GSDP राज्यों में न्यूनतम प्रति व्यक्ति परिवहन उत्सर्जन",
+  "body_hi": "पश्चिम बंगाल: 0.10 tCO₂e per person, जबकि सर्वाधिक कर्नाटक 0.71 (2024)।",
+  "evidence": {
+   "metric": "per-capita transport emissions",
+   "value": 0.1028,
+   "highest": "IN-KA",
+   "lowest_high_gsdp": "IN-WB",
+   "year": 2024
+  },
+  "viz": {
+   "kind": "ranking",
+   "unit": "tCO₂e per person",
+   "highlight": "IN-WB",
+   "series": [
+    {
+     "state_code": "IN-KA",
+     "value": 0.7056
+    },
+    {
+     "state_code": "IN-MN",
+     "value": 0.5375
+    },
+    {
+     "state_code": "IN-ML",
+     "value": 0.529
+    },
+    {
+     "state_code": "IN-HP",
+     "value": 0.5266
+    },
+    {
+     "state_code": "IN-NL",
+     "value": 0.4724
+    },
+    {
+     "state_code": "IN-TN",
+     "value": 0.4347
+    },
+    {
+     "state_code": "IN-RJ",
+     "value": 0.4108
+    },
+    {
+     "state_code": "IN-JK",
+     "value": 0.3545
+    },
+    {
+     "state_code": "IN-HR",
+     "value": 0.3314
+    },
+    {
+     "state_code": "IN-AP",
+     "value": 0.2974
+    },
+    {
+     "state_code": "IN-GJ",
+     "value": 0.2965
+    },
+    {
+     "state_code": "IN-TS",
+     "value": 0.2847
+    },
+    {
+     "state_code": "IN-KL",
+     "value": 0.2696
+    },
+    {
+     "state_code": "IN-MH",
+     "value": 0.2597
+    },
+    {
+     "state_code": "IN-UK",
+     "value": 0.2496
+    },
+    {
+     "state_code": "IN-PB",
+     "value": 0.2416
+    },
+    {
+     "state_code": "IN-MP",
+     "value": 0.1926
+    },
+    {
+     "state_code": "IN-OD",
+     "value": 0.1702
+    },
+    {
+     "state_code": "IN-CG",
+     "value": 0.1565
+    },
+    {
+     "state_code": "IN-DL",
+     "value": 0.1437
+    },
+    {
+     "state_code": "IN-JH",
+     "value": 0.1301
+    },
+    {
+     "state_code": "IN-AS",
+     "value": 0.1277
+    },
+    {
+     "state_code": "IN-UP",
+     "value": 0.1065
+    },
+    {
+     "state_code": "IN-WB",
+     "value": 0.1028
+    },
+    {
+     "state_code": "IN-BR",
+     "value": 0.0868
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita transport = transport CO₂e (t) ÷ population",
+   "inputs": "2024; states with ≥ 1 Mt in the sector and ≥ 2 M people; 'high-GSDP' = top third by real GSDP",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP · Census population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-GJ",
+  "sector": "AGRICULTURE",
+  "type": "LAGGARD",
+  "severity": "info",
+  "title": "Gujarat: lowest agricultural emissions intensity among high-GSDP states",
+  "body": "Gujarat records 1.10 MtCO₂e per ₹ lakh crore vs India-high Tamil Nadu at 14.61 (2024).",
+  "title_hi": "गुजरात: उच्च-GSDP राज्यों में न्यूनतम कृषि उत्सर्जन तीव्रता",
+  "body_hi": "गुजरात: 1.10 MtCO₂e per ₹ lakh crore, जबकि सर्वाधिक तमिलनाडु 14.61 (2024)।",
+  "evidence": {
+   "metric": "agricultural emissions intensity",
+   "value": 1.1027,
+   "highest": "IN-TN",
+   "lowest_high_gsdp": "IN-GJ",
+   "year": 2024
+  },
+  "viz": {
+   "kind": "ranking",
+   "unit": "MtCO₂e per ₹ lakh crore",
+   "highlight": "IN-GJ",
+   "series": [
+    {
+     "state_code": "IN-TN",
+     "value": 14.6124
+    },
+    {
+     "state_code": "IN-CG",
+     "value": 5.7622
+    },
+    {
+     "state_code": "IN-BR",
+     "value": 5.6722
+    },
+    {
+     "state_code": "IN-JH",
+     "value": 5.611
+    },
+    {
+     "state_code": "IN-AS",
+     "value": 5.0438
+    },
+    {
+     "state_code": "IN-ML",
+     "value": 5.0051
+    },
+    {
+     "state_code": "IN-UP",
+     "value": 4.6646
+    },
+    {
+     "state_code": "IN-AP",
+     "value": 4.6565
+    },
+    {
+     "state_code": "IN-OD",
+     "value": 4.6076
+    },
+    {
+     "state_code": "IN-MP",
+     "value": 4.3745
+    },
+    {
+     "state_code": "IN-PB",
+     "value": 4.1152
+    },
+    {
+     "state_code": "IN-RJ",
+     "value": 3.4586
+    },
+    {
+     "state_code": "IN-WB",
+     "value": 3.2294
+    },
+    {
+     "state_code": "IN-TR",
+     "value": 2.644
+    },
+    {
+     "state_code": "IN-TS",
+     "value": 2.3864
+    },
+    {
+     "state_code": "IN-JK",
+     "value": 2.3479
+    },
+    {
+     "state_code": "IN-HP",
+     "value": 2.3181
+    },
+    {
+     "state_code": "IN-UK",
+     "value": 1.8721
+    },
+    {
+     "state_code": "IN-HR",
+     "value": 1.7591
+    },
+    {
+     "state_code": "IN-KA",
+     "value": 1.2672
+    },
+    {
+     "state_code": "IN-MH",
+     "value": 1.2483
+    },
+    {
+     "state_code": "IN-GJ",
+     "value": 1.1027
+    },
+    {
+     "state_code": "IN-KL",
+     "value": 0.3613
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Agricultural intensity = agriculture CO₂e (Mt) ÷ real GSDP (₹ lakh crore)",
+   "inputs": "2024; states with ≥ 1 Mt in the sector and ≥ 2 M people; 'high-GSDP' = top third by real GSDP",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP · Census population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-AN",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Andaman and Nicobar Islands' forecast",
+  "body": "Top 3 sector drivers of Andaman and Nicobar Islands' 2024→2029 forecast change: transport (+59 kt), power (+30 kt), agriculture (+10 kt).",
+  "title_hi": "अंडमान और निकोबार द्वीपसमूह के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच अंडमान और निकोबार द्वीपसमूह के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+59 kt), बिजली (+30 kt), कृषि (+10 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.059,
+    "POWER": 0.03,
+    "AGRICULTURE": 0.01
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 1.058,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.03
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.059
+    },
+    {
+     "name": "INDUSTRY",
+     "value": -0.001
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.002
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.01
+    },
+    {
+     "name": "WASTE",
+     "value": 0.0
+    },
+    {
+     "name": "OTHER",
+     "value": 0.005
+    },
+    {
+     "name": "2029",
+     "value": 1.164,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-AP",
+  "sector": "INDUSTRY",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Andhra Pradesh's forecast",
+  "body": "Top 3 sector drivers of Andhra Pradesh's 2024→2029 forecast change: industry (+7.8 Mt), power (+5.7 Mt), transport (+1.6 Mt).",
+  "title_hi": "आंध्र प्रदेश के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच आंध्र प्रदेश के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: उद्योग (+7.8 Mt), बिजली (+5.7 Mt), परिवहन (+1.6 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "INDUSTRY": 7.774,
+    "POWER": 5.68,
+    "TRANSPORT": 1.635
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 236.91,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 5.68
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 1.635
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 7.774
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.726
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 1.322
+    },
+    {
+     "name": "WASTE",
+     "value": 0.49
+    },
+    {
+     "name": "OTHER",
+     "value": 0.388
+    },
+    {
+     "name": "2029",
+     "value": 254.926,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-AR",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Arunachal Pradesh's forecast",
+  "body": "Top 3 sector drivers of Arunachal Pradesh's 2024→2029 forecast change: transport (+163 kt), agriculture (+81 kt), buildings (+61 kt).",
+  "title_hi": "अरुणाचल प्रदेश के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच अरुणाचल प्रदेश के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+163 kt), कृषि (+81 kt), भवन (+61 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.163,
+    "AGRICULTURE": 0.081,
+    "BUILDINGS": 0.061
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 4.998,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.003
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.163
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.004
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.061
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.081
+    },
+    {
+     "name": "WASTE",
+     "value": 0.002
+    },
+    {
+     "name": "OTHER",
+     "value": 0.032
+    },
+    {
+     "name": "2029",
+     "value": 5.344,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-AS",
+  "sector": "AGRICULTURE",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Assam's forecast",
+  "body": "Top 3 sector drivers of Assam's 2024→2029 forecast change: agriculture (+719 kt), industry (+707 kt), buildings (+501 kt).",
+  "title_hi": "असम के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच असम के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: कृषि (+719 kt), उद्योग (+707 kt), भवन (+501 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "AGRICULTURE": 0.719,
+    "INDUSTRY": 0.707,
+    "BUILDINGS": 0.501
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 57.805,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": -0.272
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.458
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.707
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.501
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.719
+    },
+    {
+     "name": "WASTE",
+     "value": 0.042
+    },
+    {
+     "name": "OTHER",
+     "value": 0.487
+    },
+    {
+     "name": "2029",
+     "value": 60.448,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-BR",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Bihar's forecast",
+  "body": "Top 3 sector drivers of Bihar's 2024→2029 forecast change: power (+6.2 Mt), buildings (+2.0 Mt), agriculture (+1.6 Mt).",
+  "title_hi": "बिहार के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच बिहार के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+6.2 Mt), भवन (+2.0 Mt), कृषि (+1.6 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 6.248,
+    "BUILDINGS": 1.956,
+    "AGRICULTURE": 1.577
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 133.456,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 6.248
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 1.28
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.583
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 1.956
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 1.577
+    },
+    {
+     "name": "WASTE",
+     "value": 0.194
+    },
+    {
+     "name": "OTHER",
+     "value": 0.247
+    },
+    {
+     "name": "2029",
+     "value": 145.541,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-CG",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Chhattisgarh's forecast",
+  "body": "Top 3 sector drivers of Chhattisgarh's 2024→2029 forecast change: power (+21.6 Mt), industry (+13.6 Mt), other (+3.6 Mt).",
+  "title_hi": "छत्तीसगढ़ के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच छत्तीसगढ़ के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+21.6 Mt), उद्योग (+13.6 Mt), अन्य (+3.6 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 21.58,
+    "INDUSTRY": 13.608,
+    "OTHER": 3.626
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 299.051,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 21.58
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.73
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 13.608
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.601
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.683
+    },
+    {
+     "name": "WASTE",
+     "value": 0.3
+    },
+    {
+     "name": "OTHER",
+     "value": 3.626
+    },
+    {
+     "name": "2029",
+     "value": 340.18,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-CH",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Chandigarh's forecast",
+  "body": "Top 3 sector drivers of Chandigarh's 2024→2029 forecast change: transport (+46 kt), buildings (+14 kt), industry (−13 kt).",
+  "title_hi": "चंडीगढ़ के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच चंडीगढ़ के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+46 kt), भवन (+14 kt), उद्योग (−13 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.046,
+    "BUILDINGS": 0.014,
+    "INDUSTRY": -0.013
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 1.134,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.046
+    },
+    {
+     "name": "INDUSTRY",
+     "value": -0.013
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.014
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.001
+    },
+    {
+     "name": "WASTE",
+     "value": 0.006
+    },
+    {
+     "name": "OTHER",
+     "value": 0.001
+    },
+    {
+     "name": "2029",
+     "value": 1.189,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-DH",
+  "sector": "WASTE",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Dadra and Nagar Haveli and Daman and Diu's forecast",
+  "body": "Top 3 sector drivers of Dadra and Nagar Haveli and Daman and Diu's 2024→2029 forecast change: waste (+39 kt), transport (+22 kt), buildings (+10 kt).",
+  "title_hi": "दादरा और नगर हवेली और दमन और दीव के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच दादरा और नगर हवेली और दमन और दीव के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: अपशिष्ट (+39 kt), परिवहन (+22 kt), भवन (+10 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "WASTE": 0.039,
+    "TRANSPORT": 0.022,
+    "BUILDINGS": 0.01
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 1.936,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.022
+    },
+    {
+     "name": "INDUSTRY",
+     "value": -0.003
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.01
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.002
+    },
+    {
+     "name": "WASTE",
+     "value": 0.039
+    },
+    {
+     "name": "OTHER",
+     "value": 0.001
+    },
+    {
+     "name": "2029",
+     "value": 2.006,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-DL",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Delhi's forecast",
+  "body": "Top 3 sector drivers of Delhi's 2024→2029 forecast change: power (−759 kt), transport (+379 kt), buildings (+195 kt).",
+  "title_hi": "दिल्ली के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच दिल्ली के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (−759 kt), परिवहन (+379 kt), भवन (+195 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": -0.759,
+    "TRANSPORT": 0.379,
+    "BUILDINGS": 0.195
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 18.468,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": -0.759
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.379
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.159
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.195
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.013
+    },
+    {
+     "name": "WASTE",
+     "value": 0.052
+    },
+    {
+     "name": "OTHER",
+     "value": 0.027
+    },
+    {
+     "name": "2029",
+     "value": 18.535,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-GA",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Goa's forecast",
+  "body": "Top 3 sector drivers of Goa's 2024→2029 forecast change: transport (+57 kt), industry (−17 kt), agriculture (+12 kt).",
+  "title_hi": "गोवा के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच गोवा के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+57 kt), उद्योग (−17 kt), कृषि (+12 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.057,
+    "INDUSTRY": -0.017,
+    "AGRICULTURE": 0.012
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 2.725,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.057
+    },
+    {
+     "name": "INDUSTRY",
+     "value": -0.017
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.011
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.012
+    },
+    {
+     "name": "WASTE",
+     "value": 0.01
+    },
+    {
+     "name": "OTHER",
+     "value": -0.001
+    },
+    {
+     "name": "2029",
+     "value": 2.798,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-GJ",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Gujarat's forecast",
+  "body": "Top 3 sector drivers of Gujarat's 2024→2029 forecast change: power (+14.2 Mt), industry (+10.8 Mt), waste (+2.5 Mt).",
+  "title_hi": "गुजरात के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच गुजरात के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+14.2 Mt), उद्योग (+10.8 Mt), अपशिष्ट (+2.5 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 14.24,
+    "INDUSTRY": 10.8,
+    "WASTE": 2.544
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 301.102,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 14.24
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 2.316
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 10.8
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 1.159
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 1.07
+    },
+    {
+     "name": "WASTE",
+     "value": 2.544
+    },
+    {
+     "name": "OTHER",
+     "value": 0.307
+    },
+    {
+     "name": "2029",
+     "value": 333.538,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-HP",
+  "sector": "INDUSTRY",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Himachal Pradesh's forecast",
+  "body": "Top 3 sector drivers of Himachal Pradesh's 2024→2029 forecast change: industry (+715 kt), transport (+485 kt), agriculture (+151 kt).",
+  "title_hi": "हिमाचल प्रदेश के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच हिमाचल प्रदेश के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: उद्योग (+715 kt), परिवहन (+485 kt), कृषि (+151 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "INDUSTRY": 0.715,
+    "TRANSPORT": 0.485,
+    "AGRICULTURE": 0.151
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 24.049,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.485
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.715
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.122
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.151
+    },
+    {
+     "name": "WASTE",
+     "value": 0.091
+    },
+    {
+     "name": "OTHER",
+     "value": 0.082
+    },
+    {
+     "name": "2029",
+     "value": 25.695,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-HR",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Haryana's forecast",
+  "body": "Top 3 sector drivers of Haryana's 2024→2029 forecast change: power (+2.0 Mt), industry (+1.6 Mt), transport (+1.2 Mt).",
+  "title_hi": "हरियाणा के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच हरियाणा के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+2.0 Mt), उद्योग (+1.6 Mt), परिवहन (+1.2 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 1.958,
+    "INDUSTRY": 1.614,
+    "TRANSPORT": 1.162
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 89.976,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 1.958
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 1.162
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 1.614
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.563
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.568
+    },
+    {
+     "name": "WASTE",
+     "value": 0.804
+    },
+    {
+     "name": "OTHER",
+     "value": 0.237
+    },
+    {
+     "name": "2029",
+     "value": 96.882,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-JH",
+  "sector": "OTHER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Jharkhand's forecast",
+  "body": "Top 3 sector drivers of Jharkhand's 2024→2029 forecast change: other (−10.3 Mt), industry (+6.0 Mt), power (−1.1 Mt).",
+  "title_hi": "झारखंड के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच झारखंड के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: अन्य (−10.3 Mt), उद्योग (+6.0 Mt), बिजली (−1.1 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "OTHER": -10.303,
+    "INDUSTRY": 6.037,
+    "POWER": -1.071
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 206.326,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": -1.071
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.694
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 6.037
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.607
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.454
+    },
+    {
+     "name": "WASTE",
+     "value": 0.103
+    },
+    {
+     "name": "OTHER",
+     "value": -10.303
+    },
+    {
+     "name": "2029",
+     "value": 202.848,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-JK",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Jammu and Kashmir's forecast",
+  "body": "Top 3 sector drivers of Jammu and Kashmir's 2024→2029 forecast change: transport (+465 kt), agriculture (+366 kt), buildings (+317 kt).",
+  "title_hi": "जम्मू और कश्मीर के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच जम्मू और कश्मीर के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+465 kt), कृषि (+366 kt), भवन (+317 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.465,
+    "AGRICULTURE": 0.366,
+    "BUILDINGS": 0.317
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 18.494,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.002
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.465
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.139
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.317
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.366
+    },
+    {
+     "name": "WASTE",
+     "value": 0.053
+    },
+    {
+     "name": "OTHER",
+     "value": 0.122
+    },
+    {
+     "name": "2029",
+     "value": 19.958,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-KA",
+  "sector": "INDUSTRY",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Karnataka's forecast",
+  "body": "Top 3 sector drivers of Karnataka's 2024→2029 forecast change: industry (+9.3 Mt), power (+8.0 Mt), transport (+6.2 Mt).",
+  "title_hi": "कर्नाटक के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच कर्नाटक के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: उद्योग (+9.3 Mt), बिजली (+8.0 Mt), परिवहन (+6.2 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "INDUSTRY": 9.334,
+    "POWER": 7.986,
+    "TRANSPORT": 6.197
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 242.544,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 7.986
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 6.197
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 9.334
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 1.312
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.998
+    },
+    {
+     "name": "WASTE",
+     "value": 1.47
+    },
+    {
+     "name": "OTHER",
+     "value": 0.448
+    },
+    {
+     "name": "2029",
+     "value": 270.289,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-KL",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Kerala's forecast",
+  "body": "Top 3 sector drivers of Kerala's 2024→2029 forecast change: transport (+866 kt), industry (+751 kt), buildings (+437 kt).",
+  "title_hi": "केरल के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच केरल के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+866 kt), उद्योग (+751 kt), भवन (+437 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.866,
+    "INDUSTRY": 0.751,
+    "BUILDINGS": 0.437
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 38.072,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": -0.008
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.866
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.751
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.437
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.11
+    },
+    {
+     "name": "WASTE",
+     "value": 0.322
+    },
+    {
+     "name": "OTHER",
+     "value": 0.092
+    },
+    {
+     "name": "2029",
+     "value": 40.642,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-LA",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Ladakh's forecast",
+  "body": "Top 3 sector drivers of Ladakh's 2024→2029 forecast change: transport (+236 kt), agriculture (+140 kt), other (+99 kt).",
+  "title_hi": "लद्दाख के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच लद्दाख के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+236 kt), कृषि (+140 kt), अन्य (+99 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.236,
+    "AGRICULTURE": 0.14,
+    "OTHER": 0.099
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 7.369,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.236
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.009
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.038
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.14
+    },
+    {
+     "name": "WASTE",
+     "value": 0.005
+    },
+    {
+     "name": "OTHER",
+     "value": 0.099
+    },
+    {
+     "name": "2029",
+     "value": 7.896,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-MH",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Maharashtra's forecast",
+  "body": "Top 3 sector drivers of Maharashtra's 2024→2029 forecast change: power (+21.1 Mt), industry (+8.3 Mt), transport (+3.4 Mt).",
+  "title_hi": "महाराष्ट्र के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच महाराष्ट्र के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+21.1 Mt), उद्योग (+8.3 Mt), परिवहन (+3.4 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 21.107,
+    "INDUSTRY": 8.31,
+    "TRANSPORT": 3.359
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 407.982,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 21.107
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 3.359
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 8.31
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 1.851
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 1.298
+    },
+    {
+     "name": "WASTE",
+     "value": 1.696
+    },
+    {
+     "name": "OTHER",
+     "value": 1.462
+    },
+    {
+     "name": "2029",
+     "value": 447.066,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-ML",
+  "sector": "INDUSTRY",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Meghalaya's forecast",
+  "body": "Top 3 sector drivers of Meghalaya's 2024→2029 forecast change: industry (+316 kt), transport (+184 kt), buildings (+100 kt).",
+  "title_hi": "मेघालय के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच मेघालय के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: उद्योग (+316 kt), परिवहन (+184 kt), भवन (+100 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "INDUSTRY": 0.316,
+    "TRANSPORT": 0.184,
+    "BUILDINGS": 0.1
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 10.489,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.016
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.184
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.316
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.1
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.061
+    },
+    {
+     "name": "WASTE",
+     "value": 0.029
+    },
+    {
+     "name": "OTHER",
+     "value": 0.053
+    },
+    {
+     "name": "2029",
+     "value": 11.249,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-MN",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Manipur's forecast",
+  "body": "Top 3 sector drivers of Manipur's 2024→2029 forecast change: transport (+191 kt), buildings (+60 kt), agriculture (+33 kt).",
+  "title_hi": "मणिपुर के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच मणिपुर के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+191 kt), भवन (+60 kt), कृषि (+33 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.191,
+    "BUILDINGS": 0.06,
+    "AGRICULTURE": 0.033
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 4.111,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.191
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.02
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.06
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.033
+    },
+    {
+     "name": "WASTE",
+     "value": 0.012
+    },
+    {
+     "name": "OTHER",
+     "value": 0.032
+    },
+    {
+     "name": "2029",
+     "value": 4.459,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-MP",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Madhya Pradesh's forecast",
+  "body": "Top 3 sector drivers of Madhya Pradesh's 2024→2029 forecast change: power (+22.6 Mt), other (+4.8 Mt), industry (+2.5 Mt).",
+  "title_hi": "मध्य प्रदेश के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच मध्य प्रदेश के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+22.6 Mt), अन्य (+4.8 Mt), उद्योग (+2.5 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 22.642,
+    "OTHER": 4.791,
+    "INDUSTRY": 2.526
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 301.354,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 22.642
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 2.146
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 2.526
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 1.59
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 1.793
+    },
+    {
+     "name": "WASTE",
+     "value": 0.539
+    },
+    {
+     "name": "OTHER",
+     "value": 4.791
+    },
+    {
+     "name": "2029",
+     "value": 337.381,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-MZ",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Mizoram's forecast",
+  "body": "Top 3 sector drivers of Mizoram's 2024→2029 forecast change: transport (+192 kt), other (+33 kt), agriculture (+28 kt).",
+  "title_hi": "मिज़ोरम के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच मिज़ोरम के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+192 kt), अन्य (+33 kt), कृषि (+28 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.192,
+    "OTHER": 0.033,
+    "AGRICULTURE": 0.028
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 3.048,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.192
+    },
+    {
+     "name": "INDUSTRY",
+     "value": -0.002
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.025
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.028
+    },
+    {
+     "name": "WASTE",
+     "value": 0.001
+    },
+    {
+     "name": "OTHER",
+     "value": 0.033
+    },
+    {
+     "name": "2029",
+     "value": 3.324,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-NL",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Nagaland's forecast",
+  "body": "Top 3 sector drivers of Nagaland's 2024→2029 forecast change: transport (+119 kt), other (+39 kt), buildings (+19 kt).",
+  "title_hi": "नागालैंड के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच नागालैंड के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+119 kt), अन्य (+39 kt), भवन (+19 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.119,
+    "OTHER": 0.039,
+    "BUILDINGS": 0.019
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 2.667,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.006
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.119
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.01
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.019
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.01
+    },
+    {
+     "name": "WASTE",
+     "value": 0.0
+    },
+    {
+     "name": "OTHER",
+     "value": 0.039
+    },
+    {
+     "name": "2029",
+     "value": 2.87,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-OD",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Odisha's forecast",
+  "body": "Top 3 sector drivers of Odisha's 2024→2029 forecast change: power (+12.0 Mt), industry (+11.7 Mt), agriculture (+972 kt).",
+  "title_hi": "ओडिशा के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच ओडिशा के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+12.0 Mt), उद्योग (+11.7 Mt), कृषि (+972 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 12.011,
+    "INDUSTRY": 11.652,
+    "AGRICULTURE": 0.972
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 269.26,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 12.011
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.906
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 11.652
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.749
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.972
+    },
+    {
+     "name": "WASTE",
+     "value": 0.587
+    },
+    {
+     "name": "OTHER",
+     "value": 0.957
+    },
+    {
+     "name": "2029",
+     "value": 297.094,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-PB",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Punjab's forecast",
+  "body": "Top 3 sector drivers of Punjab's 2024→2029 forecast change: power (+2.2 Mt), agriculture (+773 kt), industry (+766 kt).",
+  "title_hi": "पंजाब के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच पंजाब के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+2.2 Mt), कृषि (+773 kt), उद्योग (+766 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 2.157,
+    "AGRICULTURE": 0.773,
+    "INDUSTRY": 0.766
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 84.787,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 2.157
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.66
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.766
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.479
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.773
+    },
+    {
+     "name": "WASTE",
+     "value": 0.448
+    },
+    {
+     "name": "OTHER",
+     "value": 0.144
+    },
+    {
+     "name": "2029",
+     "value": 90.215,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-PY",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Puducherry's forecast",
+  "body": "Top 3 sector drivers of Puducherry's 2024→2029 forecast change: transport (+45 kt), industry (+32 kt), waste (+12 kt).",
+  "title_hi": "पुडुचेरी के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच पुडुचेरी के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+45 kt), उद्योग (+32 kt), अपशिष्ट (+12 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.045,
+    "INDUSTRY": 0.032,
+    "WASTE": 0.012
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 1.209,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.008
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.045
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.032
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.011
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.006
+    },
+    {
+     "name": "WASTE",
+     "value": 0.012
+    },
+    {
+     "name": "OTHER",
+     "value": -0.003
+    },
+    {
+     "name": "2029",
+     "value": 1.319,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-RJ",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Rajasthan's forecast",
+  "body": "Top 3 sector drivers of Rajasthan's 2024→2029 forecast change: power (+6.1 Mt), industry (+3.8 Mt), transport (+3.1 Mt).",
+  "title_hi": "राजस्थान के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच राजस्थान के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+6.1 Mt), उद्योग (+3.8 Mt), परिवहन (+3.1 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 6.072,
+    "INDUSTRY": 3.764,
+    "TRANSPORT": 3.054
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 205.348,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 6.072
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 3.054
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 3.764
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 1.51
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 1.875
+    },
+    {
+     "name": "WASTE",
+     "value": 0.98
+    },
+    {
+     "name": "OTHER",
+     "value": 0.616
+    },
+    {
+     "name": "2029",
+     "value": 223.218,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-SK",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Sikkim's forecast",
+  "body": "Top 3 sector drivers of Sikkim's 2024→2029 forecast change: transport (+66 kt), other (+12 kt), agriculture (+10 kt).",
+  "title_hi": "सिक्किम के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच सिक्किम के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+66 kt), अन्य (+12 kt), कृषि (+10 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.066,
+    "OTHER": 0.012,
+    "AGRICULTURE": 0.01
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 1.258,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.0
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.066
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.001
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.01
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.01
+    },
+    {
+     "name": "WASTE",
+     "value": 0.006
+    },
+    {
+     "name": "OTHER",
+     "value": 0.012
+    },
+    {
+     "name": "2029",
+     "value": 1.363,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-TN",
+  "sector": "AGRICULTURE",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Tamil Nadu's forecast",
+  "body": "Top 3 sector drivers of Tamil Nadu's 2024→2029 forecast change: agriculture (+18.7 Mt), power (+9.4 Mt), industry (+4.3 Mt).",
+  "title_hi": "तमिलनाडु के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच तमिलनाडु के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: कृषि (+18.7 Mt), बिजली (+9.4 Mt), उद्योग (+4.3 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "AGRICULTURE": 18.704,
+    "POWER": 9.408,
+    "INDUSTRY": 4.28
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 447.808,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 9.408
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 3.312
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 4.28
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 1.138
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 18.704
+    },
+    {
+     "name": "WASTE",
+     "value": 1.103
+    },
+    {
+     "name": "OTHER",
+     "value": 0.28
+    },
+    {
+     "name": "2029",
+     "value": 486.034,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-TR",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Tripura's forecast",
+  "body": "Top 3 sector drivers of Tripura's 2024→2029 forecast change: transport (+117 kt), agriculture (+49 kt), buildings (+48 kt).",
+  "title_hi": "त्रिपुरा के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच त्रिपुरा के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+117 kt), कृषि (+49 kt), भवन (+48 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.117,
+    "AGRICULTURE": 0.049,
+    "BUILDINGS": 0.048
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 4.167,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.043
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.117
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.006
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.048
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.049
+    },
+    {
+     "name": "WASTE",
+     "value": 0.009
+    },
+    {
+     "name": "OTHER",
+     "value": 0.022
+    },
+    {
+     "name": "2029",
+     "value": 4.46,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-TS",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Telangana's forecast",
+  "body": "Top 3 sector drivers of Telangana's 2024→2029 forecast change: power (+5.7 Mt), industry (+1.9 Mt), transport (+1.2 Mt).",
+  "title_hi": "तेलंगाना के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच तेलंगाना के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+5.7 Mt), उद्योग (+1.9 Mt), परिवहन (+1.2 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 5.687,
+    "INDUSTRY": 1.854,
+    "TRANSPORT": 1.155
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 171.442,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 5.687
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 1.155
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 1.854
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.522
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.814
+    },
+    {
+     "name": "WASTE",
+     "value": 0.421
+    },
+    {
+     "name": "OTHER",
+     "value": 0.611
+    },
+    {
+     "name": "2029",
+     "value": 182.506,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-UK",
+  "sector": "TRANSPORT",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Uttarakhand's forecast",
+  "body": "Top 3 sector drivers of Uttarakhand's 2024→2029 forecast change: transport (+287 kt), buildings (+203 kt), agriculture (+193 kt).",
+  "title_hi": "उत्तराखंड के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच उत्तराखंड के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: परिवहन (+287 kt), भवन (+203 kt), कृषि (+193 kt)।",
+  "evidence": {
+   "changes_mt": {
+    "TRANSPORT": 0.287,
+    "BUILDINGS": 0.203,
+    "AGRICULTURE": 0.193
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 14.835,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 0.063
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 0.287
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 0.14
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.203
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 0.193
+    },
+    {
+     "name": "WASTE",
+     "value": 0.132
+    },
+    {
+     "name": "OTHER",
+     "value": 0.092
+    },
+    {
+     "name": "2029",
+     "value": 15.946,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-UP",
+  "sector": "POWER",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives Uttar Pradesh's forecast",
+  "body": "Top 3 sector drivers of Uttar Pradesh's 2024→2029 forecast change: power (+12.8 Mt), buildings (+4.1 Mt), industry (+4.0 Mt).",
+  "title_hi": "उत्तर प्रदेश के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच उत्तर प्रदेश के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: बिजली (+12.8 Mt), भवन (+4.1 Mt), उद्योग (+4.0 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "POWER": 12.765,
+    "BUILDINGS": 4.128,
+    "INDUSTRY": 3.978
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 352.587,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 12.765
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 3.142
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 3.978
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 4.128
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 3.049
+    },
+    {
+     "name": "WASTE",
+     "value": 0.802
+    },
+    {
+     "name": "OTHER",
+     "value": 1.065
+    },
+    {
+     "name": "2029",
+     "value": 381.515,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-WB",
+  "sector": "INDUSTRY",
+  "type": "DRIVERS",
+  "severity": "info",
+  "title": "What drives West Bengal's forecast",
+  "body": "Top 3 sector drivers of West Bengal's 2024→2029 forecast change: industry (+4.7 Mt), power (+3.0 Mt), other (−2.0 Mt).",
+  "title_hi": "पश्चिम बंगाल के पूर्वानुमान के मुख्य कारक",
+  "body_hi": "2024→2029 के बीच पश्चिम बंगाल के पूर्वानुमान परिवर्तन के शीर्ष 3 क्षेत्र: उद्योग (+4.7 Mt), बिजली (+3.0 Mt), अन्य (−2.0 Mt)।",
+  "evidence": {
+   "changes_mt": {
+    "INDUSTRY": 4.698,
+    "POWER": 2.987,
+    "OTHER": -1.99
+   },
+   "from": 2024,
+   "to": 2029
+  },
+  "viz": {
+   "kind": "waterfall",
+   "unit": "MtCO₂e",
+   "series": [
+    {
+     "name": "2024",
+     "value": 228.909,
+     "total": true
+    },
+    {
+     "name": "POWER",
+     "value": 2.987
+    },
+    {
+     "name": "TRANSPORT",
+     "value": 1.142
+    },
+    {
+     "name": "INDUSTRY",
+     "value": 4.698
+    },
+    {
+     "name": "BUILDINGS",
+     "value": 0.982
+    },
+    {
+     "name": "AGRICULTURE",
+     "value": 1.051
+    },
+    {
+     "name": "WASTE",
+     "value": 0.224
+    },
+    {
+     "name": "OTHER",
+     "value": -1.99
+    },
+    {
+     "name": "2029",
+     "value": 238.002,
+     "total": true
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Δ_sector = forecast P50_2029 (reconciled) − observed CO₂e_2024; ranked by |Δ|",
+   "inputs": "Reconciled state × sector forecast; observed sector CO₂e",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · CarbonScope Forecast (P50)"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-DL",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Delhi vs Chhattisgarh: 12× per-capita gap",
+  "body": "Delhi's per-capita CO₂e is 0.85 t — about 1/12 of Chhattisgarh's 9.8 t (India average 2.99 t, 2024).",
+  "title_hi": "दिल्ली बनाम छत्तीसगढ़: प्रति व्यक्ति 12× अंतर",
+  "body_hi": "दिल्ली का प्रति व्यक्ति CO₂e 0.85 t है — छत्तीसगढ़ (9.8 t) का लगभग 1/12 (भारत औसत 2.99 t, 2024)।",
+  "evidence": {
+   "low": "IN-DL",
+   "low_t": 0.849,
+   "high": "IN-CG",
+   "high_t": 9.7972,
+   "national_t": 2.9915
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Delhi",
+     "value": 0.849,
+     "state_code": "IN-DL"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    },
+    {
+     "name": "Chhattisgarh",
+     "value": 9.797,
+     "state_code": "IN-CG"
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-BR",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Bihar per-capita CO₂e is 0.3× the national average",
+  "body": "Bihar: 1.04 tCO₂e per person vs India 2.99 t (2024).",
+  "title_hi": "बिहार का प्रति व्यक्ति CO₂e राष्ट्रीय औसत का 0.3×",
+  "body_hi": "बिहार: 1.04 tCO₂e प्रति व्यक्ति, जबकि भारत 2.99 t (2024)।",
+  "evidence": {
+   "per_capita_t": 1.0378,
+   "national_t": 2.9915,
+   "ratio": 0.3469
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Bihar",
+     "value": 1.038,
+     "state_code": "IN-BR"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-CG",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Chhattisgarh per-capita CO₂e is 3.3× the national average",
+  "body": "Chhattisgarh: 9.80 tCO₂e per person vs India 2.99 t (2024).",
+  "title_hi": "छत्तीसगढ़ का प्रति व्यक्ति CO₂e राष्ट्रीय औसत का 3.3×",
+  "body_hi": "छत्तीसगढ़: 9.80 tCO₂e प्रति व्यक्ति, जबकि भारत 2.99 t (2024)।",
+  "evidence": {
+   "per_capita_t": 9.7972,
+   "national_t": 2.9915,
+   "ratio": 3.2751
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Chhattisgarh",
+     "value": 9.797,
+     "state_code": "IN-CG"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-DL",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Delhi per-capita CO₂e is 0.3× the national average",
+  "body": "Delhi: 0.85 tCO₂e per person vs India 2.99 t (2024).",
+  "title_hi": "दिल्ली का प्रति व्यक्ति CO₂e राष्ट्रीय औसत का 0.3×",
+  "body_hi": "दिल्ली: 0.85 tCO₂e प्रति व्यक्ति, जबकि भारत 2.99 t (2024)।",
+  "evidence": {
+   "per_capita_t": 0.849,
+   "national_t": 2.9915,
+   "ratio": 0.2838
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Delhi",
+     "value": 0.849,
+     "state_code": "IN-DL"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-JK",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Jammu and Kashmir per-capita CO₂e is 0.5× the national average",
+  "body": "Jammu and Kashmir: 1.35 tCO₂e per person vs India 2.99 t (2024).",
+  "title_hi": "जम्मू और कश्मीर का प्रति व्यक्ति CO₂e राष्ट्रीय औसत का 0.5×",
+  "body_hi": "जम्मू और कश्मीर: 1.35 tCO₂e प्रति व्यक्ति, जबकि भारत 2.99 t (2024)।",
+  "evidence": {
+   "per_capita_t": 1.3498,
+   "national_t": 2.9915,
+   "ratio": 0.4512
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Jammu and Kashmir",
+     "value": 1.35,
+     "state_code": "IN-JK"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-KL",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Kerala per-capita CO₂e is 0.4× the national average",
+  "body": "Kerala: 1.06 tCO₂e per person vs India 2.99 t (2024).",
+  "title_hi": "केरल का प्रति व्यक्ति CO₂e राष्ट्रीय औसत का 0.4×",
+  "body_hi": "केरल: 1.06 tCO₂e प्रति व्यक्ति, जबकि भारत 2.99 t (2024)।",
+  "evidence": {
+   "per_capita_t": 1.0599,
+   "national_t": 2.9915,
+   "ratio": 0.3543
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Kerala",
+     "value": 1.06,
+     "state_code": "IN-KL"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-UK",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Uttarakhand per-capita CO₂e is 0.4× the national average",
+  "body": "Uttarakhand: 1.26 tCO₂e per person vs India 2.99 t (2024).",
+  "title_hi": "उत्तराखंड का प्रति व्यक्ति CO₂e राष्ट्रीय औसत का 0.4×",
+  "body_hi": "उत्तराखंड: 1.26 tCO₂e प्रति व्यक्ति, जबकि भारत 2.99 t (2024)।",
+  "evidence": {
+   "per_capita_t": 1.262,
+   "national_t": 2.9915,
+   "ratio": 0.4219
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Uttarakhand",
+     "value": 1.262,
+     "state_code": "IN-UK"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": "IN-UP",
+  "sector": null,
+  "type": "COMPARISON",
+  "severity": "info",
+  "title": "Uttar Pradesh per-capita CO₂e is 0.5× the national average",
+  "body": "Uttar Pradesh: 1.46 tCO₂e per person vs India 2.99 t (2024).",
+  "title_hi": "उत्तर प्रदेश का प्रति व्यक्ति CO₂e राष्ट्रीय औसत का 0.5×",
+  "body_hi": "उत्तर प्रदेश: 1.46 tCO₂e प्रति व्यक्ति, जबकि भारत 2.99 t (2024)।",
+  "evidence": {
+   "per_capita_t": 1.4626,
+   "national_t": 2.9915,
+   "ratio": 0.4889
+  },
+  "viz": {
+   "kind": "bars",
+   "unit": "tCO₂e per person",
+   "series": [
+    {
+     "name": "Uttar Pradesh",
+     "value": 1.463,
+     "state_code": "IN-UP"
+    },
+    {
+     "name": "India",
+     "value": 2.991
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Per-capita CO₂e = state CO₂e (t) ÷ population; India average = Σ CO₂e ÷ Σ population",
+   "inputs": "2024; comparisons limited to states with ≥ 2 M people (≥ 20 M for the low end)",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · Census/MoSPI population"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": null,
+  "sector": "POWER",
+  "type": "TREND",
+  "severity": "info",
+  "title": "National power emissions intensity -17% since 2015",
+  "body": "India's power CO₂e per unit of real GDP changed -16.7% between 2015 and 2024 (-2.0%/yr, decoupling).",
+  "title_hi": "राष्ट्रीय बिजली उत्सर्जन तीव्रता 2015 से -17%",
+  "body_hi": "2015 से 2024 के बीच भारत की बिजली CO₂e प्रति इकाई वास्तविक GDP -16.7% बदली (-2.0% प्रति वर्ष)।",
+  "evidence": {
+   "from": 2015,
+   "to": 2024,
+   "intensity_change_pct": -16.7144,
+   "cagr_pct": -2.0116
+  },
+  "viz": {
+   "kind": "spark",
+   "unit": "tCO₂e per ₹ crore real GDP",
+   "cagr": -2.01,
+   "from": 2015,
+   "series": [
+    {
+     "year": 2005,
+     "value": 87.593
+    },
+    {
+     "year": 2006,
+     "value": 85.488
+    },
+    {
+     "year": 2007,
+     "value": 86.505
+    },
+    {
+     "year": 2008,
+     "value": 87.813
+    },
+    {
+     "year": 2009,
+     "value": 89.056
+    },
+    {
+     "year": 2010,
+     "value": 86.305
+    },
+    {
+     "year": 2011,
+     "value": 85.894
+    },
+    {
+     "year": 2012,
+     "value": 92.698
+    },
+    {
+     "year": 2013,
+     "value": 88.967
+    },
+    {
+     "year": 2014,
+     "value": 93.247
+    },
+    {
+     "year": 2015,
+     "value": 85.253
+    },
+    {
+     "year": 2016,
+     "value": 75.769
+    },
+    {
+     "year": 2017,
+     "value": 74.922
+    },
+    {
+     "year": 2018,
+     "value": 74.564
+    },
+    {
+     "year": 2019,
+     "value": 71.029
+    },
+    {
+     "year": 2020,
+     "value": 71.359
+    },
+    {
+     "year": 2021,
+     "value": 72.631
+    },
+    {
+     "year": 2022,
+     "value": 72.587
+    },
+    {
+     "year": 2023,
+     "value": 72.592
+    },
+    {
+     "year": 2024,
+     "value": 71.004
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Intensity_t = Σ_states sector CO₂e_t ÷ Σ_states real GSDP_t; CAGR = (I_end ÷ I_2015)^(1/n) − 1",
+   "inputs": "National totals 2005–2024",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": null,
+  "sector": "INDUSTRY",
+  "type": "TREND",
+  "severity": "info",
+  "title": "National industry emissions intensity -20% since 2015",
+  "body": "India's industry CO₂e per unit of real GDP changed -19.8% between 2015 and 2024 (-2.4%/yr, decoupling).",
+  "title_hi": "राष्ट्रीय उद्योग उत्सर्जन तीव्रता 2015 से -20%",
+  "body_hi": "2015 से 2024 के बीच भारत की उद्योग CO₂e प्रति इकाई वास्तविक GDP -19.8% बदली (-2.4% प्रति वर्ष)।",
+  "evidence": {
+   "from": 2015,
+   "to": 2024,
+   "intensity_change_pct": -19.8251,
+   "cagr_pct": -2.4252
+  },
+  "viz": {
+   "kind": "spark",
+   "unit": "tCO₂e per ₹ crore real GDP",
+   "cagr": -2.43,
+   "from": 2015,
+   "series": [
+    {
+     "year": 2005,
+     "value": 65.55
+    },
+    {
+     "year": 2006,
+     "value": 66.602
+    },
+    {
+     "year": 2007,
+     "value": 66.715
+    },
+    {
+     "year": 2008,
+     "value": 66.429
+    },
+    {
+     "year": 2009,
+     "value": 65.779
+    },
+    {
+     "year": 2010,
+     "value": 68.212
+    },
+    {
+     "year": 2011,
+     "value": 72.915
+    },
+    {
+     "year": 2012,
+     "value": 71.427
+    },
+    {
+     "year": 2013,
+     "value": 70.322
+    },
+    {
+     "year": 2014,
+     "value": 69.136
+    },
+    {
+     "year": 2015,
+     "value": 65.872
+    },
+    {
+     "year": 2016,
+     "value": 62.697
+    },
+    {
+     "year": 2017,
+     "value": 62.087
+    },
+    {
+     "year": 2018,
+     "value": 59.576
+    },
+    {
+     "year": 2019,
+     "value": 56.5
+    },
+    {
+     "year": 2020,
+     "value": 55.494
+    },
+    {
+     "year": 2021,
+     "value": 57.344
+    },
+    {
+     "year": 2022,
+     "value": 53.299
+    },
+    {
+     "year": 2023,
+     "value": 54.319
+    },
+    {
+     "year": 2024,
+     "value": 52.813
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Intensity_t = Σ_states sector CO₂e_t ÷ Σ_states real GSDP_t; CAGR = (I_end ÷ I_2015)^(1/n) − 1",
+   "inputs": "National totals 2005–2024",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": null,
+  "sector": "TRANSPORT",
+  "type": "TREND",
+  "severity": "info",
+  "title": "National transport emissions intensity -24% since 2015",
+  "body": "India's transport CO₂e per unit of real GDP changed -24.0% between 2015 and 2024 (-3.0%/yr, decoupling).",
+  "title_hi": "राष्ट्रीय परिवहन उत्सर्जन तीव्रता 2015 से -24%",
+  "body_hi": "2015 से 2024 के बीच भारत की परिवहन CO₂e प्रति इकाई वास्तविक GDP -24.0% बदली (-3.0% प्रति वर्ष)।",
+  "evidence": {
+   "from": 2015,
+   "to": 2024,
+   "intensity_change_pct": -23.9558,
+   "cagr_pct": -2.997
+  },
+  "viz": {
+   "kind": "spark",
+   "unit": "tCO₂e per ₹ crore real GDP",
+   "cagr": -3.0,
+   "from": 2015,
+   "series": [
+    {
+     "year": 2005,
+     "value": 19.882
+    },
+    {
+     "year": 2006,
+     "value": 19.104
+    },
+    {
+     "year": 2007,
+     "value": 20.985
+    },
+    {
+     "year": 2008,
+     "value": 23.289
+    },
+    {
+     "year": 2009,
+     "value": 23.658
+    },
+    {
+     "year": 2010,
+     "value": 23.553
+    },
+    {
+     "year": 2011,
+     "value": 24.21
+    },
+    {
+     "year": 2012,
+     "value": 24.304
+    },
+    {
+     "year": 2013,
+     "value": 23.197
+    },
+    {
+     "year": 2014,
+     "value": 22.696
+    },
+    {
+     "year": 2015,
+     "value": 22.826
+    },
+    {
+     "year": 2016,
+     "value": 21.755
+    },
+    {
+     "year": 2017,
+     "value": 21.907
+    },
+    {
+     "year": 2018,
+     "value": 21.469
+    },
+    {
+     "year": 2019,
+     "value": 20.677
+    },
+    {
+     "year": 2020,
+     "value": 19.308
+    },
+    {
+     "year": 2021,
+     "value": 19.236
+    },
+    {
+     "year": 2022,
+     "value": 18.885
+    },
+    {
+     "year": 2023,
+     "value": 18.034
+    },
+    {
+     "year": 2024,
+     "value": 17.358
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "Intensity_t = Σ_states sector CO₂e_t ÷ Σ_states real GSDP_t; CAGR = (I_end ÷ I_2015)^(1/n) − 1",
+   "inputs": "National totals 2005–2024",
+   "source": "EDGAR 2025 sector grids, downscaled to states (CO₂e, AR6 GWP-100) · MoSPI GSDP"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ },
+ {
+  "state_code": null,
+  "sector": "POWER",
+  "type": "TREND",
+  "severity": "info",
+  "title": "Grid emission factor +2% since FY2017",
+  "body": "CEA plant data: the conventional fleet's average emission factor moved from 0.822 to 0.835 tCO₂/MWh (FY2017→FY2024). Solar/wind are outside the CEA baseline database, so this understates the all-source decline.",
+  "title_hi": "ग्रिड उत्सर्जन कारक FY2017 से +2%",
+  "body_hi": "CEA संयंत्र आंकड़े: पारंपरिक बिजली संयंत्रों का औसत उत्सर्जन कारक 0.822 से 0.835 tCO₂/MWh (FY2017→FY2024)।",
+  "evidence": {
+   "from": 2017,
+   "to": 2024,
+   "ef_from": 0.8218,
+   "ef_to": 0.8354
+  },
+  "viz": {
+   "kind": "spark",
+   "unit": "tCO₂/MWh (conventional grid plants)",
+   "cagr": 0.23,
+   "from": 2017,
+   "series": [
+    {
+     "year": 2017,
+     "value": 0.8218
+    },
+    {
+     "year": 2018,
+     "value": 0.8246
+    },
+    {
+     "year": 2019,
+     "value": 0.7968
+    },
+    {
+     "year": 2020,
+     "value": 0.7926
+    },
+    {
+     "year": 2021,
+     "value": 0.8145
+    },
+    {
+     "year": 2022,
+     "value": 0.8266
+    },
+    {
+     "year": 2023,
+     "value": 0.8436
+    },
+    {
+     "year": 2024,
+     "value": 0.8354
+    }
+   ]
+  },
+  "how": {
+   "updated": "2026-09-26",
+   "formula": "GEF_t = Σ plant CO₂_t ÷ Σ plant net generation_t (grid-connected coal, gas, oil, hydro, nuclear)",
+   "inputs": "CEA CO₂ Baseline Database v22, FY2017–FY2024 (FY t–t+1 → year t)",
+   "source": "CEA CO₂ Baseline Database"
+  },
+  "generated_at": "2026-09-26T16:30:01Z"
+ }
+]

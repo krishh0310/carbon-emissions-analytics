@@ -1,0 +1,9 @@
+.venv
+frontend/node_modules
+frontend/dist
+data
+results
+models
+mlruns
+.git
+paper

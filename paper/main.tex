@@ -1,0 +1,118 @@
+% CarbonScope India — IEEE conference skeleton. Tables are generated: `make paper` (runs make_tables.py first).
+\documentclass[conference]{IEEEtran}
+\usepackage{booktabs,amsmath,graphicx,hyperref,siunitx}
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\usepackage{xcolor}
+
+\begin{document}
+\title{CarbonScope India: Deep Panel Forecasting of State- and City-Level CO\textsubscript{2} Emissions for All 36 Indian States and Union Territories}
+\author{\IEEEauthorblockN{\todo{Author names}}\IEEEauthorblockA{\todo{Affiliation}}}
+\maketitle
+
+\begin{abstract}
+We forecast fossil CO\textsubscript{2} emissions 1, 3 and 5 years ahead for all 28 states and 8 union territories of India.
+Because official state inventories are incomplete, targets are EDGAR 2025 gridded emissions area-weighted to post-2020
+state boundaries; drivers combine CEA plant-level power data, MoSPI GSDP, Census population, NASA POWER climate and
+OxCGRT lockdown stringency. With only $\sim$35 annual observations per state, we train a single global model with learned
+state embeddings and compare 11 methods under a strict time split (train $\le$2014, validation 2015--2019, test 2020--2024).
+State forecasts are made coherent with the national total via MinT reconciliation. \todo{one-sentence headline result from Table~\ref{tab:test}.}
+\end{abstract}
+
+\section{Introduction}
+India's updated NDC and net-zero-by-2070 pledge are implemented largely through state policy (power procurement,
+EV policies, industrial permitting), yet sub-national emission projections are scarce. Contributions:
+\begin{enumerate}
+\item A comparative deep-learning benchmark on all 36 Indian states/UTs under a leakage-safe protocol
+      (to our knowledge the first at this coverage \todo{verify against literature}).
+\item A state-embedding global panel design that makes deep models usable for small-N annual panels.
+\item Hierarchical MinT reconciliation so state forecasts sum exactly to the national total; we report both
+      unreconciled and reconciled accuracy.
+\item A city-level proxy estimation framework (EDGAR grid buffers) with explicit estimation-method and confidence tiers.
+\item (v2) The first India state$\times$sector deep-learning benchmark: 252 CO\textsubscript{2}e series (7 sectors,
+      AR6 GWP-100) with a factorised state+sector embedding.
+\item (v2) Two-level MinT reconciliation (national $\rightarrow$ \{states, sectors\} $\rightarrow$ cells) for emissions.
+\item (v2) A cross-learning multi-task model that forecasts all sectors of a state in one pass.
+\item (v2) A transparent scenario/counterfactual engine and an open, deterministic insight-generation framework (ATAR).
+\end{enumerate}
+
+\section{Data}
+\textbf{Target.} EDGAR 2025 GHG CO\textsubscript{2} TOTALS, 0.1$^\circ$, 1990--2024, aggregated by exact cell/polygon
+area overlay (EPSG:6933) to 36 state/UT polygons (Ladakh separate; DNH\&DD merged). These are \emph{EDGAR-downscaled
+estimates}, not official inventories. \textbf{Validation source.} CEA CO\textsubscript{2} Baseline Database v22
+(plant-level, FY2017--2025). \textbf{Drivers.} EDGAR sector grids (power, industry, road, cement, buildings);
+MoSPI GSDP (2011-12 series) back-cast with World Bank real GDP; Census 2001/2011 population interpolated to 2023/24
+estimates; NASA POWER monthly temperature/precipitation (CDD, JJAS rainfall); OxCGRT subnational stringency; policy
+calendars (UJALA, PAT, JNNSM phases, state EV policies). All imputations are logged (\texttt{imputation\_report.csv}).
+
+\section{Method}
+Sliding windows of $W{=}10$ years predict log-growth $y_{t+h}=\log(1{+}c_{t+h})-\log(1{+}c_t)$ for $h{=}1..5$. Each
+(sample, horizon) pair is assigned to a split by its \emph{target} year; scalers, winsorisation bounds and income tiers
+are fitted on train years only (enforced by unit tests). Deep models (LSTM, GRU, TCN, Seq2Seq with Bahdanau attention,
+TFT-lite with variable selection and multi-head attention, DeepAR-style Gaussian head) share one network across states
+with an 8-d state embedding and static covariates (region, coastal, UT, income tier), trained with pinball loss weighted by
+the inverse per-state MASE scale. MinT uses shrinkage covariance when residual rows exceed series, otherwise its WLS
+(variance-scaled) form.
+
+\section{Results}
+\begin{table}[t]\centering\caption{Test (2020--2024) accuracy, all states. MASE scaled by train-period naive-1 MAE.
+$^\dagger$ARIMA fitted on the 10 largest emitters only.}\label{tab:test}
+\resizebox{\columnwidth}{!}{\input{tables/leaderboard_test.tex}}\end{table}
+\begin{table}[t]\centering\caption{Validation (2015--2019) accuracy.}\label{tab:val}
+\resizebox{\columnwidth}{!}{\input{tables/leaderboard_val.tex}}\end{table}
+\begin{table}[t]\centering\caption{Permutation importance of feature groups ($\Delta$ val MASE).}\label{tab:imp}
+\resizebox{\columnwidth}{!}{\input{tables/importance.tex}}\end{table}
+\todo{Discuss: COVID-19 shock dominates test h=1; attention concentrates on the most recent 4--6 input years;
+history and economy groups dominate importance; decoupling (Insights page) and watchlist findings.}
+
+
+\section{State$\times$Sector Forecasting (v2)}
+\textbf{Data.} EDGAR 2025 CO\textsubscript{2}, CH\textsubscript{4} and N\textsubscript{2}O sub-sector grids (1,785 grids,
+1990--2024) are mapped to seven sectors (Power, Transport, Industry, Buildings, Agriculture, Waste, Other) and converted to
+CO\textsubscript{2}e with AR6 GWP-100 (CH\textsubscript{4} 29.8 fossil / 27.0 non-fossil; N\textsubscript{2}O 273). Other is the
+residual against EDGAR CO\textsubscript{2} totals, so $\sum_k$ sector CO\textsubscript{2} equals the v1 state series exactly.
+\textbf{Models.} A unit is a (state, sector) pair with embedding $e = E_{\text{state}}[s] + E_{\text{sector}}[k]$. Inputs add
+lagged own-sector and state-total history and sector drivers. The multi-task model encodes each sector's window with a
+shared GRU (or TFT-style variable selection + GRU + temporal attention), mixes the seven sector tokens with a
+Transformer layer, and emits per-sector P10/P50/P90.
+\textbf{Reconciliation.} With $S\in\{0,1\}^{296\times252}$ (national, 36 states, 7 sectors, 252 cells) and diagonal $W$ of
+train residual variances, $\tilde{y}=S(S^\top W^{-1}S)^{-1}S^\top W^{-1}\hat{y}$. State totals use a direct state-total TFT
+as base forecast; sector and national totals use drift.
+
+\begin{table}[t]\centering\caption{State$\times$sector test accuracy (material cells, train mean $\ge$10 kt).}\label{tab:sector}
+\resizebox{\columnwidth}{!}{\input{tables/leaderboard_sector_test.tex}}\end{table}
+\begin{table}[t]\centering\caption{Reconciled MASE at $h{=}5$ by sector.}\label{tab:bysector}
+\resizebox{\columnwidth}{!}{\input{tables/sector_by_sector_h5.tex}}\end{table}
+
+\section{Experiments (v2)}
+\textbf{E10 disaggregation} (Table~\ref{tab:e10}): state-total MASE of bottom-up sector sums vs a direct state-total model.
+\textbf{E11 multi-task} (Table~\ref{tab:e11}). \textbf{E12 reconciliation} (Table~\ref{tab:e12}).
+\textbf{E13 counterfactual sanity}: CI asserts monotonicity (more renewables never increase power emissions; EVs reduce
+transport and add grid load; BAU is the identity). \textbf{E14 transfer} (Table~\ref{tab:e14}): six held-out states predicted
+zero-shot with the mean state embedding. \todo{interpret once tables are final.}
+\begin{table}[t]\centering\caption{E10: state totals, bottom-up vs direct.}\label{tab:e10}\resizebox{\columnwidth}{!}{\input{tables/e10.tex}}\end{table}
+\begin{table}[t]\centering\caption{E11: multi-task vs per-sector heads.}\label{tab:e11}\resizebox{\columnwidth}{!}{\input{tables/e11.tex}}\end{table}
+\begin{table}[t]\centering\caption{E12: unreconciled vs two-level MinT.}\label{tab:e12}\resizebox{\columnwidth}{!}{\input{tables/e12.tex}}\end{table}
+\begin{table}[t]\centering\caption{E14: zero-shot transfer to held-out states.}\label{tab:e14}\resizebox{\columnwidth}{!}{\input{tables/e14.tex}}\end{table}
+
+\textbf{Scenario engine.} Renewable share, EV adoption and industrial policy never vary in the training window, so the
+networks cannot learn their effect; we therefore apply explicit identities to the reconciled forecast (power $\times
+(1-\Delta_{\text{RE}}/\text{fossil share})$; EV load at the state grid factor; compounding industry growth; building
+efficiency) and widen bands by $\pm$20\% of the delta. \textbf{ATAR} generates anomaly, decoupling, watchlist,
+leader/laggard, driver, comparison and trend insights from templates over the same data, each with a machine-readable
+evidence record.
+
+\section{Limitations}
+EDGAR spatial allocation is proxy-based (typical sub-national uncertainty $\pm$20--50\%); CEA covers only FY2017+ and
+conventional plants; GSDP before FY2011 and for Ladakh/Lakshadweep/DNH\&DD is imputed; climate uses one point per state;
+city values are buffer estimates that may cross state lines. Test years include the COVID-19 shock. Sector allocation inherits EDGAR proxy uncertainty (higher for agriculture and waste); several sector drivers (MoRTH, livestock, MSW) require manual inputs; scenario levers are structural, not learned.
+
+\bibliographystyle{IEEEtran}
+\begin{thebibliography}{9}
+\bibitem{edgar} M. Crippa \emph{et al.}, ``EDGAR 2025 GHG emissions,'' JRC, 2025.
+\bibitem{cea} Central Electricity Authority, ``CO\textsubscript{2} Baseline Database for the Indian Power Sector, v22,'' 2026.
+\bibitem{mint} S. Wickramasuriya, G. Athanasopoulos, R. Hyndman, ``Optimal forecast reconciliation for hierarchical and grouped time series through trace minimization,'' \emph{JASA}, 2019.
+\bibitem{tft} B. Lim \emph{et al.}, ``Temporal Fusion Transformers for interpretable multi-horizon time series forecasting,'' \emph{IJF}, 2021.
+\bibitem{deepar} D. Salinas \emph{et al.}, ``DeepAR: Probabilistic forecasting with autoregressive recurrent networks,'' \emph{IJF}, 2020.
+\bibitem{oxcgrt} T. Hale \emph{et al.}, ``A global panel database of pandemic policies (OxCGRT),'' \emph{Nat. Hum. Behav.}, 2021.
+\end{thebibliography}
+\end{document}

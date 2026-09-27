@@ -1,0 +1,67 @@
+# One command: `docker compose up --build`  ->  http://localhost:8080  (API docs: http://localhost:8080/docs)
+# First run: the `init` service ingests data (≈1 GB download), trains all models, and seeds PostGIS.
+# Set CARBONSCOPE_SKIP_TRAIN=1 in .env to only ingest+seed (models can be trained later from the Admin page).
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-carbonscope}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: carbonscope
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-carbonscope}"], interval: 5s, retries: 20}
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck: {test: ["CMD", "redis-cli", "ping"], interval: 5s, retries: 20}
+
+  init:
+    build: {context: ., dockerfile: docker/backend.Dockerfile}
+    env_file: .env
+    environment: &dbenv
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER:-carbonscope}:${POSTGRES_PASSWORD}@db:5432/carbonscope
+      REDIS_URL: redis://redis:6379/0
+    command: >
+      sh -c "alembic upgrade head &&
+             (test -f data/processed/india_states_panel.parquet || python -m src.data.ingest) &&
+             (test -n \"$$CARBONSCOPE_SKIP_TRAIN\" || test -f results/forecasts.parquet ||
+               (python -m src.train.run && python -m src.train.sector_run && python -m src.flowfield &&
+                python -m src.explain.importance && python -m src.insights)) &&
+             python -m src.data.cities_meta &&
+             python -m backend.app.seed"
+    volumes: &vols [./data:/app/data, ./results:/app/results, ./models:/app/models, ./mlruns:/app/mlruns]
+    depends_on: {db: {condition: service_healthy}}
+
+  api:
+    build: {context: ., dockerfile: docker/backend.Dockerfile}
+    env_file: .env
+    environment: *dbenv
+    volumes: *vols
+    depends_on: {init: {condition: service_completed_successfully}, redis: {condition: service_healthy}}
+    healthcheck: {test: ["CMD", "python", "-c", "import urllib.request;urllib.request.urlopen('http://localhost:8000/healthz')"], interval: 10s}
+
+  worker:
+    build: {context: ., dockerfile: docker/backend.Dockerfile}
+    env_file: .env
+    environment: *dbenv
+    command: ["rq", "worker", "carbonscope", "--url", "redis://redis:6379/0"]
+    volumes: *vols
+    depends_on: {init: {condition: service_completed_successfully}, redis: {condition: service_healthy}}
+
+  scheduler:
+    # continuous learning: quarterly full retrain, monthly incremental refresh, daily drift + shadow-promotion review
+    build: {context: ., dockerfile: docker/backend.Dockerfile}
+    env_file: .env
+    environment: *dbenv
+    command: ["python", "-m", "backend.app.scheduler"]
+    volumes: *vols
+    depends_on: {init: {condition: service_completed_successfully}, redis: {condition: service_healthy}}
+
+  web:
+    build: {context: ., dockerfile: docker/frontend.Dockerfile}
+    ports: ["8080:80"]
+    depends_on: {api: {condition: service_started}}
+
+volumes:
+  pgdata:

@@ -1,0 +1,15 @@
+# Per-model hyper-parameters. Tuned values (configs/tuned/<model>.yaml, written by `make tune`) override these.
+seed: 42
+window: 10
+models:
+  naive: {}
+  drift: {}
+  ridge: {alpha: 10.0}
+  lightgbm: {n_estimators: 300, learning_rate: 0.03, num_leaves: 15}
+  arima: {top_n: 10}
+  lstm: {hidden: 64, n_layers: 2, dropout: 0.3, lr: 0.001, weight_decay: 0.0001, max_epochs: 300, patience: 25}
+  gru: {hidden: 64, n_layers: 2, dropout: 0.3, lr: 0.001, weight_decay: 0.0001, max_epochs: 300, patience: 25}
+  tcn: {hidden: 64, n_layers: 3, dropout: 0.2, lr: 0.001, weight_decay: 0.0001, max_epochs: 300, patience: 25}
+  seq2seq_attn: {hidden: 64, n_layers: 1, dropout: 0.3, lr: 0.001, weight_decay: 0.0001, max_epochs: 300, patience: 25}
+  tft: {hidden: 64, dropout: 0.2, lr: 0.001, weight_decay: 0.0001, max_epochs: 300, patience: 25}
+  deepar: {hidden: 64, n_layers: 2, dropout: 0.3, lr: 0.001, weight_decay: 0.0001, max_epochs: 300, patience: 25}

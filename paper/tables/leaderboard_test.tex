@@ -1,0 +1,17 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Model & MASE$_1$ & MASE$_3$ & MASE$_5$ & MinT MASE$_5$ & sMAPE$_5$ \\
+\midrule
+TFT-lite & 2.92 & 3.75 & \textbf{2.90} & 2.92 & 11.1 \\
+Seq2Seq-Attn & 2.23 & 3.73 & 3.07 & 3.08 & 10.0 \\
+LSTM + emb. & 1.72 & \textbf{3.25} & 3.45 & 3.48 & 11.5 \\
+ARIMA$^\dagger$ & 1.75 & 3.58 & 3.91 & 3.91 & 11.5 \\
+Naive (RW) & 2.18 & 3.84 & 4.02 & 3.66 & 12.8 \\
+DeepAR-style & 1.98 & 4.41 & 4.51 & 4.46 & 14.7 \\
+RW + drift & 1.82 & 4.08 & 5.13 & 5.12 & 15.7 \\
+TCN + emb. & 1.93 & 4.26 & 6.28 & 6.25 & 18.7 \\
+LightGBM (panel) & \textbf{1.72} & 3.90 & 6.64 & 6.63 & 19.9 \\
+GRU + emb. & 1.88 & 4.20 & 7.20 & 7.15 & 21.5 \\
+Ridge (panel) & 2.21 & 5.16 & 12.50 & 12.25 & 33.1 \\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,11 @@
+feature,method,n_values,note
+gsdp_cr/gsdp_const_cr,constant-share backcast with World Bank real GDP (NY.GDP.MKTP.KN),812,MoSPI 2011-12 series starts FY2011; earlier years assume constant state share
+gsdp_cr,unavailable,36,IN-DH: no MoSPI series (e.g. Ladakh/Lakshadweep/DNHDD)
+gsdp_cr,unavailable,36,IN-LA: no MoSPI series (e.g. Ladakh/Lakshadweep/DNHDD)
+gsdp_cr,unavailable,36,IN-LD: no MoSPI series (e.g. Ladakh/Lakshadweep/DNHDD)
+population_mn,log-linear interpolation between Census 2001/2011 and 2023/2024 estimates,1296,pre-2001 extrapolated with 2001-2011 growth
+urban_population_pct,held at Census 2011 value,1296,
+climate,major-city point per state (not area-weighted); CDD from monthly means,1260,
+climate,IMD gridded area-weighted; NASA POWER city point where IMD has no land cells,22,
+petrol/diesel/pol_sales_kt,unavailable before FY2008 (PPAC series start),0,missing-indicator columns added
+gsdp_const_cr,population x regional median per-capita GSDP,108,
