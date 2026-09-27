@@ -135,3 +135,8 @@ def test_analytics_endpoints(client):
     if st["years"]:
         assert all(len(v) == len(st["years"]) for s in st["data"].values() for v in s.values())
     assert client.get("/api/v2/analytics/facilities?state=bad", headers=h).status_code == 422
+
+
+def test_public_summary_needs_no_login(client):
+    r = client.get("/api/v2/analytics/public")
+    assert r.status_code == 200 and "facts" in r.json() and "forecast" not in r.text

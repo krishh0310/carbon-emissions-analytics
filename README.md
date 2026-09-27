@@ -364,6 +364,8 @@ See `CHANGELOG.md` for the stage-by-stage record. In short:
 
   See `CHANGELOG.md` v3.1.
 
+**v3.2:** signed-out visitors land on a public home page with an interactive emission-stripes hero, a feature tour, how-it-works, the team and sign-up. Signed-in users can find it at `/about`. It reads `GET /api/v2/analytics/public`, which needs no login.
+
 ## Paper
 
 `paper/main.tex` is an IEEE skeleton. `make paper` regenerates `paper/tables/*.tex` from `results/tables/metrics.csv` and builds the PDF.

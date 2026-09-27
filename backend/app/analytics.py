@@ -10,9 +10,11 @@ from pathlib import Path
 from typing import Annotated, Literal
 
 import pandas as pd
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, Query, Request
 
+from backend.app.config import settings
 from backend.app.db import User
+from backend.app.ratelimit import limiter
 from backend.app.security import current_user
 
 PROC = Path(__file__).resolve().parents[2] / "data" / "processed"
@@ -125,3 +127,37 @@ def facilities(_: Viewer, state: str | None = Query(None, pattern=r"^IN-[A-Z]{2}
     cols = ["id", "name", "owner", "sector", "subsector", "asset_type", "co2e_mt", "capacity", "capacity_units",
             "lat", "lon", "state_code", "year"]
     return {"items": _clean(f.sort_values("co2e_mt", ascending=False).head(limit)[cols]), "source": SOURCES["climatetrace"]}
+
+
+@router.get("/public")
+@limiter.limit(settings().rate_limit_default)
+def public_summary(request: Request):
+    """No-auth summary for the landing page: national history by sector and a few headline facts (no forecasts)."""
+    from src.data.reference import states_df
+
+    p = _panel("states")
+    if p.empty:
+        return {"years": [], "sectors": {}, "facts": {}}
+    years = sorted(p.year.unique().tolist())
+    nat = p.groupby(["sector", "year"]).co2e_mt.sum().unstack(0).reindex(years).fillna(0)
+    st = p.groupby(["id", "year"]).co2e_mt.sum().unstack(1)
+    last, ten = years[-1], years[-1] - 10
+    names = states_df().set_index("code").name
+    big = st[st[last] >= 20]
+    growth = ((big[last] / big[ten]) ** 0.1 - 1).sort_values(ascending=False)
+    top = st[last].sort_values(ascending=False).head(5)
+    tot = nat.sum(axis=1)
+    return {
+        "years": years,
+        "sectors": {s: [round(float(v), 1) for v in nat[s]] for s in SECTORS if s in nat},
+        "facts": {
+            "latest_year": int(last), "india_mt": round(float(tot[last]), 0), "first_year": int(years[0]),
+            "first_mt": round(float(tot[years[0]]), 0),
+            "power_share_pct": round(float(100 * nat.loc[last, "POWER"] / tot[last]), 1),
+            "top_states": [{"code": c, "name": names.get(c, c), "mt": round(float(v), 1)} for c, v in top.items()],
+            "fastest": {"code": growth.index[0], "name": names.get(growth.index[0], growth.index[0]),
+                        "cagr_pct": round(float(100 * growth.iloc[0]), 1)},
+            "states": int(st.shape[0]), "cities": int(_panel("cities").id.nunique()),
+            "facilities": int(len(_read("ext_facilities"))),
+        },
+    }

@@ -18,3 +18,12 @@ body { @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 a
 .maplibregl-popup-tip { display: none; }
 
 @keyframes slidein { from { transform: translateX(40px); opacity: 0 } to { transform: none; opacity: 1 } }
+
+/* Landing page: its own light identity regardless of the app theme */
+.lp { font-family: "Archivo", ui-sans-serif, system-ui, sans-serif; background: #E9EDEE; color: #14202B; color-scheme: light; }
+.lp .wide { font-stretch: 125%; font-variation-settings: "wdth" 125; }
+.lp ::selection { background: #C98A1B; color: #14202B; }
+@keyframes stripe-in { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+.lp .stripe { transform-origin: bottom; animation: stripe-in .7s cubic-bezier(.2, .7, .2, 1) both; }
+@media (prefers-reduced-motion: reduce) { .lp .stripe { animation: none; } html:has(.lp) { scroll-behavior: auto; } }
+html:has(.lp) { scroll-behavior: smooth; }

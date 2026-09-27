@@ -1,5 +1,18 @@
 # Changelog
 
+## v3.2 — public landing page (2026-09-27)
+
+- A public home page greets visitors before sign-in, and signed-in users can reach it at `/about`.
+  - **Emission stripes:** India's real 1970–2024 emissions, one stripe per year. Hover, touch or use the arrow keys to read any year's total and sector split.
+  - **Why we built this:** includes live facts.
+  - **What's inside:** a tour of 6 real screens.
+  - **How it works:** 5 steps, with an interactive train / validate / test / forecast year bar.
+  - **Team:** Sai Krish, Karthik, B Shiva.
+  - **Sign in / create account form.**
+- **Design:** a light fog-and-coal identity with Archivo's width axis for display type. The page is responsive down to phones, respects reduced motion, and has keyboard-accessible controls.
+- **New public endpoint** `GET /api/v2/analytics/public`: no login, rate-limited, returns national history and headline facts only (no forecasts or model details).
+- The old standalone login card was removed; sign-in now lives on the landing page.
+
 ## v3.1 — live open-data APIs, 1970+ history, Analytics page (2026-09-27)
 
 ### Data

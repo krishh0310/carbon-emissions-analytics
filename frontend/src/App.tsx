@@ -1,12 +1,11 @@
-import { lazy, Suspense, useEffect, useState, type FormEvent } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Moon, Sun, Leaf } from "lucide-react";
-import { toast } from "sonner";
-import { api, auth, login } from "./lib/api";
+import { api, auth } from "./lib/api";
 import { LangCtx, useT, type Lang } from "./lib/i18n";
 import { glossify } from "./lib/glossary";
-import { Button, Card, Input, Skeleton } from "./components/ui";
+import { Button, Skeleton } from "./components/ui";
 
 const LiveMap = lazy(() => import("./pages/LiveMap"));
 const MapOverview = lazy(() => import("./pages/MapOverview"));
@@ -16,50 +15,11 @@ const Insights = lazy(() => import("./pages/Insights"));
 const Analytics = lazy(() => import("./pages/Analytics"));
 const Methodology = lazy(() => import("./pages/Methodology"));
 const AdminConsole = lazy(() => import("./pages/AdminConsole"));
-
-function Login({ onDone }: { onDone: () => void }) {
-  const t = useT();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [busy, setBusy] = useState(false);
-  const submit = async (e: FormEvent, register = false) => {
-    e.preventDefault();
-    // "Create account" is a type=button, so run the form's native validation (email format, ≥10 chars) ourselves
-    if (!(e.currentTarget as HTMLElement).closest("form")?.reportValidity()) return;
-    setBusy(true);
-    try {
-      await login(email, password, register);
-      if (register) toast.success("Account created — you're signed in");
-      onDone();
-    } catch (err: any) {
-      toast.error(err.status === 409 ? "This email already has an account — use Sign in."
-        : err.status === 401 ? "Wrong email or password."
-        : err.status === 429 ? "Too many attempts — wait a minute and try again."
-        : err.message);
-    } finally {
-      setBusy(false);
-    }
-  };
-  return (
-    <div className="grid min-h-screen place-items-center p-4">
-      <Card className="w-full max-w-sm">
-        <div className="mb-4 flex items-center gap-2 text-lg font-semibold"><Leaf className="text-emerald-500" />CarbonScope India</div>
-        <form className="grid gap-3" onSubmit={(e) => submit(e)}>
-          <Input type="email" required placeholder={t("Email")} autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Input type="password" required minLength={10} placeholder={`${t("Password")} (≥10)`} autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <p className="-mt-1.5 text-[11px] text-slate-500">New here? Enter any email + a password of 10+ characters and press “{t("Create account")}”.</p>
-          <Button disabled={busy}>{t("Sign in")}</Button>
-          <Button type="button" variant="outline" disabled={busy} onClick={(e) => submit(e as any, true)}>{t("Create account")}</Button>
-        </form>
-        <p className="mt-3 text-[11px] text-slate-500">Emissions are EDGAR-downscaled estimates; city values are proxy estimates.</p>
-      </Card>
-    </div>
-  );
-}
+const Landing = lazy(() => import("./pages/Landing"));
 
 // Viewer navigation. Model/training/data-quality internals live only under /admin (role-gated here AND in the API).
 const NAV = [["/", "Live Map"], ["/overview", "India Map"], ["/state/IN-MH", "State Explorer"], ["/cities", "Cities"],
-  ["/analytics", "Analytics"], ["/insights", "Insights"], ["/methodology", "Methodology"]] as const;
+  ["/analytics", "Analytics"], ["/insights", "Insights"], ["/methodology", "Methodology"], ["/about", "About"]] as const;
 
 function Shell() {
   const t = useT();
@@ -99,6 +59,7 @@ function Shell() {
             <Route path="/analytics" element={<Analytics />} />
             <Route path="/insights" element={<Insights />} />
             <Route path="/methodology" element={<Methodology />} />
+            <Route path="/about" element={<Landing />} />
             <Route path="/admin/*" element={me.isLoading ? <Skeleton className="h-96" /> : me.data?.role === "admin" ? <AdminConsole /> : <Navigate to="/" />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
@@ -143,7 +104,7 @@ export default function App() {
   }, []);
   return (
     <LangCtx.Provider value={{ lang, setLang }}>
-      <BrowserRouter>{authed ? <Shell /> : <Login onDone={() => setAuthed(true)} />}</BrowserRouter>
+      <BrowserRouter>{authed ? <Shell /> : <Suspense fallback={null}><Landing onDone={() => setAuthed(true)} /></Suspense>}</BrowserRouter>
     </LangCtx.Provider>
   );
 }
