@@ -286,8 +286,8 @@ export default function Landing({ onDone }: { onDone?: () => void }) {
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-8">
             <h2 className="wide text-[clamp(1.9rem,3.6vw,2.9rem)] font-extrabold leading-tight tracking-tight">Team</h2>
             <p className="mt-3 max-w-[60ch] text-[17px]" style={{ color: "#aeb9c0" }}>A mini project, built with open data and open-source tools.</p>
-            <ul className="mt-12 grid gap-8 sm:grid-cols-3">
-              {["Sai Krish", "Karthik", "B Shiva"].map((name) => (
+            <ul className="mt-12 grid gap-8 sm:grid-cols-2">
+              {["Sai Krish Karthik", "B Shiva"].map((name) => (
                 <li key={name} className="border-t-4 pt-5" style={{ borderColor: OCHRE }}>
                   <span className="wide block text-[clamp(1.8rem,3.2vw,2.6rem)] font-extrabold leading-tight tracking-tight">{name}</span>
                 </li>

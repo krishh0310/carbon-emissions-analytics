@@ -7,7 +7,7 @@
   - **Why we built this:** includes live facts.
   - **What's inside:** a tour of 6 real screens.
   - **How it works:** 5 steps, with an interactive train / validate / test / forecast year bar.
-  - **Team:** Sai Krish, Karthik, B Shiva.
+  - **Team:** Sai Krish Karthik and B Shiva.
   - **Sign in / create account form.**
 - **Design:** a light fog-and-coal identity with Archivo's width axis for display type. The page is responsive down to phones, respects reduced motion, and has keyboard-accessible controls.
 - **New public endpoint** `GET /api/v2/analytics/public`: no login, rate-limited, returns national history and headline facts only (no forecasts or model details).
